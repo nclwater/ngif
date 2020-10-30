@@ -8,10 +8,24 @@ import dash_core_components as dcc
 import dash_html_components as html
 import plotly.express as px
 import pandas as pd
+import flask
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = flask.Flask(__name__)
+
+app = dash.Dash(
+    __name__,
+    server=server,
+    routes_pathname_prefix='/dash/',
+    external_stylesheets=external_stylesheets
+)
+
+
+@server.route('/')
+def index():
+    return flask.redirect('/dash')
+
 
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
