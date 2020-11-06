@@ -9,6 +9,7 @@ import dash_html_components as html
 import plotly.express as px
 import pandas as pd
 import flask
+from flask import request, make_response
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -25,6 +26,17 @@ app = dash.Dash(
 @server.route('/')
 def index():
     return flask.redirect('/dash')
+
+
+@server.route('/upload', methods=['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        # check if the post request has the file part
+        if 'upload_file' not in request.files:
+            return make_response({'error': 'upload_file not present'}, 400)
+        file = request.files['upload_file']
+
+        return make_response({}, 200)
 
 
 # assume you have a "long-form" data frame
