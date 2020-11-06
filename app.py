@@ -10,10 +10,16 @@ import plotly.express as px
 import pandas as pd
 import flask
 from flask import request, make_response
+from pymongo import MongoClient
+import os
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 server = flask.Flask(__name__)
+
+client = MongoClient(os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/'))
+db = client[os.getenv('DATABASE', 'test')]
+readings = db.readings
 
 app = dash.Dash(
     __name__,
@@ -34,7 +40,9 @@ def upload_file():
         # check if the post request has the file part
         if 'upload_file' not in request.files:
             return make_response({'error': 'upload_file not present'}, 400)
-        file = request.files['upload_file']
+
+        data = pd.read_csv(request.files['upload_file'])
+        readings.insert_many(data.to_dict('records'))
 
         return make_response({}, 200)
 
