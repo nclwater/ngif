@@ -16,7 +16,7 @@ from flask_pymongo import PyMongo
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 server = flask.Flask(__name__)
-server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/test')
+server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/test?authSource=admin')
 mongo = PyMongo(server)
 
 readings = mongo.db.readings
