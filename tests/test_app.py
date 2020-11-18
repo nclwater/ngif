@@ -1,10 +1,5 @@
 from app import app, server
 from unittest import TestCase
-from pymongo import MongoClient
-
-db = MongoClient('mongodb://test:password@localhost:27017/').test
-readings = db.readings
-readings.drop()
 
 
 class TestApp(TestCase):

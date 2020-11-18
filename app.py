@@ -10,16 +10,16 @@ import plotly.express as px
 import pandas as pd
 import flask
 from flask import request, make_response
-from pymongo import MongoClient
 import os
+from flask_pymongo import PyMongo
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 server = flask.Flask(__name__)
+server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/test')
+mongo = PyMongo(server)
 
-client = MongoClient(os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/'))
-db = client[os.getenv('DATABASE', 'test')]
-readings = db.readings
+readings = mongo.db.readings
 
 app = dash.Dash(
     __name__,
