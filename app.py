@@ -56,11 +56,8 @@ def upload_file():
             data = data[data.time > last_time]
 
         if len(data) > 0:
-            readings.insert_many({
-                                     'name': name,
-                                     'time': row['time'].isoformat(),
-                                     **{k: v for k, v in row.items() if not (pd.isna(v) or k == 'time')}
-                                 } for row in data.to_dict('records'))
+            readings.insert_many({'name': name, **{k: v for k, v in row.items() if pd.notna(v)}}
+                                 for row in data.to_dict('records'))
 
         return make_response({}, 200)
 
