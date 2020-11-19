@@ -11,7 +11,8 @@ import pandas as pd
 import flask
 from flask import request, make_response
 import os
-from flask_pymongo import PyMongo, DESCENDING
+from flask_pymongo import PyMongo, DESCENDING, ASCENDING
+from dash.dependencies import Input, Output
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -21,6 +22,11 @@ mongo = PyMongo(server)
 
 readings = mongo.db.readings
 units = mongo.db.units
+
+sensors = {sensor['name']: {k: v for k, v in sensor.items() if k != 'name'}
+           for sensor in list(units.find({}, {'_id': False}, sort=[('name', ASCENDING)]))}
+
+sensor_names = list(sensors.keys())
 
 app = dash.Dash(
     __name__,
@@ -71,46 +77,54 @@ def upload_file():
 
 
 def create_layout():
-    sensors = {sensor['name']: {k: v for k, v in sensor.items() if k != 'name'}
-               for sensor in list(units.find({}, {'_id': False}))}
-    names = list(sensors.keys())
-
-    df = pd.DataFrame(list(readings.find({'name': 'Lysimeter 1', 'Theta 800mm': {"$exists": True}},
-                                         sort=[('_id', DESCENDING)]).limit(100)))
-    if len(df) > 0:
-        fig = px.line(df, x="time", y="Theta 800mm", title='Lysimeter 1')
-        fig.update_layout({'xaxis': {'title': None}})
-    else:
-        fig = None
 
     return html.Div(children=[
-        html.H1(children='NGIF'),
+        html.H1(children='National Green Infrastructure Facility (NGIF)'),
 
-        html.Div(children='''
-            National Green Infrastructure Facility.
-        '''),
+        html.Div([
+            dcc.Dropdown(
+                id='name',
+                options=[{'label': n, 'value': n} for n in sensor_names],
+                value=sensor_names[0] if len(sensor_names) > 0 else None,
+                className='two columns'
+            ),
+            dcc.Dropdown(
+                id='field',
+                className='two columns'
+            )], className='row'),
 
-        dcc.Dropdown(
-            id='name',
-            options=[{'label': n, 'value': n} for n in names],
-            value=names[0] if len(names) > 0 else None
-        ),
-        dcc.Dropdown(
-            id='field',
-            options=[{'label': n, 'value': n} for n in sensors[names[0]].keys()] if len(names) > 0 else [],
-            value=list(sensors[names[0]].keys())[0] if len(names) > 0 else None
-        ),
+        dcc.Graph(id='plot')])
 
-        dcc.Graph(
-            id='example-graph',
-            figure=fig,
 
-        )])
+@app.callback(Output(component_id='plot', component_property='figure'),
+              [Input(component_id='name', component_property='value'),
+               Input(component_id='field', component_property='value')
+               ])
+def update_plot(name, field):
+    df = pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True}}, {field: 1, 'time': 1},
+                                         sort=[('_id', DESCENDING)]).limit(100)))
+    if len(df) > 0:
+        fig = px.line(df, x="time", y=field)
+        fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': f'{field} ({sensors[name][field]})'}})
+    else:
+        fig = None
+    return fig
+
+
+@app.callback(Output(component_id='field', component_property='options'),
+              [Input(component_id='name', component_property='value')])
+def update_fields(name):
+    return [{'label': n, 'value': n} for n in sensors[name].keys()]
+
+
+@app.callback(
+    dash.dependencies.Output('field', 'value'),
+    [dash.dependencies.Input('field', 'options')])
+def update_selected_field(available_options):
+    return available_options[0]['value']
 
 
 app.layout = create_layout
 
-# app.layout=html.Div()
 if __name__ == '__main__':
-    # app.run_server(debug=True)
     server.run(debug=True)
