@@ -41,7 +41,7 @@ def upload_file():
         if 'upload_file' not in request.files:
             return make_response({'error': 'upload_file not present'}, 400)
 
-        data = pd.read_csv(request.files['upload_file'])
+        data = pd.read_csv(request.files['upload_file'], sep='\t')
         readings.insert_many(data.to_dict('records'))
 
         return make_response({}, 200)
