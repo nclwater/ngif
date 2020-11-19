@@ -97,7 +97,7 @@ def create_layout():
         ),
         dcc.Dropdown(
             id='field',
-            options=[{'label': n, 'value': n} for n in sensors[names[0]].keys()],
+            options=[{'label': n, 'value': n} for n in sensors[names[0]].keys()] if len(names) > 0 else [],
             value=list(sensors[names[0]].keys())[0] if len(names) > 0 else None
         ),
 
