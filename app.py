@@ -65,15 +65,16 @@ def upload_file():
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
 
+def create_figure():
+    df = pd.DataFrame(list(readings.find({'name': 'Lysimeter 1', 'Theta 800mm': {"$exists": True}},
+                                         sort=[('_id', DESCENDING)]).limit(100)))
+    if len(df) > 0:
+        fig = px.line(df, x="time", y="Theta 800mm", title='Lysimeter 1')
+        fig.update_layout({'xaxis': {'title': None}})
+        return fig
 
-df = pd.DataFrame(list(readings.find({'name': 'Lysimeter 1', 'Theta 800mm': {"$exists": True}},
-                                     sort=[('_id', DESCENDING)]).limit(100)))
 
-
-fig = px.line(df, x="time", y="Theta 800mm", title='Lysimeter 1')
-fig.update_layout({'xaxis': {'title': None}})
-
-app.layout = html.Div(children=[
+app.layout = lambda: html.Div(children=[
     html.H1(children='NGIF'),
 
     html.Div(children='''
@@ -82,7 +83,7 @@ app.layout = html.Div(children=[
 
     dcc.Graph(
         id='example-graph',
-        figure=fig,
+        figure=create_figure(),
 
     )
 ])
