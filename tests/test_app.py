@@ -8,6 +8,6 @@ class TestApp(TestCase):
 
     def test_upload(self):
         with server.test_client() as client:
-            with open('tests/data.csv', 'rb') as f:
+            with open('tests/lysimeter.txt', 'rb') as f:
                 self.assertEqual(client.post('/upload', data={'upload_file': (f, 'test.csv')},
                                              content_type='multipart/form-data').status_code, 200)
