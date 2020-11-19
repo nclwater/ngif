@@ -71,8 +71,9 @@ def upload_file():
 
 
 def create_layout():
-
-    names = sorted(readings.find().distinct('name'))
+    sensors = {sensor['name']: {k: v for k, v in sensor.items() if k != 'name'}
+               for sensor in list(units.find({}, {'_id': False}))}
+    names = list(sensors.keys())
 
     df = pd.DataFrame(list(readings.find({'name': 'Lysimeter 1', 'Theta 800mm': {"$exists": True}},
                                          sort=[('_id', DESCENDING)]).limit(100)))
@@ -96,8 +97,8 @@ def create_layout():
         ),
         dcc.Dropdown(
             id='field',
-            options=[{'label': n, 'value': n} for n in names],
-            value=names[0] if len(names) > 0 else None
+            options=[{'label': n, 'value': n} for n in sensors[names[0]].keys()],
+            value=list(sensors[names[0]].keys())[0] if len(names) > 0 else None
         ),
 
         dcc.Graph(
