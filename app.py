@@ -28,6 +28,11 @@ sensors = {sensor['name']: {k: v for k, v in sensor.items() if k != 'name'}
 
 sensor_names = list(sensors.keys())
 
+
+def get_name_with_units(name, field):
+    return f'{field} ({sensors[name][field]})'
+
+
 app = dash.Dash(
     __name__,
     server=server,
@@ -93,7 +98,9 @@ def create_layout():
                 className='two columns'
             )], className='row'),
 
-        dcc.Graph(id='plot')])
+        dcc.Loading(dcc.Graph(id='plot')),
+
+        html.A(id='download-link', children='Download Data')])
 
 
 @app.callback(Output(component_id='plot', component_property='figure'),
@@ -102,10 +109,10 @@ def create_layout():
                ])
 def update_plot(name, field):
     df = pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True}}, {field: 1, 'time': 1},
-                                         sort=[('_id', DESCENDING)]).limit(100)))
+                                         sort=[('_id', DESCENDING)])))
     if len(df) > 0:
         fig = px.line(df, x="time", y=field)
-        fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': f'{field} ({sensors[name][field]})'}})
+        fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': get_name_with_units(name, field)}})
     else:
         fig = None
     return fig
@@ -122,6 +129,34 @@ def update_fields(name):
     [dash.dependencies.Input('field', 'options')])
 def update_selected_field(available_options):
     return available_options[0]['value']
+
+
+@app.callback(Output('download-link', 'href'),
+              [
+                  Input(component_id='name', component_property='value'),
+                  Input(component_id='field', component_property='value')
+               ])
+def update_href(name, field):
+    return f'/download/{name}/{field}'
+
+
+@app.server.route('/download/<name>/<field>')
+def serve_static(name, field):
+    import flask
+    import io
+    csv = io.StringIO()
+    pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True}}, {'_id': False, field: 1, 'time': 1, },
+                                    sort=[('_id', DESCENDING)]))).rename(
+        columns={field: get_name_with_units(name, field)}).to_csv(csv, index=False)
+
+    mem = io.BytesIO()
+    mem.write(csv.getvalue().encode('utf-8'))
+    mem.seek(0)
+
+    return flask.send_file(mem,
+                           mimetype='text/csv',
+                           attachment_filename=f'ngif-[{name}]-[{field}].csv',
+                           as_attachment=True)
 
 
 app.layout = create_layout
