@@ -49,8 +49,8 @@ def upload_file():
         readings.insert_many({
                                  'name': name,
                                  'time': pd.to_datetime(row['Unnamed: 0']).isoformat(),
-                                 **{k: ast.literal_eval(v) for k, v in row.items()
-                                    if pd.notna(v) and v.replace('.', '', 1).isdigit()}
+                                 **{k: ast.literal_eval(str(v)) for k, v in row.items()
+                                    if pd.notna(v) and str(v).replace('.', '', 1).isdigit()}
                              } for row in data.to_dict('records') if pd.notna(row['Unnamed: 0']))
 
         return make_response({}, 200)
@@ -80,4 +80,5 @@ app.layout = html.Div(children=[
 ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    # app.run_server(debug=True)
+    server.run(debug=True)
