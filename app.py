@@ -20,6 +20,7 @@ server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@loc
 mongo = PyMongo(server)
 
 readings = mongo.db.readings
+units = mongo.db.units
 
 app = dash.Dash(
     __name__,
@@ -44,6 +45,13 @@ def upload_file():
         f = request.files['upload_file']
         name = f.filename
         name = name[name.index('(') + 1:name.index('+') - 1 if '+' in name else name.index(')')]
+
+        # Update units
+        units.update_one({'name': name}, {'$set': {field: unit for field, unit in zip(
+                f.stream.readline().strip().decode().split('\t'), f.stream.readline().strip().decode().split('\t'))}
+        }, upsert=True)
+        f.stream.seek(0)
+
         data = pd.read_csv(f, sep='\t', parse_dates=[0], dayfirst=True, skiprows=range(1, 2), na_values=['#+INF'])
         data = data.rename(columns={data.columns[0]: 'time'})
         # Get the latest inserted time
@@ -62,31 +70,45 @@ def upload_file():
         return make_response({}, 200)
 
 
-# assume you have a "long-form" data frame
-# see https://plotly.com/python/px-arguments/ for more options
+def create_layout():
 
-def create_figure():
+    names = sorted(readings.find().distinct('name'))
+
     df = pd.DataFrame(list(readings.find({'name': 'Lysimeter 1', 'Theta 800mm': {"$exists": True}},
                                          sort=[('_id', DESCENDING)]).limit(100)))
     if len(df) > 0:
         fig = px.line(df, x="time", y="Theta 800mm", title='Lysimeter 1')
         fig.update_layout({'xaxis': {'title': None}})
-        return fig
+    else:
+        fig = None
+
+    return html.Div(children=[
+        html.H1(children='NGIF'),
+
+        html.Div(children='''
+            National Green Infrastructure Facility.
+        '''),
+
+        dcc.Dropdown(
+            id='name',
+            options=[{'label': n, 'value': n} for n in names],
+            value=names[0] if len(names) > 0 else None
+        ),
+        dcc.Dropdown(
+            id='field',
+            options=[{'label': n, 'value': n} for n in names],
+            value=names[0] if len(names) > 0 else None
+        ),
+
+        dcc.Graph(
+            id='example-graph',
+            figure=fig,
+
+        )])
 
 
-app.layout = lambda: html.Div(children=[
-    html.H1(children='NGIF'),
+app.layout = create_layout
 
-    html.Div(children='''
-        National Green Infrastructure Facility.
-    '''),
-
-    dcc.Graph(
-        id='example-graph',
-        figure=create_figure(),
-
-    )
-])
 # app.layout=html.Div()
 if __name__ == '__main__':
     # app.run_server(debug=True)
