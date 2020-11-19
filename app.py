@@ -12,7 +12,6 @@ import flask
 from flask import request, make_response
 import os
 from flask_pymongo import PyMongo, DESCENDING
-import ast
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -45,8 +44,8 @@ def upload_file():
         f = request.files['upload_file']
         name = f.filename
         name = name[name.index('(') + 1:name.index('+') - 1 if '+' in name else name.index(')')]
-        data = pd.read_csv(f, sep='\t')
-
+        data = pd.read_csv(f, sep='\t', parse_dates=[0], dayfirst=True, skiprows=range(1, 2), na_values=['#+INF'])
+        data = data.rename(columns={data.columns[0]: 'time'})
         # Get the latest inserted time
         last_entry = readings.find_one(
             {'name': name}, {'time': 1},
@@ -54,41 +53,43 @@ def upload_file():
         )
         if last_entry is not None:
             last_time = pd.to_datetime(last_entry['time'])
-            data = data[pd.to_datetime(data['Unnamed: 0']) > last_time]
+            data = data[data.time > last_time]
+
         if len(data) > 0:
             readings.insert_many({
                                      'name': name,
-                                     'time': pd.to_datetime(row['Unnamed: 0']).isoformat(),
-                                     **{k: ast.literal_eval(str(v)) for k, v in row.items()
-                                        if pd.notna(v) and str(v).replace('.', '', 1).isdigit()}
-                                 } for row in data.to_dict('records') if pd.notna(row['Unnamed: 0']))
+                                     'time': row['time'].isoformat(),
+                                     **{k: v for k, v in row.items() if not (pd.isna(v) or k == 'time')}
+                                 } for row in data.to_dict('records'))
 
         return make_response({}, 200)
 
 
 # assume you have a "long-form" data frame
 # see https://plotly.com/python/px-arguments/ for more options
-df = pd.DataFrame({
-    "Fruit": ["Apples", "Oranges", "Bananas", "Apples", "Oranges", "Bananas"],
-    "Amount": [4, 1, 2, 2, 4, 5],
-    "City": ["SF", "SF", "SF", "Montreal", "Montreal", "Montreal"]
-})
 
-fig = px.bar(df, x="Fruit", y="Amount", color="City", barmode="group")
+
+df = pd.DataFrame(list(readings.find({'name': 'Lysimeter 1', 'Theta 800mm': {"$exists": True}},
+                                     sort=[('_id', DESCENDING)]).limit(100)))
+
+
+fig = px.line(df, x="time", y="Theta 800mm", title='Lysimeter 1')
+fig.update_layout({'xaxis': {'title': None}})
 
 app.layout = html.Div(children=[
-    html.H1(children='Hello Dash'),
+    html.H1(children='NGIF'),
 
     html.Div(children='''
-        Dash: A web application framework for Python.
+        National Green Infrastructure Facility.
     '''),
 
     dcc.Graph(
         id='example-graph',
-        figure=fig
+        figure=fig,
+
     )
 ])
-
+# app.layout=html.Div()
 if __name__ == '__main__':
     # app.run_server(debug=True)
     server.run(debug=True)
