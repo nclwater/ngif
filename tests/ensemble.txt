@@ -1,0 +1,18 @@
+	Power	E3_Theta_200	E3_ECb_200	E3_SoilTemp_200	E3_Theta_400	E3_ECb_400	E3_SoilTemp_400	E3_Theta_600	E3_ECb_600	E3_SoilTemp_600	E3_Theta_800	E3_ECb_800	E3_SoilTemp_800	E3_Psi_200	E3_SoilTemp(2)_200	E3_Psi_400	E3_SoilTemp(2)_400	E3_Psi_600	E3_SoilTemp(2)_600	E3_Psi_800	E3_SoilTemp(2)_800	E2_Theta_800	E2_ECb_800	E2_SoilTemp_800	E2_Theta_600	E2_ECb_600	E2_SoilTemp_600	E2_Theta_400	E2_ECb_400	E2_SoilTemp_400	E2_Theta_200	E2_ECb_200	E2_SoilTemp_200	E2_Psi_800	E2_SoilTemp(2)_800	E2_Psi_600	E2_SoilTemp(2)_600	E2_Psi_400	E2_SoilTemp(2)_400	E2_Psi_200	E2_SoilTemp(2)_200	E1_Theta_800	E1_ECb_800	E1_SoilTemp_800	E1_Theta_600	E1_ECb_600	E1_SoilTemp_600	E1_Theta_400	E1_ECb_400	E1_SoilTemp_400	E1_Theta_200	E1_ECb_200	E1_SoilTemp_200	E1_Psi_800	E1_SoilTemp(2)_800	E1_Psi_600	E1_SoilTemp(2)_600	E1_Psi_400	E1_SoilTemp(2)_400	E1_Psi_200	E1_SoilTemp(2)_200	Pit Rain Gauge#@1m	Drain_E1#@1m	Drain_E2#@1m	Drain_E3#@1m
+	V	%	mS.m-1	deg C	%	mS.m-1	deg C	%	mS.m-1	deg C	%	mS.m-1	deg C	kPa	deg C	kPa	deg C	kPa	deg C	kPa	deg C	%	mS.m-1	deg C	%	mS.m-1	deg C	%	mS.m-1	deg C	%	mS.m-1	deg C	kPa	deg C	kPa	deg C	kPa	deg C	kPa	deg C	%	mS.m-1	deg C	%	mS.m-1	deg C	%	mS.m-1	deg C	%	mS.m-1	deg C	kPa	deg C	kPa	deg C	kPa	deg C	kPa	deg C	-	ml	ml	ml
+03/07/2020 05:00:00	11.0	10.4	0	14.5	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	10.0	3	14.6	#+INF	#+INF	-1330.3	14.8	-2045.2	14.1	#+INF	#+INF	14.9	4	13.6	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	-469.4	13.5	-3522.8	14.0	#+INF	#+INF	12.7	2	14.0	#+INF	#+INF	#+INF	15.2	1	13.7	17.0	2	13.8	#+INF	#+INF	#+INF	#+INF	-682.5	13.7	-669.9	13.5	0	0	0	0
+03/07/2020 05:01:00																																																														0	0	0	0
+03/07/2020 05:02:00																																																														0	0	0	0
+03/07/2020 05:03:00																																																														0	0	0	0
+03/07/2020 05:04:00																																																														0	0	0	0
+03/07/2020 05:05:00																																																														0	0	0	0
+03/07/2020 05:06:00																																																														0	0	0	0
+03/07/2020 05:07:00																																																														0	0	0	0
+03/07/2020 05:08:00																																																														0	0	0	0
+03/07/2020 05:09:00																																																														0	0	0	0
+03/07/2020 05:10:00																																																														0	0	0	0
+03/07/2020 05:11:00																																																														0	0	0	0
+03/07/2020 05:12:00																																																														0	0	0	0
+03/07/2020 05:13:00																																																														0	0	0	0
+03/07/2020 05:14:00																																																														0	0	0	0
+03/07/2020 05:15:00	11.0	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	10.0	2	14.6	-9143.2	13.4	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	-467.7	13.5	-3716.9	14.0	#+INF	#+INF	12.7	2	14.0	10.9	0	13.7	15.2	0	13.7	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	#+INF	-493.3	13.7	0	0	0	0

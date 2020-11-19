@@ -12,6 +12,7 @@ import flask
 from flask import request, make_response
 import os
 from flask_pymongo import PyMongo
+import ast
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -41,8 +42,16 @@ def upload_file():
         if 'upload_file' not in request.files:
             return make_response({'error': 'upload_file not present'}, 400)
 
-        data = pd.read_csv(request.files['upload_file'], sep='\t')
-        readings.insert_many(data.to_dict('records'))
+        f = request.files['upload_file']
+        name = f.filename
+        data = pd.read_csv(f, sep='\t')
+        name = name[name.index('(')+1:name.index('+')-1 if '+' in name else name.index(')')]
+        readings.insert_many({
+                                 'name': name,
+                                 'time': pd.to_datetime(row['Unnamed: 0']).isoformat(),
+                                 **{k: ast.literal_eval(v) for k, v in row.items()
+                                    if pd.notna(v) and v.replace('.', '', 1).isdigit()}
+                             } for row in data.to_dict('records') if pd.notna(row['Unnamed: 0']))
 
         return make_response({}, 200)
 
