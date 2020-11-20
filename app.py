@@ -21,16 +21,16 @@ server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@loc
 mongo = PyMongo(server)
 
 readings = mongo.db.readings
-units = mongo.db.units
+sensors = mongo.db.sensors
 
-sensors = {sensor['name']: {k: v for k, v in sensor.items() if k != 'name'}
-           for sensor in list(units.find({}, {'_id': False}, sort=[('name', ASCENDING)]))}
+units = {sensor['name']: {k: v for k, v in sensor.items() if k != 'name'}
+         for sensor in list(sensors.find({}, {'_id': False}, sort=[('name', ASCENDING)]))}
 
-sensor_names = list(sensors.keys())
+sensor_names = list(units.keys())
 
 
 def get_name_with_units(name, field):
-    return f'{field} ({sensors[name][field]})'
+    return f'{field} ({units[name][field]})'
 
 
 app = dash.Dash(
@@ -57,8 +57,8 @@ def upload_file():
         name = f.filename
         name = name[name.index('(') + 1:name.index('+') - 1 if '+' in name else name.index(')')]
 
-        # Update units
-        units.update_one({'name': name}, {'$set': {field: unit for field, unit in zip(
+        # Update sensors collection
+        sensors.update_one({'name': name}, {'$set': {field: unit for field, unit in zip(
                 f.stream.readline().strip().decode().split('\t'), f.stream.readline().strip().decode().split('\t'))}
         }, upsert=True)
         f.stream.seek(0)
@@ -121,7 +121,7 @@ def update_plot(name, field):
 @app.callback(Output(component_id='field', component_property='options'),
               [Input(component_id='name', component_property='value')])
 def update_fields(name):
-    return [{'label': n, 'value': n} for n in sensors[name].keys()]
+    return [{'label': n, 'value': n} for n in units[name].keys()]
 
 
 @app.callback(
@@ -162,4 +162,4 @@ def serve_static(name, field):
 app.layout = create_layout
 
 if __name__ == '__main__':
-    server.run(debug=True)
+    server.run(debug=True, host='0.0.0.0')
