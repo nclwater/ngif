@@ -13,6 +13,7 @@ from flask import request, make_response
 import os
 from flask_pymongo import PyMongo, DESCENDING, ASCENDING
 from dash.dependencies import Input, Output
+from dash.exceptions import PreventUpdate
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -108,6 +109,8 @@ def create_layout():
                Input(component_id='field', component_property='value')
                ])
 def update_plot(name, field):
+    if name is None or field is None:
+        raise PreventUpdate
     df = pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True}}, {field: 1, 'time': 1},
                                          sort=[('_id', DESCENDING)])))
     if len(df) > 0:
@@ -121,6 +124,8 @@ def update_plot(name, field):
 @app.callback(Output(component_id='field', component_property='options'),
               [Input(component_id='name', component_property='value')])
 def update_fields(name):
+    if name is None:
+        raise PreventUpdate
     return [{'label': n, 'value': n} for n in units[name].keys()]
 
 
@@ -142,7 +147,6 @@ def update_href(name, field):
 
 @app.server.route('/download/<name>/<field>')
 def serve_static(name, field):
-    import flask
     import io
     csv = io.StringIO()
     pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True}}, {'_id': False, field: 1, 'time': 1, },
