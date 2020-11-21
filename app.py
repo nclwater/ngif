@@ -13,6 +13,7 @@ import os
 from flask_pymongo import PyMongo, DESCENDING, ASCENDING
 from dash.dependencies import Input, Output
 from dash.exceptions import PreventUpdate
+import urllib.parse
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -114,7 +115,7 @@ def update_selected_field(available_options):
                   Input(component_id='field', component_property='value')
                ])
 def update_href(name, field):
-    return f'/download/{name}/{field}'
+    return urllib.parse.quote(f'/download/{name}/{field}')
 
 
 @app.server.route('/download/<name>/<field>')
