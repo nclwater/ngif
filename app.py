@@ -54,6 +54,7 @@ app = dash.Dash(
 def create_layout():
     sensors.update()
     return html.Div(children=[
+
         html.H1(children='National Green Infrastructure Facility (NGIF)'),
 
         html.Div([
@@ -61,12 +62,14 @@ def create_layout():
                 id='name',
                 options=[{'label': n, 'value': n} for n in sensors.names],
                 value=sensors.names[0] if len(sensors.names) > 0 else None,
-                className='two columns'
-            ),
+            )
+        ], style={'display': 'inline-block', 'width': '49%'}),
+        html.Div([
             dcc.Dropdown(
                 id='field',
-                className='two columns'
-            )], className='row'),
+            )
+        ], style={'display': 'inline-block', 'width': '49%'}),
+
 
         dcc.Loading(dcc.Graph(id='plot')),
 
