@@ -1,25 +1,24 @@
-from app import app, server
+import app
 from unittest import TestCase
 from pymongo import MongoClient
+from datetime import datetime
 
-db = MongoClient('mongodb://test:password@localhost:27017/').test
+db = MongoClient(app.server.config['MONGO_URI']).get_database()
+readings = db.readings
+sensors = db.sensors
+sensors.drop()
+readings.drop()
 
-db.readings.drop()
-db.sensors.drop()
-
+readings.insert({'name': 'sensor', 'field': 1, 'time': datetime.now()})
+sensors.insert({'name': 'sensor', 'field': 'mm'})
 
 class TestApp(TestCase):
     def test_app(self):
-        self.assertIsNotNone(app)
+        self.assertIsNotNone(app.app)
 
-    def test_upload(self):
-        with server.test_client() as client:
-            with open('tests/lysimeter.txt', 'rb') as f:
-                self.assertEqual(client.post('/upload', data={
-                    'upload_file': (f, 'GP2-10-58 (Lysimeter 1) 2020-11-19 10.27.04.txt')},
-                                             content_type='multipart/form-data').status_code, 200)
+    def test_create_layout(self):
+        app.create_layout()
 
-            with open('tests/ensemble.txt', 'rb') as f:
-                self.assertEqual(client.post('/upload', data={
-                    'upload_file': (f, 'GP2-10-60 (Ensemble E + RG) 2020-11-18 13.52.10.txt')},
-                                             content_type='multipart/form-data').status_code, 200)
+    def test_create_plot(self):
+
+        app.create_plot(name='sensor', field='field')
