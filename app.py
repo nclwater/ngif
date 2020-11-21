@@ -90,7 +90,7 @@ def create_plot(name, field):
         fig = px.line(df, x="time", y=field)
         fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': get_name_with_units(name, field)}})
     else:
-        fig = None
+        fig = {}
     return fig
 
 
