@@ -47,7 +47,8 @@ def get_name_with_units(name, field):
 app = dash.Dash(
     __name__,
     server=server,
-    external_stylesheets=external_stylesheets
+    external_stylesheets=external_stylesheets,
+    title='NGIF'
 )
 
 
