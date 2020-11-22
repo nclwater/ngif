@@ -73,7 +73,9 @@ def create_layout():
 
         dcc.Loading(dcc.Graph(id='plot')),
 
-        html.A(id='download-link', children='Download Data')])
+        html.A(html.Button('Download Data'), id='download-link')
+
+    ])
 
 
 @app.callback(Output(component_id='plot', component_property='figure'),
