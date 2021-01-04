@@ -14,6 +14,7 @@ from flask_pymongo import PyMongo, DESCENDING, ASCENDING
 from dash.dependencies import Input, Output
 from dash.exceptions import PreventUpdate
 import urllib.parse
+from datetime import date, timedelta, datetime
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -71,27 +72,43 @@ def create_layout():
             )
         ], style={'display': 'inline-block', 'width': '49%'}),
 
+        dcc.DatePickerRange(
+            id='date-picker',
+            min_date_allowed=date(1995, 8, 5),
+            max_date_allowed=date.today(),
+            start_date=date.today() - timedelta(days=2),
+            end_date=date.today(),
+            display_format='DD/MM/YYYY',
+            minimum_nights=0
+        ),
 
         dcc.Loading(dcc.Graph(id='plot')),
 
-        html.A(html.Button('Download Data'), id='download-link')
+        html.A(html.Button('Download Selected Period'), id='download-link'),
+        html.A(html.Button('Download Entire Series'), id='download-all-link'),
 
     ])
 
 
 @app.callback(Output(component_id='plot', component_property='figure'),
               [Input(component_id='name', component_property='value'),
-               Input(component_id='field', component_property='value')
+               Input(component_id='field', component_property='value'),
+               Input(component_id='date-picker', component_property='start_date'),
+               Input(component_id='date-picker', component_property='end_date')
                ])
-def update_plot(name, field):
-    return create_plot(name, field)
+def update_plot(name, field, start_date, end_date):
+    return create_plot(name, field, start_date, end_date)
 
 
-def create_plot(name, field):
+def create_plot(name, field, start_date, end_date):
     if name is None or field is None:
         raise PreventUpdate
-    df = pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True}}, {field: 1, 'time': 1},
-                                         sort=[('_id', DESCENDING)]).limit(500)))
+    df = pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True},
+                                          "time": {"$lt": datetime.fromisoformat(end_date) + timedelta(days=1),
+                                                   "$gte": datetime.fromisoformat(start_date)}},
+
+                                         {field: 1, 'time': 1},
+                                         sort=[('_id', DESCENDING)])))
     if len(df) > 0:
         fig = px.line(df, x="time", y=field)
         fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': get_name_with_units(name, field)}})
@@ -115,21 +132,53 @@ def update_selected_field(available_options):
     return available_options[0]['value']
 
 
-@app.callback(Output('download-link', 'href'),
+@app.callback(Output('download-all-link', 'href'),
               [
                   Input(component_id='name', component_property='value'),
                   Input(component_id='field', component_property='value')
                ])
 def update_href(name, field):
-    return urllib.parse.quote(f'/download/{name}/{field}')
+    return urllib.parse.quote(f'/download-all/{name}/{field}')
 
 
-@app.server.route('/download/<name>/<field>')
-def serve_static(name, field):
+@app.callback(Output('download-link', 'href'),
+              [
+                  Input(component_id='name', component_property='value'),
+                  Input(component_id='field', component_property='value'),
+                  Input(component_id='date-picker', component_property='start_date'),
+                  Input(component_id='date-picker', component_property='end_date')
+               ])
+def update_href(name, field, start_date, end_date):
+    return urllib.parse.quote(f'/download/{name}/{field}/{start_date}/{end_date}')
+
+
+@app.server.route('/download-all/<name>/<field>')
+def download_all(name, field):
     import io
     csv = io.StringIO()
     pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True}}, {'_id': False, field: 1, 'time': 1, },
-                                    sort=[('_id', DESCENDING)]))).rename(
+                                    sort=[('_id', ASCENDING)]))).rename(
+        columns={field: get_name_with_units(name, field)}).to_csv(csv, index=False)
+
+    mem = io.BytesIO()
+    mem.write(csv.getvalue().encode('utf-8'))
+    mem.seek(0)
+
+    return flask.send_file(mem,
+                           mimetype='text/csv',
+                           attachment_filename=f'ngif-[{name}]-[{field}].csv',
+                           as_attachment=True)
+
+
+@app.server.route('/download/<name>/<field>/<start_date>/<end_date>')
+def download(name, field, start_date, end_date):
+    import io
+    csv = io.StringIO()
+    pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True},
+                                     "time": {"$lt": datetime.fromisoformat(end_date) + timedelta(days=1),
+                                              "$gte": datetime.fromisoformat(start_date)}},
+                                    {'_id': False, field: 1, 'time': 1, },
+                                    sort=[('_id', ASCENDING)]))).rename(
         columns={field: get_name_with_units(name, field)}).to_csv(csv, index=False)
 
     mem = io.BytesIO()

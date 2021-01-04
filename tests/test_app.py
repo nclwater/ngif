@@ -1,7 +1,7 @@
 import app
 from unittest import TestCase
 from pymongo import MongoClient
-from datetime import datetime
+from datetime import datetime, date
 
 db = MongoClient(app.server.config['MONGO_URI']).get_database()
 readings = db.readings
@@ -21,4 +21,5 @@ class TestApp(TestCase):
 
     def test_create_plot(self):
 
-        app.create_plot(name='sensor', field='field')
+        app.create_plot(name='sensor', field='field', start_date=date.today().isoformat(),
+                        end_date=date.today().isoformat())
