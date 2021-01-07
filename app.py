@@ -58,7 +58,7 @@ def create_layout():
     start_date = date.today() - timedelta(days=2)
     end_date = date.today()
     name = sensors.names[0] if len(sensors.names) > 0 else None
-    field = list(sensors.units[name].keys())[0]
+    field = list(sensors.units[name].keys())[0] if len(sensors.names) > 0 else None
     return html.Div(children=[
 
         html.H1(children='National Green Infrastructure Facility (NGIF)'),
