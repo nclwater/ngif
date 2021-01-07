@@ -14,7 +14,7 @@ from flask_pymongo import PyMongo, DESCENDING, ASCENDING
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 import urllib.parse
-from datetime import date, timedelta, datetime
+from datetime import timedelta, datetime
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -55,8 +55,8 @@ app = dash.Dash(
 
 def create_layout():
     sensors.update()
-    start_date = date.today() - timedelta(days=2)
-    end_date = date.today()
+    start_date = datetime.utcnow() - timedelta(days=2)
+    end_date = datetime.utcnow()
     name = sensors.names[0] if len(sensors.names) > 0 else None
     field = list(sensors.units[name].keys())[0] if len(sensors.names) > 0 else None
     return html.Div(children=[
@@ -78,8 +78,8 @@ def create_layout():
 
         dcc.DatePickerRange(
             id='date-picker',
-            min_date_allowed=date(1995, 8, 5),
-            max_date_allowed=date.today(),
+            min_date_allowed=datetime(2000, 1, 1),
+            max_date_allowed=end_date,
             start_date=start_date,
             end_date=end_date,
             display_format='DD/MM/YYYY',
