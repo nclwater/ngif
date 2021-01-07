@@ -11,7 +11,7 @@ import pandas as pd
 import flask
 import os
 from flask_pymongo import PyMongo, DESCENDING, ASCENDING
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 import urllib.parse
 from datetime import date, timedelta, datetime
@@ -55,6 +55,10 @@ app = dash.Dash(
 
 def create_layout():
     sensors.update()
+    start_date = date.today() - timedelta(days=2)
+    end_date = date.today()
+    name = sensors.names[0] if len(sensors.names) > 0 else None
+    field = list(sensors.units[name].keys())[0]
     return html.Div(children=[
 
         html.H1(children='National Green Infrastructure Facility (NGIF)'),
@@ -76,27 +80,29 @@ def create_layout():
             id='date-picker',
             min_date_allowed=date(1995, 8, 5),
             max_date_allowed=date.today(),
-            start_date=date.today() - timedelta(days=2),
-            end_date=date.today(),
+            start_date=start_date,
+            end_date=end_date,
             display_format='DD/MM/YYYY',
             minimum_nights=0
         ),
-
-        dcc.Loading(dcc.Graph(id='plot')),
-
+        html.P(),
+        html.A(html.Button('Update Plot'), id='update'),
         html.A(html.Button('Download Selected Period'), id='download-link'),
         html.A(html.Button('Download Entire Series'), id='download-all-link'),
 
+        dcc.Loading(dcc.Graph(id='plot',
+                              figure=create_plot(name, field, start_date.isoformat(), end_date.isoformat()))),
     ])
 
 
 @app.callback(Output(component_id='plot', component_property='figure'),
-              [Input(component_id='name', component_property='value'),
-               Input(component_id='field', component_property='value'),
-               Input(component_id='date-picker', component_property='start_date'),
-               Input(component_id='date-picker', component_property='end_date')
+              [Input('update', 'n_clicks')],
+              [State(component_id='name', component_property='value'),
+               State(component_id='field', component_property='value'),
+               State(component_id='date-picker', component_property='start_date'),
+               State(component_id='date-picker', component_property='end_date')
                ])
-def update_plot(name, field, start_date, end_date):
+def update_plot(_, name, field, start_date, end_date):
     return create_plot(name, field, start_date, end_date)
 
 
