@@ -112,6 +112,7 @@ def create_plot(name, field, start_date, end_date):
     if len(df) > 0:
         fig = px.line(df, x="time", y=field)
         fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': get_name_with_units(name, field)}})
+        fig.update_traces(mode='lines+markers')
     else:
         fig = {}
     return fig
@@ -194,4 +195,4 @@ def download(name, field, start_date, end_date):
 app.layout = create_layout
 
 if __name__ == '__main__':
-    server.run(debug=True, host='0.0.0.0')
+    server.run(debug=True)
