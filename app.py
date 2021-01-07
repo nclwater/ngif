@@ -91,7 +91,8 @@ def create_layout():
         html.A(html.Button('Download Entire Series'), id='download-all-link'),
 
         dcc.Loading(dcc.Graph(id='plot',
-                              figure=create_plot(name, field, start_date.isoformat(), end_date.isoformat()))),
+                              figure=create_plot(name, field, start_date.isoformat(), end_date.isoformat()) if
+                              name is not None else None)),
     ])
 
 
