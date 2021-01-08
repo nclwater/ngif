@@ -55,8 +55,8 @@ app = dash.Dash(
 
 def create_layout():
     sensors.update()
-    start_date = datetime.utcnow() - timedelta(days=2)
-    end_date = datetime.utcnow()
+    start_date = datetime.utcnow().date() - timedelta(days=2)
+    end_date = datetime.utcnow().date()
     name = sensors.names[0] if len(sensors.names) > 0 else None
     field = list(sensors.units[name].keys())[0] if len(sensors.names) > 0 else None
     return html.Div(children=[
@@ -79,7 +79,7 @@ def create_layout():
         dcc.DatePickerRange(
             id='date-picker',
             min_date_allowed=datetime(2000, 1, 1),
-            max_date_allowed=end_date,
+            max_date_allowed=end_date + timedelta(days=1),  # https://github.com/plotly/dash-core-components/issues/867
             start_date=start_date,
             end_date=end_date,
             display_format='DD/MM/YYYY',
