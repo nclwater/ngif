@@ -27,22 +27,22 @@ readings = mongo.db.readings
 
 class Sensors:
     def __init__(self):
-        self.units = None
+        self.metadata = None
         self.names = None
         self.update()
 
     def update(self):
-        self.units = {sensor['name']: {k: v for k, v in sensor.items() if k != 'name'}
-                      for sensor in list(mongo.db.sensors.find({}, {'_id': False}, sort=[('name', ASCENDING)]))}
+        self.metadata = {sensor['name']: {k: v for k, v in sensor.items() if k != 'name'}
+                         for sensor in list(mongo.db.sensors.find({}, {'_id': False}, sort=[('name', ASCENDING)]))}
 
-        self.names = list(self.units.keys())
+        self.names = list(self.metadata.keys())
 
 
 sensors = Sensors()
 
 
 def get_name_with_units(name, field):
-    return f'{field} ({sensors.units[name][field]})'
+    return f'{field} ({sensors.metadata[name][field]["units"]})'
 
 
 app = dash.Dash(
@@ -58,7 +58,7 @@ def create_layout():
     start_date = datetime.utcnow().date() - timedelta(days=2)
     end_date = datetime.utcnow().date()
     name = sensors.names[0] if len(sensors.names) > 0 else None
-    field = list(sensors.units[name].keys())[0] if len(sensors.names) > 0 else None
+    field = list(sensors.metadata[name].keys())[0] if len(sensors.names) > 0 else None
     return html.Div(children=[
 
         html.H1(children='National Green Infrastructure Facility (NGIF)'),
@@ -130,7 +130,7 @@ def create_plot(name, field, start_date, end_date):
 def update_fields(name):
     if name is None:
         raise PreventUpdate
-    return [{'label': n, 'value': n} for n in sensors.units[name].keys()]
+    return [{'label': n, 'value': n} for n in sensors.metadata[name].keys()]
 
 
 @app.callback(
@@ -202,4 +202,4 @@ def download(name, field, start_date, end_date):
 app.layout = create_layout
 
 if __name__ == '__main__':
-    server.run(debug=True)
+    app.run_server(debug=True)
