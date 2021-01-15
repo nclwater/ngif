@@ -6,6 +6,7 @@
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
+import dash_table
 import plotly.express as px
 import pandas as pd
 import flask
@@ -93,7 +94,44 @@ def create_layout():
         dcc.Loading(dcc.Graph(id='plot',
                               figure=create_plot(name, field, start_date.isoformat(), end_date.isoformat()) if
                               name is not None else None)),
+        dash_table.DataTable(
+            id='table',
+            columns=[
+                {"name": name.title(), "id": name, "deletable": False, "selectable": False} for i, name in
+                enumerate(['sensor', 'field', 'units', 'time of last reading', 'value of last reading'])
+            ],
+            data=get_table_data(),
+            editable=False,
+            filter_action="native",
+            sort_action="native",
+            sort_mode="multi",
+            row_deletable=False,
+            cell_selectable=False,
+            page_action="native",
+            page_current=0,
+            page_size=10,
+        ),
+        html.A('Download metadata table', href='/download-metadata')
     ])
+
+
+@app.callback(Output(component_id='table', component_property='data'),
+              [Input('update', 'n_clicks')])
+def update_table(_):
+    return get_table_data()
+
+
+def get_table_data():
+    rows = []
+    for sensor, fields in sensors.metadata.items():
+        for field in fields.keys():
+            metadata = fields[field]
+            units = metadata.get('units')
+            last_updated = metadata.get('last_updated')
+            last_value = metadata.get('last_value')
+            rows.append({'sensor': sensor, 'field': field, 'units': units, 'time of last reading': str(last_updated),
+                         'value of last reading': str(last_value), 'id': f'{sensor}.{field}'})
+    return rows
 
 
 @app.callback(Output(component_id='plot', component_property='figure'),
@@ -175,6 +213,22 @@ def download_all(name, field):
     return flask.send_file(mem,
                            mimetype='text/csv',
                            attachment_filename=f'ngif-[{name}]-[{field}].csv',
+                           as_attachment=True)
+
+
+@app.server.route('/download-metadata')
+def download_metadata():
+    import io
+    csv = io.StringIO()
+    pd.DataFrame(get_table_data()).drop('id', axis=1).to_csv(csv, index=False)
+
+    mem = io.BytesIO()
+    mem.write(csv.getvalue().encode('utf-8'))
+    mem.seek(0)
+
+    return flask.send_file(mem,
+                           mimetype='text/csv',
+                           attachment_filename=f'ngif-metadata.csv',
                            as_attachment=True)
 
 
