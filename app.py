@@ -246,7 +246,7 @@ def download_all(name, field):
 
     return flask.send_file(mem,
                            mimetype='text/csv',
-                           attachment_filename=f'ngif-[{name}]-[{field}].csv',
+                           attachment_filename=f'ngif-[{get_name(name)}]-[{get_field(field)}].csv',
                            as_attachment=True)
 
 
@@ -283,7 +283,7 @@ def download(name, field, start_date, end_date):
 
     return flask.send_file(mem,
                            mimetype='text/csv',
-                           attachment_filename=f'ngif-[{name}]-[{field}].csv',
+                           attachment_filename=f'ngif-[{get_name(name)}]-[{get_field(field)}].csv',
                            as_attachment=True)
 
 
