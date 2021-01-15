@@ -1,0 +1,991 @@
+﻿Current name,Current field,units,,To keep?,New name,New field,New units,Resolution,Long. Lat,Weather,Rainfall,Outflow (drain gauge),Soil moisture/VWC,Soil temperature,Soil electrical conductivity,Soil tension/pressure,Water depth,Runoff simulator,Rel Humidity,Air temperature,Barometric pressure,Evapotranspiration,Wind,Wind direction,Wind speed,Power,Solar radiation,PLEXUS,Swale,UGDaMS,CACTUS,ACHILLES,Biochar,City wide,Green roof,NGIF other,Lysimeter,Ensemble,Swale,Green roof,Cell A,Cell B
+GP2-10-68 (Ensemble F + Pavement),Drain_F1#@15m,ml,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),Drain_F2#@15m,ml,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),Drain_F3#@15m,ml,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_ECb_200,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_ECb_400,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_ECb_600,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_ECb_800,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_Psi_200,kPa,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_Psi_400,kPa,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_Psi_600,kPa,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_Psi_800,kPa,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_SoilTemp(2)_200,deg C,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_SoilTemp(2)_400,deg C,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_SoilTemp(2)_600,deg C,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_SoilTemp(2)_800,deg C,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_SoilTemp_200,deg C,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_SoilTemp_400,deg C,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_SoilTemp_600,deg C,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_SoilTemp_800,deg C,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_Theta_200,%,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_Theta_400,%,,Y,Ensemble F,,,,"54.974420, -1.625904",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_Theta_600,%,,Y,Ensemble F,,,,"54.974420, -1.625925",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F1_Theta_800,%,,Y,Ensemble F,,,,"54.974420, -1.625926",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_ECb_200,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625927",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_ECb_400,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625928",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_ECb_600,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625929",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_ECb_800,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625930",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_Psi_200,kPa,,Y,Ensemble F,,,,"54.974420, -1.625931",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_Psi_400,kPa,,Y,Ensemble F,,,,"54.974420, -1.625932",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_Psi_600,kPa,,Y,Ensemble F,,,,"54.974420, -1.625933",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_Psi_800,kPa,,Y,Ensemble F,,,,"54.974420, -1.625934",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_SoilTemp(2)_200,deg C,,Y,Ensemble F,,,,"54.974420, -1.625935",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_SoilTemp(2)_400,deg C,,Y,Ensemble F,,,,"54.974420, -1.625936",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_SoilTemp(2)_600,deg C,,Y,Ensemble F,,,,"54.974420, -1.625937",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_SoilTemp(2)_800,deg C,,Y,Ensemble F,,,,"54.974420, -1.625938",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_SoilTemp_200,deg C,,Y,Ensemble F,,,,"54.974420, -1.625939",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_SoilTemp_400,deg C,,Y,Ensemble F,,,,"54.974420, -1.625940",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_SoilTemp_600,deg C,,Y,Ensemble F,,,,"54.974420, -1.625941",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_SoilTemp_800,deg C,,Y,Ensemble F,,,,"54.974420, -1.625942",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_Theta_200,%,,Y,Ensemble F,,,,"54.974420, -1.625943",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_Theta_400,%,,Y,Ensemble F,,,,"54.974420, -1.625944",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_Theta_600,%,,Y,Ensemble F,,,,"54.974420, -1.625945",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F2_Theta_800,%,,Y,Ensemble F,,,,"54.974420, -1.625946",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_ECb_200,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625947",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_ECb_400,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625948",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_ECb_600,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625949",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_ECb_800,mS.m-1,,Y,Ensemble F,,,,"54.974420, -1.625950",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_Psi_200,kPa,,Y,Ensemble F,,,,"54.974420, -1.625951",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_Psi_400,kPa,,Y,Ensemble F,,,,"54.974420, -1.625952",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_Psi_600,kPa,,Y,Ensemble F,,,,"54.974420, -1.625953",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_Psi_800,kPa,,Y,Ensemble F,,,,"54.974420, -1.625954",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_SoilTemp(2)_200,deg C,,Y,Ensemble F,,,,"54.974420, -1.625955",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_SoilTemp(2)_400,deg C,,Y,Ensemble F,,,,"54.974420, -1.625956",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_SoilTemp(2)_600,deg C,,Y,Ensemble F,,,,"54.974420, -1.625957",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_SoilTemp(2)_800,deg C,,Y,Ensemble F,,,,"54.974420, -1.625958",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_SoilTemp_200,deg C,,Y,Ensemble F,,,,"54.974420, -1.625959",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_SoilTemp_400,deg C,,Y,Ensemble F,,,,"54.974420, -1.625960",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_SoilTemp_600,deg C,,Y,Ensemble F,,,,"54.974420, -1.625961",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_SoilTemp_800,deg C,,Y,Ensemble F,,,,"54.974420, -1.625962",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_Theta_200,%,,Y,Ensemble F,,,,"54.974420, -1.625963",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_Theta_400,%,,Y,Ensemble F,,,,"54.974420, -1.625964",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_Theta_600,%,,Y,Ensemble F,,,,"54.974420, -1.625965",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),F3_Theta_800,%,,Y,Ensemble F,,,,"54.974420, -1.625966",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),Pavement Runoff#@15m,ml,,Y,Ensemble F,,,,"54.974420, -1.625967",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-68 (Ensemble F + Pavement),Power,V,,Y,Ensemble F,,,,"54.974420, -1.625968",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-62 (Lysimeter 2),Drain gauge#@15m,ml,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),ECb 100 C,mS.m-1,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),ECb 100 D,mS.m-1,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),ECb 500 C,mS.m-1,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),ECb 500 D,mS.m-1,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),ECb 800 C,mS.m-1,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),ECb 800 D,mS.m-1,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),Power,V,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),SoilTemp 100 C,deg C,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),SoilTemp 100 D,deg C,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),SoilTemp 500 C,deg C,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),SoilTemp 500 D,deg C,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),SoilTemp 800 C,deg C,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),SoilTemp 800 D,deg C,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),Theta 100 C,%,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),Theta 100 D,%,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),Theta 500 C,%,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),Theta 500 D,%,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),Theta 800 C,%,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-62 (Lysimeter 2),Theta 800 D,%,,Y,Lysimeter 2,,,,"54.973455, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Hairgrass##Canopy LAI,degrees,,N,Lysimeter 6,,,,"54.973675, -1.625813",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Hairgrass##Canopy albedo,degrees,,N,Lysimeter 6,,,,"54.973675, -1.625813",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Hairgrass##Canopy height,Count,,N,Lysimeter 6,,,,"54.973675, -1.625815",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Hairgrass##Surface resistance (day),mm,,N,Lysimeter 6,,,,"54.973675, -1.625816",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Hairgrass##Surface resistance (night),degrees,,N,Lysimeter 6,,,,"54.973675, -1.625817",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Iris##Canopy LAI,V,,N,Lysimeter 6,,,,"54.973675, -1.625818",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Iris##Canopy albedo,,,N,Lysimeter 6,,,,"54.973675, -1.625819",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Iris##Canopy height,s.m-1,,N,Lysimeter 6,,,,"54.973675, -1.625820",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Iris##Surface resistance (day),s.m-1,,N,Lysimeter 6,,,,"54.973675, -1.625821",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),#ET (P-M) - Mono-cropped Iris##Surface resistance (night),,,N,Lysimeter 6,,,,"54.973675, -1.625822",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Abtew Coefficient,,,N,Lysimeter 6,,,,"54.973675, -1.625823",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Air temperature - GP2,Degrees,,Y,Lysimeter 6,Air temperature,°C,15 min,"54.973675, -1.625824",Y,,,,,,,,,,Y,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Barometric pressure - GP2,mm,,Y,Lysimeter 6,Barometric pressure,hPa,15 min,"54.973675, -1.625825",Y,,,,,,,,,,,Y,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),CS320 Calibration - X,mm,,N,Lysimeter 6,,,,"54.973675, -1.625826",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),CS320 Calibration - Y,mm,,N,Lysimeter 6,,,,"54.973675, -1.625827",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),CS320 Calibration - Z,mm,,N,Lysimeter 6,,,,"54.973675, -1.625828",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Counter#@15m,m/s,,Y,Lysimeter 6,Outflow,Tips,15 min,"54.973675, -1.625829",,,Y,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Bare Earth#@15m/15m,mm,,Y,Lysimeter 6,ETo (Bare earth) - 15 minutes,mm,15 min,"54.973675, -1.625830",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Bare Earth-Cumul1@15m,mm,,N,Lysimeter 6,,,,"54.973675, -1.625831",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Bare Earth-Cumul1@1d,mm,,N,Lysimeter 6,,,,"54.973675, -1.625832",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Bare Earth-CumulDaily1@15m,mm,,Y,Lysimeter 6,ETo (Bare earth) - Cumulative daily,mm,15 min,"54.973675, -1.625833",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Bare Earth-Tot1@1d,mm,,Y,Lysimeter 6,Daily ETo (Bare earth),mm,1 day,"54.973675, -1.625834",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Hairgrass#@15m/15m,mm,,N,Lysimeter 6,,,,"54.973675, -1.625835",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Hairgrass-Cumul5@15m,mm,,N,Lysimeter 6,,,,"54.973675, -1.625836",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Hairgrass-Cumul5@1d,mm.d-1,,N,Lysimeter 6,,,,"54.973675, -1.625837",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Hairgrass-CumulDaily5@15m,mm,,N,Lysimeter 6,,,,"54.973675, -1.625838",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Hairgrass-Tot5@1d,mm.d-1,,N,Lysimeter 6,,,,"54.973675, -1.625839",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Iris#@15m/15m,mm,,N,Lysimeter 6,,,,"54.973675, -1.625840",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Iris-Cumul4@15m,mm,,N,Lysimeter 6,,,,"54.973675, -1.625841",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Iris-Cumul4@1d,mm.d-1,,N,Lysimeter 6,,,,"54.973675, -1.625842",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Iris-CumulDaily4@15m,mm,,N,Lysimeter 6,,,,"54.973675, -1.625843",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Mono-cropped Iris-Tot4@1d,MJ/m^2,,N,Lysimeter 6,,,,"54.973675, -1.625844",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Reference (Grass) - Ensembles#@15m/15m,mm,,N,Lysimeter 6,,,,"54.973675, -1.625845",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Reference (Grass) - Ensembles-Cumul6@1d,deg C,,N,Lysimeter 6,,,,"54.973675, -1.625846",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Reference (Grass) - Ensembles-Tot6@1d,mm.d-1,,N,Lysimeter 6,,,,"54.973675, -1.625847",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Reference (Grass)#@15m/15m,mm,,Y,Lysimeter 6,ETo (Reference grass) - 15 minutes,mm,15 min,"54.973675, -1.625848",,,,,,,,,,,,,Y,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Reference (Grass)-Cumul2@15m,mm,,N,Lysimeter 6,,,,"54.973675, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Reference (Grass)-Cumul2@1d,mm,,N,Lysimeter 6,,,,"54.973675, -1.625850",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Reference (Grass)-CumulDaily2@15m,mm,,Y,Lysimeter 6,ETo (Reference grass) - Cumulative daily,mm,15 min,"54.973675, -1.625851",,,,,,,,,,,,,Y,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Reference (Grass)-Tot2@1d,mm,,Y,Lysimeter 6,Daily ETo (Reference grass),mm,1 day,"54.973675, -1.625852",,,,,,,,,,,,,Y,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET (P-M) - Reference (Tall)#@15m/15m,mm,,Y,Lysimeter 6,Eto (Reference tall crop) - 15 minutes,mm,15 min,"54.973675, -1.625853",,,,,,,,,,,,,Y,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),ET Hargreaves,W.m-2,,N,Lysimeter 6,,,,"54.973675, -1.625854",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Hargreaves 'a' Coefficient,m,,N,Lysimeter 6,,,,"54.973675, -1.625855",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Hargreaves 'b' Coefficient,s.m-1,,N,Lysimeter 6,,,,"54.973675, -1.625856",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),McCloud 'K' Coefficient,,,N,Lysimeter 6,,,,"54.973675, -1.625857",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),McCloud 'W' Coefficient,m,,N,Lysimeter 6,,,,"54.973675, -1.625858",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Power,m/s,,Y,Lysimeter 6,Power,V,15 min,"54.973675, -1.625859",,,,,,,,,,,,,,,,,Y,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),RainGauge#@15m,m/s,,Y,Lysimeter 6,Rain - 15 minutes,mm,15 min,"54.973675, -1.625860",Y,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),RainGauge#@1h,mm,,Y,Lysimeter 6,Rain - Hourly,mm,1 hour,"54.973675, -1.625861",Y,Y,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),RainGauge#@5m,mm,,Y,Lysimeter 6,Rain - 5 minutes,mm,5 min,"54.973675, -1.625862",Y,Y,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Relative humidity - GP2,Degrees,,Y,Lysimeter 6,Relative humidity,%,15 min,"54.973675, -1.625863",Y,Y,,,,,,,,Y,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Sensor temperature (CS320),mm,,Y,Lysimeter 6,Solar radiation sensor temperature,°C,15 min,"54.973675, -1.625864",Y,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Solar radiation,mm,,Y,Lysimeter 6,Solar radiation,W/m²,15 min,"54.973675, -1.625865",Y,,,,,,,,,,,,,,,,,Y,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Solar radiation-Intg,%,,Y,Lysimeter 6,Daily flux,kW/m²,15 min,"54.973675, -1.625866",Y,,,,,,,,,,,,,,,,,Y,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Turc Coefficient,s.m-1,,N,Lysimeter 6,,,,"54.973675, -1.625867",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Wind direction (average) - GP2,%,,Y,Lysimeter 6,Wind direction (average),°,15 min,"54.973675, -1.625868",Y,,,,,,,,,,,,,Y,Y,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Wind direction (maximum) - GP2,hPa,,Y,Lysimeter 6,Wind direction (maximum),°,15 min,"54.973675, -1.625869",Y,,,,,,,,,,,,,Y,Y,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Wind direction (minimum) - GP2,deg C,,Y,Lysimeter 6,Wind direction (minimum),°,15 min,"54.973675, -1.625870",Y,,,,,,,,,,,,,Y,Y,,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Wind speed (average) - GP2,W.m-2,,Y,Lysimeter 6,Wind speed (average),m/s,15 min,"54.973675, -1.625871",Y,,,,,,,,,,,,,Y,,Y,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Wind speed (maximum) - GP2,Degrees,,Y,Lysimeter 6,Wind speed (maximum),m/s,15 min,"54.973675, -1.625872",Y,,,,,,,,,,,,,Y,,Y,,,,,,,,,,,,Y,,,,,
+GP2-10-76 (Lysimeter 6),Wind speed (minimum) - GP2,deg. C,,Y,Lysimeter 6,Wind speed (minimum),m/s,15 min,"54.973675, -1.625873",Y,,,,,,,,,,,,,Y,,Y,,,,,,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_1_20cm_road,%,,Y,Lysimeter 3,A_5TE_conductivity_1_20cm_road,mS/m,15 min,"54.973499, -1.625843",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_2_60cm_road,%,,Y,Lysimeter 3,A_5TE_conductivity_2_60cm_road,mS/m,15 min,"54.973499, -1.625844",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_3_75cm_road,%,,Y,Lysimeter 3,A_5TE_conductivity_3_75cm_road,mS/m,15 min,"54.973499, -1.625845",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_4_20cm_in,%,,Y,Lysimeter 3,A_5TE_conductivity_4_20cm_in,mS/m,15 min,"54.973499, -1.625846",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_5_60cm_in,%,,Y,Lysimeter 3,A_5TE_conductivity_5_60cm_in,mS/m,15 min,"54.973499, -1.625847",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_1_20cm_road,deg C,,Y,Lysimeter 3,A_5TE_soilmoisture_1_20cm_road,%,5 min,"54.973499, -1.625848",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_2_60cm_road,deg C,,Y,Lysimeter 3,A_5TE_soilmoisture_2_60cm_road,%,5 min,"54.973499, -1.625849",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_3_75cm_road,deg C,,Y,Lysimeter 3,A_5TE_soilmoisture_3_75cm_road,%,5 min,"54.973499, -1.625850",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_4_20cm_in,deg C,,Y,Lysimeter 3,A_5TE_soilmoisture_4_20cm_in,%,5 min,"54.973499, -1.625851",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_5_60cm_in,deg C,,Y,Lysimeter 3,A_5TE_soilmoisture_5_60cm_in,%,5 min,"54.973499, -1.625852",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_1_20cm_road,mS/m,,Y,Lysimeter 3,A_5TE_temperature_1_20cm_road,°C,15 min,"54.973499, -1.625853",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_2_60cm_road,mS/m,,Y,Lysimeter 3,A_5TE_temperature_2_60cm_road,°C,15 min,"54.973499, -1.625854",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_3_75cm_road,mS/m,,Y,Lysimeter 3,A_5TE_temperature_3_75cm_road,°C,15 min,"54.973499, -1.625855",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_4_20cm_in,mS/m,,Y,Lysimeter 3,A_5TE_temperature_4_20cm_in,°C,15 min,"54.973499, -1.625856",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_5_60cm_in,mS/m,,Y,Lysimeter 3,A_5TE_temperature_5_60cm_in,°C,15 min,"54.973499, -1.625857",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_100cm,Perm,,Y,Lysimeter 3,A_SoilVUE_EC_100cm,mS/m,15 min,"54.973499, -1.625858",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_10cm,mS/m,,Y,Lysimeter 3,A_SoilVUE_EC_10cm,mS/m,15 min,"54.973499, -1.625859",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_20cm,mS/m,,Y,Lysimeter 3,A_SoilVUE_EC_20cm,mS/m,15 min,"54.973499, -1.625860",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_30cm,mS/m,,Y,Lysimeter 3,A_SoilVUE_EC_30cm,mS/m,15 min,"54.973499, -1.625861",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_40cm,mS/m,,Y,Lysimeter 3,A_SoilVUE_EC_40cm,mS/m,15 min,"54.973499, -1.625862",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_50cm,mS/m,,Y,Lysimeter 3,A_SoilVUE_EC_50cm,mS/m,15 min,"54.973499, -1.625863",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_5cm,mS/m,,Y,Lysimeter 3,A_SoilVUE_EC_5cm,mS/m,15 min,"54.973499, -1.625864",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_60cm,mS/m,,Y,Lysimeter 3,A_SoilVUE_EC_60cm,mS/m,15 min,"54.973499, -1.625865",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_75cm,Perm,,Y,Lysimeter 3,A_SoilVUE_EC_75cm,mS/m,15 min,"54.973499, -1.625866",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_100cm,mS/m,,Y,Lysimeter 3,A_SoilVUE_VWC_100cm,%,5 min,"54.973499, -1.625867",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_10cm,%,,Y,Lysimeter 3,A_SoilVUE_VWC_10cm,%,5 min,"54.973499, -1.625868",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_20cm,%,,Y,Lysimeter 3,A_SoilVUE_VWC_20cm,%,5 min,"54.973499, -1.625869",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_30cm,%,,Y,Lysimeter 3,A_SoilVUE_VWC_30cm,%,5 min,"54.973499, -1.625870",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_40cm,%,,Y,Lysimeter 3,A_SoilVUE_VWC_40cm,%,5 min,"54.973499, -1.625871",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_50cm,%,,Y,Lysimeter 3,A_SoilVUE_VWC_50cm,%,5 min,"54.973499, -1.625872",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_5cm,%,,Y,Lysimeter 3,A_SoilVUE_VWC_5cm,%,5 min,"54.973499, -1.625873",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_60cm,%,,Y,Lysimeter 3,A_SoilVUE_VWC_60cm,%,5 min,"54.973499, -1.625874",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_75cm,mS/m,,Y,Lysimeter 3,A_SoilVUE_VWC_75cm,%,5 min,"54.973499, -1.625875",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_100cm,deg C,,Y,Lysimeter 3,A_SoilVUE_perm_100cm,ε,15 min,"54.973499, -1.625876",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_10cm,Perm,,Y,Lysimeter 3,A_SoilVUE_perm_10cm,ε,15 min,"54.973499, -1.625877",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_20cm,Perm,,Y,Lysimeter 3,A_SoilVUE_perm_20cm,ε,15 min,"54.973499, -1.625878",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_30cm,Perm,,Y,Lysimeter 3,A_SoilVUE_perm_30cm,ε,15 min,"54.973499, -1.625879",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_40cm,Perm,,Y,Lysimeter 3,A_SoilVUE_perm_40cm,ε,15 min,"54.973499, -1.625880",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_50cm,Perm,,Y,Lysimeter 3,A_SoilVUE_perm_50cm,ε,15 min,"54.973499, -1.625881",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_5cm,Perm,,Y,Lysimeter 3,A_SoilVUE_perm_5cm,ε,15 min,"54.973499, -1.625882",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_60cm,Perm,,Y,Lysimeter 3,A_SoilVUE_perm_60cm,ε,15 min,"54.973499, -1.625883",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_75cm,deg C,,Y,Lysimeter 3,A_SoilVUE_perm_75cm,ε,15 min,"54.973499, -1.625884",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_100cm,%,,Y,Lysimeter 3,A_SoilVUE_temp_100cm,°C,15 min,"54.973499, -1.625885",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_10cm,deg C,,Y,Lysimeter 3,A_SoilVUE_temp_10cm,°C,15 min,"54.973499, -1.625886",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_20cm,deg C,,Y,Lysimeter 3,A_SoilVUE_temp_20cm,°C,15 min,"54.973499, -1.625887",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_30cm,deg C,,Y,Lysimeter 3,A_SoilVUE_temp_30cm,°C,15 min,"54.973499, -1.625888",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_40cm,deg C,,Y,Lysimeter 3,A_SoilVUE_temp_40cm,°C,15 min,"54.973499, -1.625889",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_50cm,deg C,,Y,Lysimeter 3,A_SoilVUE_temp_50cm,°C,15 min,"54.973499, -1.625890",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_5cm,deg C,,Y,Lysimeter 3,A_SoilVUE_temp_5cm,°C,15 min,"54.973499, -1.625891",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_60cm,deg C,,Y,Lysimeter 3,A_SoilVUE_temp_60cm,°C,15 min,"54.973499, -1.625892",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_75cm,%,,Y,Lysimeter 3,A_SoilVUE_temp_75cm,°C,15 min,"54.973499, -1.625893",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_1_20cm_usb,%,,Y,Lysimeter 3,B_5TE_conductivity_1_20cm_usb,mS/m,15 min,"54.973499, -1.625894",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_2_60cm_usb,%,,Y,Lysimeter 3,B_5TE_conductivity_2_60cm_usb,mS/m,15 min,"54.973499, -1.625895",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_3_75cm_usb,%,,Y,Lysimeter 3,B_5TE_conductivity_3_75cm_usb,mS/m,15 min,"54.973499, -1.625896",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_4_20cm_in,%,,Y,Lysimeter 3,B_5TE_conductivity_4_20cm_in,mS/m,15 min,"54.973499, -1.625897",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_5_60cm_in,kPa,,Y,Lysimeter 3,B_5TE_conductivity_5_60cm_in,mS/m,15 min,"54.973499, -1.625898",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_1_20cm_usb,deg C,,Y,Lysimeter 3,B_5TE_soilmoisture_1_20cm_usb,%,5 min,"54.973499, -1.625899",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_2_60cm_usb,deg C,,Y,Lysimeter 3,B_5TE_soilmoisture_2_60cm_usb,%,5 min,"54.973499, -1.625900",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_3_75cm_usb,deg C,,Y,Lysimeter 3,B_5TE_soilmoisture_3_75cm_usb,%,5 min,"54.973499, -1.625901",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_4_20cm_in,deg C,,Y,Lysimeter 3,B_5TE_soilmoisture_4_20cm_in,%,5 min,"54.973499, -1.625902",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_5_60cm_in,deg C,,Y,Lysimeter 3,B_5TE_soilmoisture_5_60cm_in,%,5 min,"54.973499, -1.625903",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_1_20cm_usb,mS/m,,Y,Lysimeter 3,B_5TE_temperature_1_20cm_usb,°C,15 min,"54.973499, -1.625904",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_2_60cm_usb,mS/m,,Y,Lysimeter 3,B_5TE_temperature_2_60cm_usb,°C,15 min,"54.973499, -1.625905",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_3_75cm_usb,mS/m,,Y,Lysimeter 3,B_5TE_temperature_3_75cm_usb,°C,15 min,"54.973499, -1.625906",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_4_20cm_in,mS/m,,Y,Lysimeter 3,B_5TE_temperature_4_20cm_in,°C,15 min,"54.973499, -1.625907",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_5_60cm_in,cm,,Y,Lysimeter 3,B_5TE_temperature_5_60cm_in,°C,15 min,"54.973499, -1.625908",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_100cm,Perm,,Y,Lysimeter 3,B_SoilVUE_EC_100cm,mS/m,15 min,"54.973499, -1.625909",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_10cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_EC_10cm,mS/m,15 min,"54.973499, -1.625910",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_20cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_EC_20cm,mS/m,15 min,"54.973499, -1.625911",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_30cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_EC_30cm,mS/m,15 min,"54.973499, -1.625912",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_40cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_EC_40cm,mS/m,15 min,"54.973499, -1.625913",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_50cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_EC_50cm,mS/m,15 min,"54.973499, -1.625914",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_5cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_EC_5cm,mS/m,15 min,"54.973499, -1.625915",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_60cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_EC_60cm,mS/m,15 min,"54.973499, -1.625916",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_75cm,Perm,,Y,Lysimeter 3,B_SoilVUE_EC_75cm,mS/m,15 min,"54.973499, -1.625917",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_100cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_VWC_100cm,%,5 min,"54.973499, -1.625918",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_10cm,%,,Y,Lysimeter 3,B_SoilVUE_VWC_10cm,%,5 min,"54.973499, -1.625919",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_20cm,%,,Y,Lysimeter 3,B_SoilVUE_VWC_20cm,%,5 min,"54.973499, -1.625920",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_30cm,%,,Y,Lysimeter 3,B_SoilVUE_VWC_30cm,%,5 min,"54.973499, -1.625921",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_40cm,%,,Y,Lysimeter 3,B_SoilVUE_VWC_40cm,%,5 min,"54.973499, -1.625922",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_50cm,%,,Y,Lysimeter 3,B_SoilVUE_VWC_50cm,%,5 min,"54.973499, -1.625923",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_5cm,%,,Y,Lysimeter 3,B_SoilVUE_VWC_5cm,%,5 min,"54.973499, -1.625924",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_60cm,%,,Y,Lysimeter 3,B_SoilVUE_VWC_60cm,%,5 min,"54.973499, -1.625925",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_75cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_VWC_75cm,%,5 min,"54.973499, -1.625926",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_100cm,mS/m,,Y,Lysimeter 3,B_SoilVUE_perm_100cm,ε,15 min,"54.973499, -1.625927",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_10cm,Perm,,Y,Lysimeter 3,B_SoilVUE_perm_10cm,ε,15 min,"54.973499, -1.625928",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_20cm,Perm,,Y,Lysimeter 3,B_SoilVUE_perm_20cm,ε,15 min,"54.973499, -1.625929",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_30cm,Perm,,Y,Lysimeter 3,B_SoilVUE_perm_30cm,ε,15 min,"54.973499, -1.625930",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_40cm,Perm,,Y,Lysimeter 3,B_SoilVUE_perm_40cm,ε,15 min,"54.973499, -1.625931",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_50cm,Perm,,Y,Lysimeter 3,B_SoilVUE_perm_50cm,ε,15 min,"54.973499, -1.625932",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_5cm,Perm,,Y,Lysimeter 3,B_SoilVUE_perm_5cm,ε,15 min,"54.973499, -1.625933",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_60cm,Perm,,Y,Lysimeter 3,B_SoilVUE_perm_60cm,ε,15 min,"54.973499, -1.625934",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_75cm,%,,Y,Lysimeter 3,B_SoilVUE_perm_75cm,ε,15 min,"54.973499, -1.625935",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_100cm,%,,Y,Lysimeter 3,B_SoilVUE_temp_100cm,°C,15 min,"54.973499, -1.625936",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_10cm,deg C,,Y,Lysimeter 3,B_SoilVUE_temp_10cm,°C,15 min,"54.973499, -1.625937",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_20cm,deg C,,Y,Lysimeter 3,B_SoilVUE_temp_20cm,°C,15 min,"54.973499, -1.625938",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_30cm,deg C,,Y,Lysimeter 3,B_SoilVUE_temp_30cm,°C,15 min,"54.973499, -1.625939",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_40cm,deg C,,Y,Lysimeter 3,B_SoilVUE_temp_40cm,°C,15 min,"54.973499, -1.625940",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_50cm,deg C,,Y,Lysimeter 3,B_SoilVUE_temp_50cm,°C,15 min,"54.973499, -1.625941",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_5cm,deg C,,Y,Lysimeter 3,B_SoilVUE_temp_5cm,°C,15 min,"54.973499, -1.625942",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_60cm,deg C,,Y,Lysimeter 3,B_SoilVUE_temp_60cm,°C,15 min,"54.973499, -1.625943",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_75cm,%,,Y,Lysimeter 3,B_SoilVUE_temp_75cm,°C,15 min,"54.973499, -1.625944",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),Flow Meter (1)#@15m,deg C,,Y,Lysimeter 3,Runoff Simulator - Flow Meter A,ml,15 min,"54.973499, -1.625945",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),Flow Meter (2)#@15m,deg C,,Y,Lysimeter 3,Runoff Simulator - Flow Meter B,ml,15 min,"54.973499, -1.625946",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),Power,ml,,Y,Lysimeter 3,Power,V,15 min,"54.973499, -1.625947",,,,,,,,,,,,,,,,,Y,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge#@15m,ml,,Y,Lysimeter 3,Rain - 15 minutes,mm,15 min,"54.973499, -1.625948",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge#@5m,mm,,Y,Lysimeter 3,Rain - 5 minutes,mm,5 min,"54.973499, -1.625949",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg4,,,Y,Lysimeter 3,Rain - Hourly Average,mm,1 hour,"54.973499, -1.625950",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg5,,,Y,Lysimeter 3,Rain - Daily Average,mm,1 day,"54.973499, -1.625951",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg6,,,N,Lysimeter 3,,,,"54.973499, -1.625952",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Max4,mm,,Y,Lysimeter 3,Rain - Hourly Max,mm,1 hour,"54.973499, -1.625953",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Max5,mm,,Y,Lysimeter 3,Rain - Daily Max,mm,1 day,"54.973499, -1.625954",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Max6,mm,,Y,Lysimeter 3,Rain - Monthly Max,mm,1 month,"54.973499, -1.625955",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Std4,mm,,N,Lysimeter 3,,,,"54.973499, -1.625956",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Std5,mm,,N,Lysimeter 3,,,,"54.973499, -1.625957",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Std6,mm,,N,Lysimeter 3,,,,"54.973499, -1.625958",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax4,mm,,N,Lysimeter 3,,,,"54.973499, -1.625959",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax5,mm,,N,Lysimeter 3,,,,"54.973499, -1.625960",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax6,mm,,N,Lysimeter 3,,,,"54.973499, -1.625961",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot1,mm,,Y,Lysimeter 3,Rain - Hourly Total,mm,1 hour,"54.973499, -1.625962",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot2,mm,,Y,Lysimeter 3,Rain - Daily Total,mm,1 day,"54.973499, -1.625963",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot3,mm,,Y,Lysimeter 3,Rain - Monthly Total,mm,1 month,"54.973499, -1.625964",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGaugeHourlyRainThreshold_10mm/hr#Task#Record,mm/hr,,N,Lysimeter 3,,,,"54.973499, -1.625965",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGaugeHourlyRainThreshold_5mm/hr#Task#Record,mm,,N,Lysimeter 3,,,,"54.973499, -1.625966",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RainGaugeWetDays#Task#Record,ml,,Y,Lysimeter 3,Rain - Wet Days (> 1 mm daily rainfall),mm,1 day,"54.973499, -1.625967",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),Relay (1),V,,Y,Lysimeter 3,Relay Circuit - A,On/Off,-,"54.973499, -1.625968",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),Relay (2),mm,,Y,Lysimeter 3,Relay Circuit - B,On/Off,-,"54.973499, -1.625969",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),RunoffToApply1,ml,,Y,Lysimeter 3,Runoff To Apply,ml,-,"54.973499, -1.625970",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),T8 Tensiometer,mm,,Y,Lysimeter 3,T8 Tensiometer,kPa,15 min,"54.973499, -1.625971",,,,,,,Y,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-65 (Lysimeter GP2 (UGDaMS)),eTape,mm,,Y,Lysimeter 3,eTape,mm,15 min,"54.973499, -1.625972",,,,,,,,Y,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP1-27-21 (GP1),Outflow A (ml),ml,,Y,Lysimeter 4,Outflow A,ml,5 min,"54.973550, -1.625830",,,Y,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP1-27-21 (GP1),Outflow B (ml),ml,,Y,Lysimeter 4,Outflow B,ml,5 min,"54.973550, -1.625831",,,Y,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP1-27-21 (GP1),Power,V,,Y,Lysimeter 4,Power,V,15 min,"54.973550, -1.625832",,,,,,,,,,,,,,,,,Y,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_1_20cm_road,%,,Y,Lysimeter 4,A_5TE_conductivity_1_20cm_road,mS/m,15 min,"54.973550, -1.625833",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_2_60cm_road,%,,Y,Lysimeter 4,A_5TE_conductivity_2_60cm_road,mS/m,15 min,"54.973550, -1.625834",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_3_75cm_road,%,,Y,Lysimeter 4,A_5TE_conductivity_3_75cm_road,mS/m,15 min,"54.973550, -1.625835",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_4_20cm_in,%,,Y,Lysimeter 4,A_5TE_conductivity_4_20cm_in,mS/m,15 min,"54.973550, -1.625836",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_5_60cm_in,%,,Y,Lysimeter 4,A_5TE_conductivity_5_60cm_in,mS/m,15 min,"54.973550, -1.625837",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_1_20cm_road,deg C,,Y,Lysimeter 4,A_5TE_soilmoisture_1_20cm_road,%,5 min,"54.973550, -1.625838",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_2_60cm_road,deg C,,Y,Lysimeter 4,A_5TE_soilmoisture_2_60cm_road,%,5 min,"54.973550, -1.625839",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_3_75cm_road,deg C,,Y,Lysimeter 4,A_5TE_soilmoisture_3_75cm_road,%,5 min,"54.973550, -1.625840",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_4_20cm_in,deg C,,Y,Lysimeter 4,A_5TE_soilmoisture_4_20cm_in,%,5 min,"54.973550, -1.625841",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_5_60cm_in,deg C,,Y,Lysimeter 4,A_5TE_soilmoisture_5_60cm_in,%,5 min,"54.973550, -1.625842",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_1_20cm_road,mS/m,,Y,Lysimeter 4,A_5TE_temperature_1_20cm_road,°C,15 min,"54.973550, -1.625843",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_2_60cm_road,mS/m,,Y,Lysimeter 4,A_5TE_temperature_2_60cm_road,°C,15 min,"54.973550, -1.625844",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_3_75cm_road,mS/m,,Y,Lysimeter 4,A_5TE_temperature_3_75cm_road,°C,15 min,"54.973550, -1.625845",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_4_20cm_in,mS/m,,Y,Lysimeter 4,A_5TE_temperature_4_20cm_in,°C,15 min,"54.973550, -1.625846",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_5_60cm_in,mS/m,,Y,Lysimeter 4,A_5TE_temperature_5_60cm_in,°C,15 min,"54.973550, -1.625847",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_100cm,Perm,,Y,Lysimeter 4,A_SoilVUE_EC_100cm,mS/m,15 min,"54.973550, -1.625848",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_10cm,mS/m,,Y,Lysimeter 4,A_SoilVUE_EC_10cm,mS/m,15 min,"54.973550, -1.625849",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_20cm,mS/m,,Y,Lysimeter 4,A_SoilVUE_EC_20cm,mS/m,15 min,"54.973550, -1.625850",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_30cm,mS/m,,Y,Lysimeter 4,A_SoilVUE_EC_30cm,mS/m,15 min,"54.973550, -1.625851",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_40cm,mS/m,,Y,Lysimeter 4,A_SoilVUE_EC_40cm,mS/m,15 min,"54.973550, -1.625852",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_50cm,mS/m,,Y,Lysimeter 4,A_SoilVUE_EC_50cm,mS/m,15 min,"54.973550, -1.625853",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_5cm,mS/m,,Y,Lysimeter 4,A_SoilVUE_EC_5cm,mS/m,15 min,"54.973550, -1.625854",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_60cm,mS/m,,Y,Lysimeter 4,A_SoilVUE_EC_60cm,mS/m,15 min,"54.973550, -1.625855",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_75cm,Perm,,Y,Lysimeter 4,A_SoilVUE_EC_75cm,mS/m,15 min,"54.973550, -1.625856",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_100cm,mS/m,,Y,Lysimeter 4,A_SoilVUE_VWC_100cm,%,5 min,"54.973550, -1.625857",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_10cm,%,,Y,Lysimeter 4,A_SoilVUE_VWC_10cm,%,5 min,"54.973550, -1.625858",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_20cm,%,,Y,Lysimeter 4,A_SoilVUE_VWC_20cm,%,5 min,"54.973550, -1.625859",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_30cm,%,,Y,Lysimeter 4,A_SoilVUE_VWC_30cm,%,5 min,"54.973550, -1.625860",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_40cm,%,,Y,Lysimeter 4,A_SoilVUE_VWC_40cm,%,5 min,"54.973550, -1.625861",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_50cm,%,,Y,Lysimeter 4,A_SoilVUE_VWC_50cm,%,5 min,"54.973550, -1.625862",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_5cm,%,,Y,Lysimeter 4,A_SoilVUE_VWC_5cm,%,5 min,"54.973550, -1.625863",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_60cm,%,,Y,Lysimeter 4,A_SoilVUE_VWC_60cm,%,5 min,"54.973550, -1.625864",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_75cm,mS/m,,Y,Lysimeter 4,A_SoilVUE_VWC_75cm,%,5 min,"54.973550, -1.625865",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_100cm,deg C,,Y,Lysimeter 4,A_SoilVUE_perm_100cm,ε,15 min,"54.973550, -1.625866",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_10cm,Perm,,Y,Lysimeter 4,A_SoilVUE_perm_10cm,ε,15 min,"54.973550, -1.625867",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_20cm,Perm,,Y,Lysimeter 4,A_SoilVUE_perm_20cm,ε,15 min,"54.973550, -1.625868",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_30cm,Perm,,Y,Lysimeter 4,A_SoilVUE_perm_30cm,ε,15 min,"54.973550, -1.625869",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_40cm,Perm,,Y,Lysimeter 4,A_SoilVUE_perm_40cm,ε,15 min,"54.973550, -1.625870",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_50cm,Perm,,Y,Lysimeter 4,A_SoilVUE_perm_50cm,ε,15 min,"54.973550, -1.625871",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_5cm,Perm,,Y,Lysimeter 4,A_SoilVUE_perm_5cm,ε,15 min,"54.973550, -1.625872",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_60cm,Perm,,Y,Lysimeter 4,A_SoilVUE_perm_60cm,ε,15 min,"54.973550, -1.625873",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_75cm,deg C,,Y,Lysimeter 4,A_SoilVUE_perm_75cm,ε,15 min,"54.973550, -1.625874",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_100cm,%,,Y,Lysimeter 4,A_SoilVUE_temp_100cm,°C,15 min,"54.973550, -1.625875",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_10cm,deg C,,Y,Lysimeter 4,A_SoilVUE_temp_10cm,°C,15 min,"54.973550, -1.625876",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_20cm,deg C,,Y,Lysimeter 4,A_SoilVUE_temp_20cm,°C,15 min,"54.973550, -1.625877",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_30cm,deg C,,Y,Lysimeter 4,A_SoilVUE_temp_30cm,°C,15 min,"54.973550, -1.625878",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_40cm,deg C,,Y,Lysimeter 4,A_SoilVUE_temp_40cm,°C,15 min,"54.973550, -1.625879",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_50cm,deg C,,Y,Lysimeter 4,A_SoilVUE_temp_50cm,°C,15 min,"54.973550, -1.625880",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_5cm,deg C,,Y,Lysimeter 4,A_SoilVUE_temp_5cm,°C,15 min,"54.973550, -1.625881",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_60cm,deg C,,Y,Lysimeter 4,A_SoilVUE_temp_60cm,°C,15 min,"54.973550, -1.625882",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_75cm,%,,Y,Lysimeter 4,A_SoilVUE_temp_75cm,°C,15 min,"54.973550, -1.625883",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_1_20cm_usb,%,,Y,Lysimeter 4,B_5TE_conductivity_1_20cm_usb,mS/m,15 min,"54.973550, -1.625884",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_2_60cm_usb,%,,Y,Lysimeter 4,B_5TE_conductivity_2_60cm_usb,mS/m,15 min,"54.973550, -1.625885",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_3_75cm_usb,%,,Y,Lysimeter 4,B_5TE_conductivity_3_75cm_usb,mS/m,15 min,"54.973550, -1.625886",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_4_20cm_in,%,,Y,Lysimeter 4,B_5TE_conductivity_4_20cm_in,mS/m,15 min,"54.973550, -1.625887",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_5_60cm_in,kPa,,Y,Lysimeter 4,B_5TE_conductivity_5_60cm_in,mS/m,15 min,"54.973550, -1.625888",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_1_20cm_usb,deg C,,Y,Lysimeter 4,B_5TE_soilmoisture_1_20cm_usb,%,5 min,"54.973550, -1.625889",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_2_60cm_usb,deg C,,Y,Lysimeter 4,B_5TE_soilmoisture_2_60cm_usb,%,5 min,"54.973550, -1.625890",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_3_75cm_usb,deg C,,Y,Lysimeter 4,B_5TE_soilmoisture_3_75cm_usb,%,5 min,"54.973550, -1.625891",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_4_20cm_in,deg C,,Y,Lysimeter 4,B_5TE_soilmoisture_4_20cm_in,%,5 min,"54.973550, -1.625892",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_5_60cm_in,deg C,,Y,Lysimeter 4,B_5TE_soilmoisture_5_60cm_in,%,5 min,"54.973550, -1.625893",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_1_20cm_usb,mS/m,,Y,Lysimeter 4,B_5TE_temperature_1_20cm_usb,°C,15 min,"54.973550, -1.625894",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_2_60cm_usb,mS/m,,Y,Lysimeter 4,B_5TE_temperature_2_60cm_usb,°C,15 min,"54.973550, -1.625895",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_3_75cm_usb,mS/m,,Y,Lysimeter 4,B_5TE_temperature_3_75cm_usb,°C,15 min,"54.973550, -1.625896",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_4_20cm_in,mS/m,,Y,Lysimeter 4,B_5TE_temperature_4_20cm_in,°C,15 min,"54.973550, -1.625897",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_5_60cm_in,cm,,Y,Lysimeter 4,B_5TE_temperature_5_60cm_in,°C,15 min,"54.973550, -1.625898",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_100cm,Perm,,Y,Lysimeter 4,B_SoilVUE_EC_100cm,mS/m,15 min,"54.973550, -1.625899",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_10cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_EC_10cm,mS/m,15 min,"54.973550, -1.625900",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_20cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_EC_20cm,mS/m,15 min,"54.973550, -1.625901",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_30cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_EC_30cm,mS/m,15 min,"54.973550, -1.625902",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_40cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_EC_40cm,mS/m,15 min,"54.973550, -1.625903",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_50cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_EC_50cm,mS/m,15 min,"54.973550, -1.625904",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_5cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_EC_5cm,mS/m,15 min,"54.973550, -1.625905",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_60cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_EC_60cm,mS/m,15 min,"54.973550, -1.625906",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_75cm,Perm,,Y,Lysimeter 4,B_SoilVUE_EC_75cm,mS/m,15 min,"54.973550, -1.625907",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_100cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_VWC_100cm,%,5 min,"54.973550, -1.625908",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_10cm,%,,Y,Lysimeter 4,B_SoilVUE_VWC_10cm,%,5 min,"54.973550, -1.625909",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_20cm,%,,Y,Lysimeter 4,B_SoilVUE_VWC_20cm,%,5 min,"54.973550, -1.625910",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_30cm,%,,Y,Lysimeter 4,B_SoilVUE_VWC_30cm,%,5 min,"54.973550, -1.625911",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_40cm,%,,Y,Lysimeter 4,B_SoilVUE_VWC_40cm,%,5 min,"54.973550, -1.625912",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_50cm,%,,Y,Lysimeter 4,B_SoilVUE_VWC_50cm,%,5 min,"54.973550, -1.625913",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_5cm,%,,Y,Lysimeter 4,B_SoilVUE_VWC_5cm,%,5 min,"54.973550, -1.625914",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_60cm,%,,Y,Lysimeter 4,B_SoilVUE_VWC_60cm,%,5 min,"54.973550, -1.625915",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_75cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_VWC_75cm,%,5 min,"54.973550, -1.625916",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_100cm,mS/m,,Y,Lysimeter 4,B_SoilVUE_perm_100cm,ε,15 min,"54.973550, -1.625917",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_10cm,Perm,,Y,Lysimeter 4,B_SoilVUE_perm_10cm,ε,15 min,"54.973550, -1.625918",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_20cm,Perm,,Y,Lysimeter 4,B_SoilVUE_perm_20cm,ε,15 min,"54.973550, -1.625919",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_30cm,Perm,,Y,Lysimeter 4,B_SoilVUE_perm_30cm,ε,15 min,"54.973550, -1.625920",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_40cm,Perm,,Y,Lysimeter 4,B_SoilVUE_perm_40cm,ε,15 min,"54.973550, -1.625921",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_50cm,Perm,,Y,Lysimeter 4,B_SoilVUE_perm_50cm,ε,15 min,"54.973550, -1.625922",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_5cm,Perm,,Y,Lysimeter 4,B_SoilVUE_perm_5cm,ε,15 min,"54.973550, -1.625923",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_60cm,Perm,,Y,Lysimeter 4,B_SoilVUE_perm_60cm,ε,15 min,"54.973550, -1.625924",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_75cm,%,,Y,Lysimeter 4,B_SoilVUE_perm_75cm,ε,15 min,"54.973550, -1.625925",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_100cm,%,,Y,Lysimeter 4,B_SoilVUE_temp_100cm,°C,15 min,"54.973550, -1.625926",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_10cm,deg C,,Y,Lysimeter 4,B_SoilVUE_temp_10cm,°C,15 min,"54.973550, -1.625927",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_20cm,deg C,,Y,Lysimeter 4,B_SoilVUE_temp_20cm,°C,15 min,"54.973550, -1.625928",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_30cm,deg C,,Y,Lysimeter 4,B_SoilVUE_temp_30cm,°C,15 min,"54.973550, -1.625929",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_40cm,deg C,,Y,Lysimeter 4,B_SoilVUE_temp_40cm,°C,15 min,"54.973550, -1.625930",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_50cm,deg C,,Y,Lysimeter 4,B_SoilVUE_temp_50cm,°C,15 min,"54.973550, -1.625931",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_5cm,deg C,,Y,Lysimeter 4,B_SoilVUE_temp_5cm,°C,15 min,"54.973550, -1.625932",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_60cm,deg C,,Y,Lysimeter 4,B_SoilVUE_temp_60cm,°C,15 min,"54.973550, -1.625933",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_75cm,%,,Y,Lysimeter 4,B_SoilVUE_temp_75cm,°C,15 min,"54.973550, -1.625934",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),Flow Meter (1)#@15m,deg C,,Y,Lysimeter 4,Runoff Simulator - Flow Meter A,ml,-,"54.973550, -1.625935",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),Flow Meter (2)#@15m,deg C,,Y,Lysimeter 4,Runoff Simulator - Flow Meter B,ml,-,"54.973550, -1.625936",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),Power,ml,,Y,Lysimeter 4,Power,V,15 min,"54.973550, -1.625937",,,,,,,,,,,,,,,,,Y,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge#@15m,ml,,Y,Lysimeter 4,Rain - 5 minutes,mm,5 min,"54.973550, -1.625938",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge#@5m,mm,,Y,Lysimeter 4,Rain - 15 minutes,mm,15 min,"54.973550, -1.625939",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg4,,,Y,Lysimeter 4,Rain - Hourly Average,mm,1 hour,"54.973550, -1.625940",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg5,,,Y,Lysimeter 4,Rain - Daily Average,mm,1 day,"54.973550, -1.625941",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg6,,,N,Lysimeter 4,,,,"54.973550, -1.625942",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Max4,mm,,Y,Lysimeter 4,Rain - Hourly Max,mm,1 hour,"54.973550, -1.625943",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Max5,mm,,Y,Lysimeter 4,Rain - Daily Max,mm,1 day,"54.973550, -1.625944",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Max6,mm,,Y,Lysimeter 4,Rain - Monthly Max,mm,1 month,"54.973550, -1.625945",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Std4,mm,,N,Lysimeter 4,,,,"54.973550, -1.625946",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Std5,mm,,N,Lysimeter 4,,,,"54.973550, -1.625947",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Std6,mm,,N,Lysimeter 4,,,,"54.973550, -1.625948",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax4,mm,,N,Lysimeter 4,,,,"54.973550, -1.625949",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax5,mm,,N,Lysimeter 4,,,,"54.973550, -1.625950",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax6,mm,,N,Lysimeter 4,,,,"54.973550, -1.625951",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot1,mm,,Y,Lysimeter 4,Rain - Hourly Total,mm,1 hour,"54.973550, -1.625952",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot2,mm,,Y,Lysimeter 4,Rain - Daily Total,mm,1 day,"54.973550, -1.625953",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot3,mm,,Y,Lysimeter 4,Rain - Monthly Total,mm,1 month,"54.973550, -1.625954",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGaugeHourlyRainThreshold_10mm/hr#Task#Record,mm/hr,,N,Lysimeter 4,,,,"54.973550, -1.625955",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGaugeHourlyRainThreshold_5mm/hr#Task#Record,mm,,N,Lysimeter 4,,,,"54.973550, -1.625956",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RainGaugeWetDays#Task#Record,ml,,Y,Lysimeter 4,Rain - Wet Days (> 1 mm daily rainfall),mm,1 day,"54.973550, -1.625957",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),Relay (1),V,,Y,Lysimeter 4,Relay Circuit - A,On/Off,-,"54.973550, -1.625958",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),Relay (2),mm,,Y,Lysimeter 4,Relay Circuit - B,On/Off,-,"54.973550, -1.625959",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),RunoffToApply1,ml,,Y,Lysimeter 4,Runoff To Apply,ml,-,"54.973550, -1.625960",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),T8 Tensiometer,mm,,Y,Lysimeter 4,T8 Tensiometer,kPa,15 min,"54.973550, -1.625961",,,,,,,Y,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-67 (Lysimeter GP2 (UGDaMS)),eTape,mm,,Y,Lysimeter 4,eTape,mm,15 min,"54.973550, -1.625962",,,,,,,,Y,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-24 (Lysimeter 5),ECb100A,mS.m-1,,Y,Lysimeter 5,,,,"54.973600, -1.625830",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),ECb100B,mS.m-1,,Y,Lysimeter 5,,,,"54.973600, -1.625831",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),ECb500A,mS.m-1,,Y,Lysimeter 5,,,,"54.973600, -1.625832",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),ECb500B,mS.m-1,,Y,Lysimeter 5,,,,"54.973600, -1.625833",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),ECb800A,mS.m-1,,Y,Lysimeter 5,,,,"54.973600, -1.625834",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),ECb800B,mS.m-1,,Y,Lysimeter 5,,,,"54.973600, -1.625835",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),Flow_gauge#@15m,ml,,Y,Lysimeter 5,,,,"54.973600, -1.625836",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),Power,V,,Y,Lysimeter 5,,,,"54.973600, -1.625837",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),SoilTemp100A,deg C,,Y,Lysimeter 5,,,,"54.973600, -1.625838",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),SoilTemp100B,deg C,,Y,Lysimeter 5,,,,"54.973600, -1.625839",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),SoilTemp500A,deg C,,Y,Lysimeter 5,,,,"54.973600, -1.625840",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),SoilTemp500B,deg C,,Y,Lysimeter 5,,,,"54.973600, -1.625841",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),SoilTemp800A,deg C,,Y,Lysimeter 5,,,,"54.973600, -1.625842",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),SoilTemp800B,deg C,,Y,Lysimeter 5,,,,"54.973600, -1.625843",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),Theta100A,%,,Y,Lysimeter 5,,,,"54.973600, -1.625844",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),Theta100B,%,,Y,Lysimeter 5,,,,"54.973600, -1.625845",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),Theta500A,%,,Y,Lysimeter 5,,,,"54.973600, -1.625846",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),Theta500B,%,,Y,Lysimeter 5,,,,"54.973600, -1.625847",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),Theta800A,%,,Y,Lysimeter 5,,,,"54.973600, -1.625848",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP2-10-24 (Lysimeter 5),Theta800B,%,,Y,Lysimeter 5,,,,"54.973600, -1.625849",,,,,,,,,,,,,,,,,,,,,,,,Y,,,,Y,,,,,
+GP1-27-23 (GP1),Outflow A (ml),ml,,Y,Lysimeter 3,Outflow A (ml),ml,5 min,"54.973500, -1.625843",,,Y,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP1-27-23 (GP1),Outflow B (ml),ml,,Y,Lysimeter 3,Outflow B (ml),ml,5 min,"54.973500, -1.625844",,,Y,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP1-27-23 (GP1),Power,V,,Y,Lysimeter 3,Power,V,15 min,"54.973500, -1.625845",,,,,,,,,,,,,,,,,Y,,,,,,,,,,,Y,,,,,
+GP2-10-17 (Lysimeter 9),Counter#@15m,ml,,Y,Lysimeter 9,Counter#@15m,Tips,15 min,"54.973828, -1.625789",,,Y,,,,,,,,,,,,,,,,,,,,Y,,,,,Y,,,,,
+GP2-10-17 (Lysimeter 9),Power,V,,Y,Lysimeter 9,Power,V,15 min,"54.973828, -1.625789",,,,,,,,,,,,,,,,,Y,,,,,,Y,,,,,Y,,,,,
+GP1-27-22 (GP1),Outflow A (ml),ml,,Y,Lysimeter 7,Outflow A (ml),ml,5 min,"54.973712, -1.625805",,,Y,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP1-27-22 (GP1),Outflow B (ml),ml,,Y,Lysimeter 7,Outflow B (ml),ml,5 min,"54.973712, -1.625806",,,Y,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP1-27-22 (GP1),Power,V,,Y,Lysimeter 7,Power,V,15 min,"54.973712, -1.625807",,,,,,,,,,,,,,,,,Y,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_1_20cm_road,%,,Y,Lysimeter 7,A_5TE_conductivity_1_20cm_road,mS/m,15 min,"54.973712, -1.625808",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_2_60cm_road,%,,Y,Lysimeter 7,A_5TE_conductivity_2_60cm_road,mS/m,15 min,"54.973712, -1.625809",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_3_75cm_road,%,,Y,Lysimeter 7,A_5TE_conductivity_3_75cm_road,mS/m,15 min,"54.973712, -1.625810",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_4_20cm_in,%,,Y,Lysimeter 7,A_5TE_conductivity_4_20cm_in,mS/m,15 min,"54.973712, -1.625811",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_5_60cm_in,%,,Y,Lysimeter 7,A_5TE_conductivity_5_60cm_in,mS/m,15 min,"54.973712, -1.625812",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_1_20cm_road,deg C,,Y,Lysimeter 7,A_5TE_soilmoisture_1_20cm_road,%,5 min,"54.973712, -1.625813",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_2_60cm_road,deg C,,Y,Lysimeter 7,A_5TE_soilmoisture_2_60cm_road,%,5 min,"54.973712, -1.625814",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_3_75cm_road,deg C,,Y,Lysimeter 7,A_5TE_soilmoisture_3_75cm_road,%,5 min,"54.973712, -1.625815",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_4_20cm_in,deg C,,Y,Lysimeter 7,A_5TE_soilmoisture_4_20cm_in,%,5 min,"54.973712, -1.625816",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_5_60cm_in,deg C,,Y,Lysimeter 7,A_5TE_soilmoisture_5_60cm_in,%,5 min,"54.973712, -1.625817",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_1_20cm_road,mS/m,,Y,Lysimeter 7,A_5TE_temperature_1_20cm_road,°C,15 min,"54.973712, -1.625818",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_2_60cm_road,mS/m,,Y,Lysimeter 7,A_5TE_temperature_2_60cm_road,°C,15 min,"54.973712, -1.625819",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_3_75cm_road,mS/m,,Y,Lysimeter 7,A_5TE_temperature_3_75cm_road,°C,15 min,"54.973712, -1.625820",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_4_20cm_in,mS/m,,Y,Lysimeter 7,A_5TE_temperature_4_20cm_in,°C,15 min,"54.973712, -1.625821",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_5_60cm_in,mS/m,,Y,Lysimeter 7,A_5TE_temperature_5_60cm_in,°C,15 min,"54.973712, -1.625822",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_100cm,Perm,,Y,Lysimeter 7,A_SoilVUE_EC_100cm,mS/m,15 min,"54.973712, -1.625823",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_10cm,mS/m,,Y,Lysimeter 7,A_SoilVUE_EC_10cm,mS/m,15 min,"54.973712, -1.625824",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_20cm,mS/m,,Y,Lysimeter 7,A_SoilVUE_EC_20cm,mS/m,15 min,"54.973712, -1.625825",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_30cm,mS/m,,Y,Lysimeter 7,A_SoilVUE_EC_30cm,mS/m,15 min,"54.973712, -1.625826",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_40cm,mS/m,,Y,Lysimeter 7,A_SoilVUE_EC_40cm,mS/m,15 min,"54.973712, -1.625827",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_50cm,mS/m,,Y,Lysimeter 7,A_SoilVUE_EC_50cm,mS/m,15 min,"54.973712, -1.625828",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_5cm,mS/m,,Y,Lysimeter 7,A_SoilVUE_EC_5cm,mS/m,15 min,"54.973712, -1.625829",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_60cm,mS/m,,Y,Lysimeter 7,A_SoilVUE_EC_60cm,mS/m,15 min,"54.973712, -1.625830",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_75cm,Perm,,Y,Lysimeter 7,A_SoilVUE_EC_75cm,mS/m,15 min,"54.973712, -1.625831",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_100cm,mS/m,,Y,Lysimeter 7,A_SoilVUE_VWC_100cm,%,5 min,"54.973712, -1.625832",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_10cm,%,,Y,Lysimeter 7,A_SoilVUE_VWC_10cm,%,5 min,"54.973712, -1.625833",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_20cm,%,,Y,Lysimeter 7,A_SoilVUE_VWC_20cm,%,5 min,"54.973712, -1.625834",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_30cm,%,,Y,Lysimeter 7,A_SoilVUE_VWC_30cm,%,5 min,"54.973712, -1.625835",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_40cm,%,,Y,Lysimeter 7,A_SoilVUE_VWC_40cm,%,5 min,"54.973712, -1.625836",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_50cm,%,,Y,Lysimeter 7,A_SoilVUE_VWC_50cm,%,5 min,"54.973712, -1.625837",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_5cm,%,,Y,Lysimeter 7,A_SoilVUE_VWC_5cm,%,5 min,"54.973712, -1.625838",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_60cm,%,,Y,Lysimeter 7,A_SoilVUE_VWC_60cm,%,5 min,"54.973712, -1.625839",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_75cm,mS/m,,Y,Lysimeter 7,A_SoilVUE_VWC_75cm,%,5 min,"54.973712, -1.625840",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_100cm,deg C,,Y,Lysimeter 7,A_SoilVUE_perm_100cm,ε,15 min ,"54.973712, -1.625841",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_10cm,Perm,,Y,Lysimeter 7,A_SoilVUE_perm_10cm,ε,15 min,"54.973712, -1.625842",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_20cm,Perm,,Y,Lysimeter 7,A_SoilVUE_perm_20cm,ε,15 min ,"54.973712, -1.625843",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_30cm,Perm,,Y,Lysimeter 7,A_SoilVUE_perm_30cm,ε,15 min ,"54.973712, -1.625844",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_40cm,Perm,,Y,Lysimeter 7,A_SoilVUE_perm_40cm,ε,15 min ,"54.973712, -1.625845",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_50cm,Perm,,Y,Lysimeter 7,A_SoilVUE_perm_50cm,ε,15 min ,"54.973712, -1.625846",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_5cm,Perm,,Y,Lysimeter 7,A_SoilVUE_perm_5cm,ε,15 min ,"54.973712, -1.625847",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_60cm,Perm,,Y,Lysimeter 7,A_SoilVUE_perm_60cm,ε,15 min ,"54.973712, -1.625848",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_75cm,deg C,,Y,Lysimeter 7,A_SoilVUE_perm_75cm,ε,15 min ,"54.973712, -1.625849",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_100cm,%,,Y,Lysimeter 7,A_SoilVUE_temp_100cm,°C,15 min ,"54.973712, -1.625850",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_10cm,deg C,,Y,Lysimeter 7,A_SoilVUE_temp_10cm,°C,15 min ,"54.973712, -1.625851",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_20cm,deg C,,Y,Lysimeter 7,A_SoilVUE_temp_20cm,°C,15 min ,"54.973712, -1.625852",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_30cm,deg C,,Y,Lysimeter 7,A_SoilVUE_temp_30cm,°C,15 min ,"54.973712, -1.625853",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_40cm,deg C,,Y,Lysimeter 7,A_SoilVUE_temp_40cm,°C,15 min ,"54.973712, -1.625854",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_50cm,deg C,,Y,Lysimeter 7,A_SoilVUE_temp_50cm,°C,15 min ,"54.973712, -1.625855",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_5cm,deg C,,Y,Lysimeter 7,A_SoilVUE_temp_5cm,°C,15 min ,"54.973712, -1.625856",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_60cm,deg C,,Y,Lysimeter 7,A_SoilVUE_temp_60cm,°C,15 min ,"54.973712, -1.625857",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_75cm,%,,Y,Lysimeter 7,A_SoilVUE_temp_75cm,°C,15 min ,"54.973712, -1.625858",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_1_20cm_usb,%,,Y,Lysimeter 7,B_5TE_conductivity_1_20cm_usb,mS/m,15 min ,"54.973712, -1.625859",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_2_60cm_usb,%,,Y,Lysimeter 7,B_5TE_conductivity_2_60cm_usb,mS/m,15 min ,"54.973712, -1.625860",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_3_75cm_usb,%,,Y,Lysimeter 7,B_5TE_conductivity_3_75cm_usb,mS/m,15 min ,"54.973712, -1.625861",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_4_20cm_in,%,,Y,Lysimeter 7,B_5TE_conductivity_4_20cm_in,mS/m,15 min ,"54.973712, -1.625862",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_5_60cm_in,kPa,,Y,Lysimeter 7,B_5TE_conductivity_5_60cm_in,mS/m,15 min ,"54.973712, -1.625863",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_1_20cm_usb,deg C,,Y,Lysimeter 7,B_5TE_soilmoisture_1_20cm_usb,%,5 min,"54.973712, -1.625864",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_2_60cm_usb,deg C,,Y,Lysimeter 7,B_5TE_soilmoisture_2_60cm_usb,%,5 min,"54.973712, -1.625865",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_3_75cm_usb,deg C,,Y,Lysimeter 7,B_5TE_soilmoisture_3_75cm_usb,%,5 min,"54.973712, -1.625866",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_4_20cm_in,deg C,,Y,Lysimeter 7,B_5TE_soilmoisture_4_20cm_in,%,5 min,"54.973712, -1.625867",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_5_60cm_in,deg C,,Y,Lysimeter 7,B_5TE_soilmoisture_5_60cm_in,%,5 min,"54.973712, -1.625868",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_1_20cm_usb,mS/m,,Y,Lysimeter 7,B_5TE_temperature_1_20cm_usb,°C,15 min,"54.973712, -1.625869",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_2_60cm_usb,mS/m,,Y,Lysimeter 7,B_5TE_temperature_2_60cm_usb,°C,15 min,"54.973712, -1.625870",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_3_75cm_usb,mS/m,,Y,Lysimeter 7,B_5TE_temperature_3_75cm_usb,°C,15 min,"54.973712, -1.625871",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_4_20cm_in,mS/m,,Y,Lysimeter 7,B_5TE_temperature_4_20cm_in,°C,15 min,"54.973712, -1.625872",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_5_60cm_in,cm,,Y,Lysimeter 7,B_5TE_temperature_5_60cm_in,°C,15 min,"54.973712, -1.625873",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_100cm,Perm,,Y,Lysimeter 7,B_SoilVUE_EC_100cm,mS/m,15 min,"54.973712, -1.625874",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_10cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_EC_10cm,mS/m,15 min,"54.973712, -1.625875",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_20cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_EC_20cm,mS/m,15 min,"54.973712, -1.625876",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_30cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_EC_30cm,mS/m,15 min,"54.973712, -1.625877",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_40cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_EC_40cm,mS/m,15 min,"54.973712, -1.625878",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_50cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_EC_50cm,mS/m,15 min,"54.973712, -1.625879",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_5cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_EC_5cm,mS/m,15 min,"54.973712, -1.625880",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_60cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_EC_60cm,mS/m,15 min,"54.973712, -1.625881",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_75cm,Perm,,Y,Lysimeter 7,B_SoilVUE_EC_75cm,mS/m,15 min,"54.973712, -1.625882",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_100cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_VWC_100cm,%,5 min,"54.973712, -1.625883",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_10cm,%,,Y,Lysimeter 7,B_SoilVUE_VWC_10cm,%,5 min,"54.973712, -1.625884",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_20cm,%,,Y,Lysimeter 7,B_SoilVUE_VWC_20cm,%,5 min,"54.973712, -1.625885",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_30cm,%,,Y,Lysimeter 7,B_SoilVUE_VWC_30cm,%,5 min,"54.973712, -1.625886",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_40cm,%,,Y,Lysimeter 7,B_SoilVUE_VWC_40cm,%,5 min,"54.973712, -1.625887",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_50cm,%,,Y,Lysimeter 7,B_SoilVUE_VWC_50cm,%,5 min,"54.973712, -1.625888",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_5cm,%,,Y,Lysimeter 7,B_SoilVUE_VWC_5cm,%,5 min,"54.973712, -1.625889",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_60cm,%,,Y,Lysimeter 7,B_SoilVUE_VWC_60cm,%,5 min,"54.973712, -1.625890",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_75cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_VWC_75cm,%,5 min,"54.973712, -1.625891",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_100cm,mS/m,,Y,Lysimeter 7,B_SoilVUE_perm_100cm,ε,15 min,"54.973712, -1.625892",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_10cm,Perm,,Y,Lysimeter 7,B_SoilVUE_perm_10cm,ε,15 min,"54.973712, -1.625893",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_20cm,Perm,,Y,Lysimeter 7,B_SoilVUE_perm_20cm,ε,15 min,"54.973712, -1.625894",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_30cm,Perm,,Y,Lysimeter 7,B_SoilVUE_perm_30cm,ε,15 min,"54.973712, -1.625895",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_40cm,Perm,,Y,Lysimeter 7,B_SoilVUE_perm_40cm,ε,15 min,"54.973712, -1.625896",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_50cm,Perm,,Y,Lysimeter 7,B_SoilVUE_perm_50cm,ε,15 min,"54.973712, -1.625897",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_5cm,Perm,,Y,Lysimeter 7,B_SoilVUE_perm_5cm,ε,15 min,"54.973712, -1.625898",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_60cm,Perm,,Y,Lysimeter 7,B_SoilVUE_perm_60cm,ε,15 min,"54.973712, -1.625899",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_75cm,%,,Y,Lysimeter 7,B_SoilVUE_perm_75cm,ε,15 min,"54.973712, -1.625900",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_100cm,%,,Y,Lysimeter 7,B_SoilVUE_temp_100cm,°C,15 min,"54.973712, -1.625901",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_10cm,deg C,,Y,Lysimeter 7,B_SoilVUE_temp_10cm,°C,15 min,"54.973712, -1.625902",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_20cm,deg C,,Y,Lysimeter 7,B_SoilVUE_temp_20cm,°C,15 min,"54.973712, -1.625903",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_30cm,deg C,,Y,Lysimeter 7,B_SoilVUE_temp_30cm,°C,15 min,"54.973712, -1.625904",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_40cm,deg C,,Y,Lysimeter 7,B_SoilVUE_temp_40cm,°C,15 min,"54.973712, -1.625905",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_50cm,deg C,,Y,Lysimeter 7,B_SoilVUE_temp_50cm,°C,15 min,"54.973712, -1.625906",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_5cm,deg C,,Y,Lysimeter 7,B_SoilVUE_temp_5cm,°C,15 min,"54.973712, -1.625907",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_60cm,deg C,,Y,Lysimeter 7,B_SoilVUE_temp_60cm,°C,15 min,"54.973712, -1.625908",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_75cm,%,,Y,Lysimeter 7,B_SoilVUE_temp_75cm,°C,15 min,"54.973712, -1.625909",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),Flow Meter (1)#@15m,deg C,,Y,Lysimeter 7,Runoff Simulator - Flow Meter A,ml,-,"54.973712, -1.625910",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),Flow Meter (2)#@15m,deg C,,Y,Lysimeter 7,Runoff Simulator - Flow Meter B,ml,-,"54.973712, -1.625911",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),Power,ml,,Y,Lysimeter 7,Power,V,15 min,"54.973712, -1.625912",,,,,,,,,,,,,,,,,Y,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge#@15m,ml,,Y,Lysimeter 7,Rain - 15 minutes,mm,15 min,"54.973712, -1.625913",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge#@5m,mm,,Y,Lysimeter 7,Rain - 5 minutes,mm,5 min,"54.973712, -1.625914",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg4,,,Y,Lysimeter 7,Rain - Hourly Average,mm,1 hour,"54.973712, -1.625915",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg5,,,Y,Lysimeter 7,Rain - Daily Average,mm,1 day,"54.973712, -1.625916",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg6,,,N,Lysimeter 7,,,,"54.973712, -1.625917",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Max4,mm,,Y,Lysimeter 7,Rain - Hourly Max,mm,1 hour,"54.973712, -1.625918",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Max5,mm,,Y,Lysimeter 7,Rain - Daily Max,mm,1 day,"54.973712, -1.625919",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Max6,mm,,N,Lysimeter 7,,,,"54.973712, -1.625920",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Std4,mm,,N,Lysimeter 7,,,,"54.973712, -1.625921",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Std5,mm,,N,Lysimeter 7,,,,"54.973712, -1.625922",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Std6,mm,,N,Lysimeter 7,,,,"54.973712, -1.625923",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax4,mm,,N,Lysimeter 7,,,,"54.973712, -1.625924",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax5,mm,,N,Lysimeter 7,,,,"54.973712, -1.625925",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax6,mm,,N,Lysimeter 7,,,,"54.973712, -1.625926",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot1,mm,,Y,Lysimeter 7,Rain - Hourly Total,mm,1 hour,"54.973712, -1.625927",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot2,mm,,Y,Lysimeter 7,Rain - Daily Total,mm,1 day,"54.973712, -1.625928",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot3,mm,,Y,Lysimeter 7,Rain - Monthly Total,mm,1 month,"54.973712, -1.625929",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGaugeHourlyRainThreshold_10mm/hr#Task#Record,mm/hr,,N,Lysimeter 7,,,,"54.973712, -1.625930",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGaugeHourlyRainThreshold_5mm/hr#Task#Record,mm,,N,Lysimeter 7,,,,"54.973712, -1.625931",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RainGaugeWetDays#Task#Record,ml,,Y,Lysimeter 7,Rain - Wet Days (> 1 mm daily rainfall),mm,1 day,"54.973712, -1.625932",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),Relay (1),V,,Y,Lysimeter 7,Relay Circuit - A,On/Off,-,"54.973712, -1.625933",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),Relay (2),mm,,Y,Lysimeter 7,Relay Circuit - B,On/Off,-,"54.973712, -1.625934",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),RunoffToApply1,ml,,Y,Lysimeter 7,Runoff To Apply,ml,-,"54.973712, -1.625935",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),T8 Tensiometer,mm,,Y,Lysimeter 7,T8 Tensiometer,kPa,15 min,"54.973712, -1.625936",,,,,,,Y,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-54 (Lysimeter GP2 (UGDaMS)),eTape,mm,,Y,Lysimeter 7,eTape,mm,15 min,"54.973712, -1.625937",,,,,,,,Y,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-10-16 (PLEXUS),ECb_Z100T0,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625788",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z100T90,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625789",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z250T135,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625790",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z250T45,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625791",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z350T180,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625792",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z350T90,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625793",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z450T135,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625794",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z450T225,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625795",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z550T180,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625796",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z550T270,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625797",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z650T225,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625798",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z650T315,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625799",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z750T0,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625800",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),ECb_Z750T270,mS.m-1,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625801",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),FlowGauge#@15m,ml,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625802",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),FlowGauge#@1m,ml,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625803",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Power,V,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625804",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z100T180,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625805",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z100T270,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625806",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z250T225,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625807",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z250T315,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625808",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z350T0,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625809",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z350T270,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625810",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z450T315,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625811",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z450T45,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625812",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z550T0,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625813",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z550T90,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625814",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z650T135,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625815",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z650T45,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625816",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z750T180,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625817",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Psi_Z750T90,kPa,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625818",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z100T0,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625819",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z100T180,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625820",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z100T270,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625821",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z100T90,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625822",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z250T135,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625823",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z250T225,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625824",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z250T315,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625825",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z250T45,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625826",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z350T0,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625827",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z350T180,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625828",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z350T270,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625829",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z350T90,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625830",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z450T135,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625831",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z450T225,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625832",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z450T315,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625833",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z450T45,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625834",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z550T0,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625835",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z550T180,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625836",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z550T270,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625837",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z550T90,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625838",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z650T135,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625839",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z650T225,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625840",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z650T315,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625841",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z650T45,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625842",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z750T0,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625843",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z750T180,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625844",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z750T270,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625845",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),SoilTemp_Z750T90,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625846",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z100T0,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625847",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z100T90,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625848",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z250T135,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625849",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z250T45,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625850",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z350T180,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625851",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z350T90,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625852",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z450T135,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625853",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z450T225,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625854",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z550T180,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625855",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z550T270,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625856",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z650T225,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625857",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z650T315,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625858",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z750T0,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625859",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),Theta_Z750T270,%,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625860",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,,
+GP2-10-16 (PLEXUS),WaterTemp,deg C,,Y,Lysimeter 10 (PLEXUS),,,,"54.973872, -1.625861",,,,,,,,,,,,,,,,,,,Y,,,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_1_20cm_road,%,,Y,Lysimeter 8,A_5TE_conductivity_1_20cm_road,mS/m,15 min,"54.973753, -1.625804",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_2_60cm_road,%,,Y,Lysimeter 8,A_5TE_conductivity_2_60cm_road,mS/m,15 min,"54.973753, -1.625805",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_3_75cm_road,%,,Y,Lysimeter 8,A_5TE_conductivity_3_75cm_road,mS/m,15 min,"54.973753, -1.625806",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_4_20cm_in,%,,Y,Lysimeter 8,A_5TE_conductivity_4_20cm_in,mS/m,15 min,"54.973753, -1.625807",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_conductivity_5_60cm_in,%,,Y,Lysimeter 8,A_5TE_conductivity_5_60cm_in,mS/m,15 min,"54.973753, -1.625808",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_1_20cm_road,deg C,,Y,Lysimeter 8,A_5TE_soilmoisture_1_20cm_road,%,5 min,"54.973753, -1.625809",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_2_60cm_road,deg C,,Y,Lysimeter 8,A_5TE_soilmoisture_2_60cm_road,%,5 min,"54.973753, -1.625810",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_3_75cm_road,deg C,,Y,Lysimeter 8,A_5TE_soilmoisture_3_75cm_road,%,5 min,"54.973753, -1.625811",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_4_20cm_in,deg C,,Y,Lysimeter 8,A_5TE_soilmoisture_4_20cm_in,%,5 min,"54.973753, -1.625812",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_soilmoisture_5_60cm_in,deg C,,Y,Lysimeter 8,A_5TE_soilmoisture_5_60cm_in,%,5 min,"54.973753, -1.625813",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_1_20cm_road,mS/m,,Y,Lysimeter 8,A_5TE_temperature_1_20cm_road,°C,15 min,"54.973753, -1.625814",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_2_60cm_road,mS/m,,Y,Lysimeter 8,A_5TE_temperature_2_60cm_road,°C,15 min,"54.973753, -1.625815",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_3_75cm_road,mS/m,,Y,Lysimeter 8,A_5TE_temperature_3_75cm_road,°C,15 min,"54.973753, -1.625816",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_4_20cm_in,mS/m,,Y,Lysimeter 8,A_5TE_temperature_4_20cm_in,°C,15 min,"54.973753, -1.625817",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_5TE_temperature_5_60cm_in,mS/m,,Y,Lysimeter 8,A_5TE_temperature_5_60cm_in,°C,15 min,"54.973753, -1.625818",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_100cm,Perm,,Y,Lysimeter 8,A_SoilVUE_EC_100cm,mS/m,15 min,"54.973753, -1.625819",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_10cm,mS/m,,Y,Lysimeter 8,A_SoilVUE_EC_10cm,mS/m,15 min,"54.973753, -1.625820",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_20cm,mS/m,,Y,Lysimeter 8,A_SoilVUE_EC_20cm,mS/m,15 min,"54.973753, -1.625821",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_30cm,mS/m,,Y,Lysimeter 8,A_SoilVUE_EC_30cm,mS/m,15 min,"54.973753, -1.625822",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_40cm,mS/m,,Y,Lysimeter 8,A_SoilVUE_EC_40cm,mS/m,15 min,"54.973753, -1.625823",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_50cm,mS/m,,Y,Lysimeter 8,A_SoilVUE_EC_50cm,mS/m,15 min,"54.973753, -1.625824",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_5cm,mS/m,,Y,Lysimeter 8,A_SoilVUE_EC_5cm,mS/m,15 min,"54.973753, -1.625825",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_60cm,mS/m,,Y,Lysimeter 8,A_SoilVUE_EC_60cm,mS/m,15 min,"54.973753, -1.625826",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_EC_75cm,Perm,,Y,Lysimeter 8,A_SoilVUE_EC_75cm,mS/m,15 min,"54.973753, -1.625827",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_100cm,mS/m,,Y,Lysimeter 8,A_SoilVUE_VWC_100cm,%,5 min,"54.973753, -1.625828",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_10cm,%,,Y,Lysimeter 8,A_SoilVUE_VWC_10cm,%,5 min,"54.973753, -1.625829",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_20cm,%,,Y,Lysimeter 8,A_SoilVUE_VWC_20cm,%,5 min,"54.973753, -1.625830",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_30cm,%,,Y,Lysimeter 8,A_SoilVUE_VWC_30cm,%,5 min,"54.973753, -1.625831",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_40cm,%,,Y,Lysimeter 8,A_SoilVUE_VWC_40cm,%,5 min,"54.973753, -1.625832",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_50cm,%,,Y,Lysimeter 8,A_SoilVUE_VWC_50cm,%,5 min,"54.973753, -1.625833",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_5cm,%,,Y,Lysimeter 8,A_SoilVUE_VWC_5cm,%,5 min,"54.973753, -1.625834",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_60cm,%,,Y,Lysimeter 8,A_SoilVUE_VWC_60cm,%,5 min,"54.973753, -1.625835",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_VWC_75cm,mS/m,,Y,Lysimeter 8,A_SoilVUE_VWC_75cm,%,5 min,"54.973753, -1.625836",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_100cm,deg C,,Y,Lysimeter 8,A_SoilVUE_perm_100cm,ε,15 min,"54.973753, -1.625837",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_10cm,Perm,,Y,Lysimeter 8,A_SoilVUE_perm_10cm,ε,15 min,"54.973753, -1.625838",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_20cm,Perm,,Y,Lysimeter 8,A_SoilVUE_perm_20cm,ε,15 min,"54.973753, -1.625839",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_30cm,Perm,,Y,Lysimeter 8,A_SoilVUE_perm_30cm,ε,15 min,"54.973753, -1.625840",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_40cm,Perm,,Y,Lysimeter 8,A_SoilVUE_perm_40cm,ε,15 min,"54.973753, -1.625841",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_50cm,Perm,,Y,Lysimeter 8,A_SoilVUE_perm_50cm,ε,15 min,"54.973753, -1.625842",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_5cm,Perm,,Y,Lysimeter 8,A_SoilVUE_perm_5cm,ε,15 min,"54.973753, -1.625843",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_60cm,Perm,,Y,Lysimeter 8,A_SoilVUE_perm_60cm,ε,15 min,"54.973753, -1.625844",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_perm_75cm,deg C,,Y,Lysimeter 8,A_SoilVUE_perm_75cm,ε,15 min,"54.973753, -1.625845",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_100cm,%,,Y,Lysimeter 8,A_SoilVUE_temp_100cm,°C,15 min,"54.973753, -1.625846",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_10cm,deg C,,Y,Lysimeter 8,A_SoilVUE_temp_10cm,°C,15 min,"54.973753, -1.625847",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_20cm,deg C,,Y,Lysimeter 8,A_SoilVUE_temp_20cm,°C,15 min,"54.973753, -1.625848",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_30cm,deg C,,Y,Lysimeter 8,A_SoilVUE_temp_30cm,°C,15 min,"54.973753, -1.625849",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_40cm,deg C,,Y,Lysimeter 8,A_SoilVUE_temp_40cm,°C,15 min,"54.973753, -1.625850",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_50cm,deg C,,Y,Lysimeter 8,A_SoilVUE_temp_50cm,°C,15 min,"54.973753, -1.625851",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_5cm,deg C,,Y,Lysimeter 8,A_SoilVUE_temp_5cm,°C,15 min,"54.973753, -1.625852",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_60cm,deg C,,Y,Lysimeter 8,A_SoilVUE_temp_60cm,°C,15 min,"54.973753, -1.625853",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),A_SoilVUE_temp_75cm,%,,Y,Lysimeter 8,A_SoilVUE_temp_75cm,°C,15 min,"54.973753, -1.625854",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_1_20cm_usb,%,,Y,Lysimeter 8,B_5TE_conductivity_1_20cm_usb,mS/m,15 min,"54.973753, -1.625855",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_2_60cm_usb,%,,Y,Lysimeter 8,B_5TE_conductivity_2_60cm_usb,mS/m,15 min,"54.973753, -1.625856",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_3_75cm_usb,%,,Y,Lysimeter 8,B_5TE_conductivity_3_75cm_usb,mS/m,15 min,"54.973753, -1.625857",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_4_20cm_in,%,,Y,Lysimeter 8,B_5TE_conductivity_4_20cm_in,mS/m,15 min,"54.973753, -1.625858",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_conductivity_5_60cm_in,kPa,,Y,Lysimeter 8,B_5TE_conductivity_5_60cm_in,mS/m,15 min,"54.973753, -1.625859",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_1_20cm_usb,deg C,,Y,Lysimeter 8,B_5TE_soilmoisture_1_20cm_usb,%,5 min,"54.973753, -1.625860",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_2_60cm_usb,deg C,,Y,Lysimeter 8,B_5TE_soilmoisture_2_60cm_usb,%,5 min,"54.973753, -1.625861",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_3_75cm_usb,deg C,,Y,Lysimeter 8,B_5TE_soilmoisture_3_75cm_usb,%,5 min,"54.973753, -1.625862",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_4_20cm_in,deg C,,Y,Lysimeter 8,B_5TE_soilmoisture_4_20cm_in,%,5 min,"54.973753, -1.625863",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_soilmoisture_5_60cm_in,deg C,,Y,Lysimeter 8,B_5TE_soilmoisture_5_60cm_in,%,5 min,"54.973753, -1.625864",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_1_20cm_usb,mS/m,,Y,Lysimeter 8,B_5TE_temperature_1_20cm_usb,°C,5 min,"54.973753, -1.625865",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_2_60cm_usb,mS/m,,Y,Lysimeter 8,B_5TE_temperature_2_60cm_usb,°C,5 min,"54.973753, -1.625866",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_3_75cm_usb,mS/m,,Y,Lysimeter 8,B_5TE_temperature_3_75cm_usb,°C,5 min,"54.973753, -1.625867",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_4_20cm_in,mS/m,,Y,Lysimeter 8,B_5TE_temperature_4_20cm_in,°C,5 min,"54.973753, -1.625868",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_5TE_temperature_5_60cm_in,cm,,Y,Lysimeter 8,B_5TE_temperature_5_60cm_in,°C,5 min,"54.973753, -1.625869",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_100cm,Perm,,Y,Lysimeter 8,B_SoilVUE_EC_100cm,mS/m,15 min,"54.973753, -1.625870",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_10cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_EC_10cm,mS/m,15 min,"54.973753, -1.625871",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_20cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_EC_20cm,mS/m,15 min,"54.973753, -1.625872",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_30cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_EC_30cm,mS/m,15 min,"54.973753, -1.625873",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_40cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_EC_40cm,mS/m,15 min,"54.973753, -1.625874",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_50cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_EC_50cm,mS/m,15 min,"54.973753, -1.625875",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_5cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_EC_5cm,mS/m,15 min,"54.973753, -1.625876",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_60cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_EC_60cm,mS/m,15 min,"54.973753, -1.625877",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_EC_75cm,Perm,,Y,Lysimeter 8,B_SoilVUE_EC_75cm,mS/m,15 min,"54.973753, -1.625878",,,,,,Y,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_100cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_VWC_100cm,%,5 min,"54.973753, -1.625879",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_10cm,%,,Y,Lysimeter 8,B_SoilVUE_VWC_10cm,%,5 min,"54.973753, -1.625880",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_20cm,%,,Y,Lysimeter 8,B_SoilVUE_VWC_20cm,%,5 min,"54.973753, -1.625881",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_30cm,%,,Y,Lysimeter 8,B_SoilVUE_VWC_30cm,%,5 min,"54.973753, -1.625882",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_40cm,%,,Y,Lysimeter 8,B_SoilVUE_VWC_40cm,%,5 min,"54.973753, -1.625883",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_50cm,%,,Y,Lysimeter 8,B_SoilVUE_VWC_50cm,%,5 min,"54.973753, -1.625884",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_5cm,%,,Y,Lysimeter 8,B_SoilVUE_VWC_5cm,%,5 min,"54.973753, -1.625885",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_60cm,%,,Y,Lysimeter 8,B_SoilVUE_VWC_60cm,%,5 min,"54.973753, -1.625886",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_VWC_75cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_VWC_75cm,%,5 min,"54.973753, -1.625887",,,,Y,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_100cm,mS/m,,Y,Lysimeter 8,B_SoilVUE_perm_100cm,ε,15 min,"54.973753, -1.625888",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_10cm,Perm,,Y,Lysimeter 8,B_SoilVUE_perm_10cm,ε,15 min,"54.973753, -1.625889",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_20cm,Perm,,Y,Lysimeter 8,B_SoilVUE_perm_20cm,ε,15 min,"54.973753, -1.625890",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_30cm,Perm,,Y,Lysimeter 8,B_SoilVUE_perm_30cm,ε,15 min,"54.973753, -1.625891",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_40cm,Perm,,Y,Lysimeter 8,B_SoilVUE_perm_40cm,ε,15 min,"54.973753, -1.625892",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_50cm,Perm,,Y,Lysimeter 8,B_SoilVUE_perm_50cm,ε,15 min,"54.973753, -1.625893",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_5cm,Perm,,Y,Lysimeter 8,B_SoilVUE_perm_5cm,ε,15 min,"54.973753, -1.625894",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_60cm,Perm,,Y,Lysimeter 8,B_SoilVUE_perm_60cm,ε,15 min,"54.973753, -1.625895",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_perm_75cm,%,,Y,Lysimeter 8,B_SoilVUE_perm_75cm,ε,15 min,"54.973753, -1.625896",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_100cm,%,,Y,Lysimeter 8,B_SoilVUE_temp_100cm,°C,15 min,"54.973753, -1.625897",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_10cm,deg C,,Y,Lysimeter 8,B_SoilVUE_temp_10cm,°C,15 min,"54.973753, -1.625898",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_20cm,deg C,,Y,Lysimeter 8,B_SoilVUE_temp_20cm,°C,15 min,"54.973753, -1.625899",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_30cm,deg C,,Y,Lysimeter 8,B_SoilVUE_temp_30cm,°C,15 min,"54.973753, -1.625900",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_40cm,deg C,,Y,Lysimeter 8,B_SoilVUE_temp_40cm,°C,15 min,"54.973753, -1.625901",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_50cm,deg C,,Y,Lysimeter 8,B_SoilVUE_temp_50cm,°C,15 min,"54.973753, -1.625902",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_5cm,deg C,,Y,Lysimeter 8,B_SoilVUE_temp_5cm,°C,15 min,"54.973753, -1.625903",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_60cm,deg C,,Y,Lysimeter 8,B_SoilVUE_temp_60cm,°C,15 min,"54.973753, -1.625904",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),B_SoilVUE_temp_75cm,%,,Y,Lysimeter 8,B_SoilVUE_temp_75cm,°C,15 min,"54.973753, -1.625905",,,,,Y,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),Flow Meter (1)#@15m,deg C,,Y,Lysimeter 8,Runoff Simulator - Flow Meter A,ml,-,"54.973753, -1.625906",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),Flow Meter (2)#@15m,deg C,,Y,Lysimeter 8,Runoff Simulator - Flow Meter B,ml,-,"54.973753, -1.625907",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),Power,ml,,Y,Lysimeter 8,Power,V,15 min,"54.973753, -1.625908",,,,,,,,,,,,,,,,,Y,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge#@15m,ml,,Y,Lysimeter 8,Rain - 15 minutes,mm,15 min,"54.973753, -1.625909",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge#@5m,mm,,Y,Lysimeter 8,Rain - 5 minutes,mm,5 min,"54.973753, -1.625910",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg4,,,Y,Lysimeter 8,Rain - Hourly Average,mm,1 hour,"54.973753, -1.625911",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg5,,,Y,Lysimeter 8,Rain - Daily Average,mm,1 day,"54.973753, -1.625912",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Avg6,,,N,Lysimeter 8,,,,"54.973753, -1.625913",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Max4,mm,,Y,Lysimeter 8,Rain - Hourly Max,mm,1 hour,"54.973753, -1.625914",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Max5,mm,,Y,Lysimeter 8,Rain - Daily Max,mm,1 day,"54.973753, -1.625915",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Max6,mm,,Y,Lysimeter 8,Rain - Monthly Max,mm,1 month,"54.973753, -1.625916",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Std4,mm,,N,Lysimeter 8,,,,"54.973753, -1.625917",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Std5,mm,,N,Lysimeter 8,,,,"54.973753, -1.625918",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Std6,mm,,N,Lysimeter 8,,,,"54.973753, -1.625919",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax4,mm,,N,Lysimeter 8,,,,"54.973753, -1.625920",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax5,mm,,N,Lysimeter 8,,,,"54.973753, -1.625921",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-TMax6,mm,,N,Lysimeter 8,,,,"54.973753, -1.625922",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot1,mm,,Y,Lysimeter 8,Rain - Hourly Total,mm,1 hour,"54.973753, -1.625923",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot2,mm,,Y,Lysimeter 8,Rain - Daily Total,mm,1 day,"54.973753, -1.625924",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGauge-Tot3,mm,,Y,Lysimeter 8,Rain - Monthly Total,mm,1 month,"54.973753, -1.625925",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGaugeHourlyRainThreshold_10mm/hr#Task#Record,mm/hr,,N,Lysimeter 8,,,,"54.973753, -1.625926",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGaugeHourlyRainThreshold_5mm/hr#Task#Record,mm,,N,Lysimeter 8,,,,"54.973753, -1.625927",,,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RainGaugeWetDays#Task#Record,ml,,Y,Lysimeter 8,Rain - Wet Days (> 1 mm daily rainfall),mm,1 day,"54.973753, -1.625928",Y,Y,,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),Relay (1),V,,Y,Lysimeter 8,Relay Circuit - A,On/Off,-,"54.973753, -1.625929",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),Relay (2),mm,,Y,Lysimeter 8,Relay Circuit - B,On/Off,-,"54.973753, -1.625930",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),RunoffToApply1,ml,,Y,Lysimeter 8,Runoff To Apply,ml,-,"54.973753, -1.625931",,,,,,,,,Y,,,,,,,,,,,,Y,,,,,,,Y,,,,,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),T8 Tensiometer,mm,,Y,Lysimeter 8,T8 Tensiometer,kPa,15 min,"54.973753, -1.625932",,,,,,,Y,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP2-09-100 (Lysimeter GP2 (UGDaMS)),eTape,mm,,Y,Lysimeter 8,eTape,mm,15 min,"54.973753, -1.625933",,,,,,,,Y,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP1-27-20 (GP1),Outflow A (ml),ml,,Y,Lysimeter 8,Outflow A (ml),ml,5 min,"54.973753, -1.625934",,,Y,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,Y,
+GP1-27-20 (GP1),Outflow B (ml),ml,,Y,Lysimeter 8,Outflow B (ml),ml,5 min,"54.973753, -1.625935",,,Y,,,,,,,,,,,,,,,,,,Y,,,,,,,Y,,,,,Y
+GP1-27-20 (GP1),Power,V,,Y,Lysimeter 8,Power,V,15 min,"54.973753, -1.625936",,,,,,,,,,,,,,,,,Y,,,,Y,,,,,,,Y,,,,,
+GP2-10-55 (Ensemble D),D1_ECb_200,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625939",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_ECb_400,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625940",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_ECb_600,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625941",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_ECb_800,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625942",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_Psi_200,kPa,,Y,Ensemble D,,,,"54.974127, -1.625943",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_Psi_400,kPa,,Y,Ensemble D,,,,"54.974127, -1.625944",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_Psi_600,kPa,,Y,Ensemble D,,,,"54.974127, -1.625945",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_Psi_800,kPa,,Y,Ensemble D,,,,"54.974127, -1.625946",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_SoilTemp(2)_200,deg C,,Y,Ensemble D,,,,"54.974127, -1.625947",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_SoilTemp(2)_400,deg C,,Y,Ensemble D,,,,"54.974127, -1.625948",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_SoilTemp(2)_600,deg C,,Y,Ensemble D,,,,"54.974127, -1.625949",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_SoilTemp(2)_800,deg C,,Y,Ensemble D,,,,"54.974127, -1.625950",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_SoilTemp_200,deg C,,Y,Ensemble D,,,,"54.974127, -1.625951",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_SoilTemp_400,deg C,,Y,Ensemble D,,,,"54.974127, -1.625952",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_SoilTemp_600,deg C,,Y,Ensemble D,,,,"54.974127, -1.625953",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_SoilTemp_800,deg C,,Y,Ensemble D,,,,"54.974127, -1.625954",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_Theta_200,%,,Y,Ensemble D,,,,"54.974127, -1.625955",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_Theta_400,%,,Y,Ensemble D,,,,"54.974127, -1.625956",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_Theta_600,%,,Y,Ensemble D,,,,"54.974127, -1.625957",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D1_Theta_800,%,,Y,Ensemble D,,,,"54.974127, -1.625958",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_ECb_200,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625959",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_ECb_400,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625960",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_ECb_600,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625961",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_ECb_800,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625962",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_Psi_200,kPa,,Y,Ensemble D,,,,"54.974127, -1.625963",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_Psi_400,kPa,,Y,Ensemble D,,,,"54.974127, -1.625964",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_Psi_600,kPa,,Y,Ensemble D,,,,"54.974127, -1.625965",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_Psi_800,kPa,,Y,Ensemble D,,,,"54.974127, -1.625966",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_SoilTemp(2)_200,deg C,,Y,Ensemble D,,,,"54.974127, -1.625967",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_SoilTemp(2)_400,deg C,,Y,Ensemble D,,,,"54.974127, -1.625968",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_SoilTemp(2)_600,deg C,,Y,Ensemble D,,,,"54.974127, -1.625969",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_SoilTemp(2)_800,deg C,,Y,Ensemble D,,,,"54.974127, -1.625970",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_SoilTemp_200,deg C,,Y,Ensemble D,,,,"54.974127, -1.625971",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_SoilTemp_400,deg C,,Y,Ensemble D,,,,"54.974127, -1.625972",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_SoilTemp_600,deg C,,Y,Ensemble D,,,,"54.974127, -1.625973",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_SoilTemp_800,deg C,,Y,Ensemble D,,,,"54.974127, -1.625974",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_Theta_200,%,,Y,Ensemble D,,,,"54.974127, -1.625975",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_Theta_400,%,,Y,Ensemble D,,,,"54.974127, -1.625976",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_Theta_600,%,,Y,Ensemble D,,,,"54.974127, -1.625977",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D2_Theta_800,%,,Y,Ensemble D,,,,"54.974127, -1.625978",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_ECb_200,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625979",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_ECb_400,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625980",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_ECb_600,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625981",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_ECb_800,mS.m-1,,Y,Ensemble D,,,,"54.974127, -1.625982",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_Psi_200,kPa,,Y,Ensemble D,,,,"54.974127, -1.625983",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_Psi_400,kPa,,Y,Ensemble D,,,,"54.974127, -1.625984",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_Psi_600,kPa,,Y,Ensemble D,,,,"54.974127, -1.625985",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_Psi_800,kPa,,Y,Ensemble D,,,,"54.974127, -1.625986",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_SoilTemp(2)_200,deg C,,Y,Ensemble D,,,,"54.974127, -1.625987",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_SoilTemp(2)_400,deg C,,Y,Ensemble D,,,,"54.974127, -1.625988",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_SoilTemp(2)_600,deg C,,Y,Ensemble D,,,,"54.974127, -1.625989",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_SoilTemp(2)_800,deg C,,Y,Ensemble D,,,,"54.974127, -1.625990",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_SoilTemp_200,deg C,,Y,Ensemble D,,,,"54.974127, -1.625991",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_SoilTemp_400,deg C,,Y,Ensemble D,,,,"54.974127, -1.625992",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_SoilTemp_600,deg C,,Y,Ensemble D,,,,"54.974127, -1.625993",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_SoilTemp_800,deg C,,Y,Ensemble D,,,,"54.974127, -1.625994",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_Theta_200,%,,Y,Ensemble D,,,,"54.974127, -1.625995",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_Theta_400,%,,Y,Ensemble D,,,,"54.974127, -1.625996",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_Theta_600,%,,Y,Ensemble D,,,,"54.974127, -1.625997",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),D3_Theta_800,%,,Y,Ensemble D,,,,"54.974127, -1.625998",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),Drain_D1#@15m,ml,,Y,Ensemble D,,,,"54.974127, -1.625999",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),Drain_D2#@15m,ml,,Y,Ensemble D,,,,"54.974127, -1.626000",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),Drain_D3#@15m,ml,,Y,Ensemble D,,,,"54.974127, -1.626001",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-55 (Ensemble D),Power,V,,Y,Ensemble D,,,,"54.974127, -1.626002",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_ECb_200,mS.m-1,,Y,Ensemble C,,,,"54.973966, -1.625960",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_ECb_400,mS.m-1,,Y,Ensemble C,,,,"54.973966, -1.625961",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_ECb_600,mS.m-1,,Y,Ensemble C,,,,"54.973966, -1.625962",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_ECb_800,mS.m-1,,Y,Ensemble C,,,,"54.973966, -1.625963",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_Psi_200,kPa,,Y,Ensemble C,,,,"54.973966, -1.625964",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_Psi_400,kPa,,Y,Ensemble C,,,,"54.973966, -1.625965",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_Psi_600,kPa,,Y,Ensemble C,,,,"54.973966, -1.625966",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_Psi_800,kPa,,Y,Ensemble C,,,,"54.973966, -1.625967",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_SoilTemp(2)_200,deg C,,Y,Ensemble C,,,,"54.973966, -1.625968",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_SoilTemp(2)_400,deg C,,Y,Ensemble C,,,,"54.973966, -1.625969",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_SoilTemp(2)_600,deg C,,Y,Ensemble C,,,,"54.973966, -1.625970",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_SoilTemp(2)_800,deg C,,Y,Ensemble C,,,,"54.973966, -1.625971",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_SoilTemp_200,deg C,,Y,Ensemble C,,,,"54.973966, -1.625972",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_SoilTemp_400,deg C,,Y,Ensemble C,,,,"54.973966, -1.625973",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_SoilTemp_600,deg C,,Y,Ensemble C,,,,"54.973966, -1.625974",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_SoilTemp_800,deg C,,Y,Ensemble C,,,,"54.973966, -1.625975",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_Theta_200,%,,Y,Ensemble C,,,,"54.973966, -1.625976",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_Theta_400,%,,Y,Ensemble C,,,,"54.973966, -1.625977",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_Theta_600,%,,Y,Ensemble C,,,,"54.973966, -1.625978",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),C_Theta_800,%,,Y,Ensemble C,,,,"54.973966, -1.625979",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),Drain_C#@15m,ml,,Y,Ensemble C,,,,"54.973966, -1.625980",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-82 (Ensemble C),Power,V,,Y,Ensemble C,,,,"54.973966, -1.625981",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_ECb_200,mS.m-1,,Y,Ensemble B,,,,"54.973827, -1.625971",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_ECb_400,mS.m-1,,Y,Ensemble B,,,,"54.973827, -1.625972",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_ECb_600,mS.m-1,,Y,Ensemble B,,,,"54.973827, -1.625973",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_ECb_800,mS.m-1,,Y,Ensemble B,,,,"54.973827, -1.625974",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_Psi_200,kPa,,Y,Ensemble B,,,,"54.973827, -1.625975",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_Psi_400,kPa,,Y,Ensemble B,,,,"54.973827, -1.625976",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_Psi_600,kPa,,Y,Ensemble B,,,,"54.973827, -1.625977",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_Psi_800,kPa,,Y,Ensemble B,,,,"54.973827, -1.625978",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_SoilTemp(2)_200,deg C,,Y,Ensemble B,,,,"54.973827, -1.625979",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_SoilTemp(2)_400,deg C,,Y,Ensemble B,,,,"54.973827, -1.625980",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_SoilTemp(2)_600,deg C,,Y,Ensemble B,,,,"54.973827, -1.625981",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_SoilTemp(2)_800,deg C,,Y,Ensemble B,,,,"54.973827, -1.625982",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_SoilTemp_200,deg C,,Y,Ensemble B,,,,"54.973827, -1.625983",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_SoilTemp_400,deg C,,Y,Ensemble B,,,,"54.973827, -1.625984",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_SoilTemp_600,deg C,,Y,Ensemble B,,,,"54.973827, -1.625985",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_SoilTemp_800,deg C,,Y,Ensemble B,,,,"54.973827, -1.625986",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_Theta_200,%,,Y,Ensemble B,,,,"54.973827, -1.625987",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_Theta_400,%,,Y,Ensemble B,,,,"54.973827, -1.625988",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_Theta_600,%,,Y,Ensemble B,,,,"54.973827, -1.625989",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),B_Theta_800,%,,Y,Ensemble B,,,,"54.973827, -1.625990",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),Drain_B#@15m,ml,,Y,Ensemble B,,,,"54.973827, -1.625991",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-09-99 (Ensemble B),Power,V,,Y,Ensemble B,,,,"54.973827, -1.625992",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_ECb_200,mS.m-1,,Y,Ensemble A,,,,"54.973691, -1.626002",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_ECb_400,mS.m-1,,Y,Ensemble A,,,,"54.973691, -1.626003",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_ECb_600,mS.m-1,,Y,Ensemble A,,,,"54.973691, -1.626004",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_ECb_800,mS.m-1,,Y,Ensemble A,,,,"54.973691, -1.626005",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_Psi_200,kPa,,Y,Ensemble A,,,,"54.973691, -1.626006",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_Psi_400,kPa,,Y,Ensemble A,,,,"54.973691, -1.626007",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_Psi_600,kPa,,Y,Ensemble A,,,,"54.973691, -1.626008",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_Psi_800,kPa,,Y,Ensemble A,,,,"54.973691, -1.626009",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_SoilTemp(2)_200,deg C,,Y,Ensemble A,,,,"54.973691, -1.626010",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_SoilTemp(2)_400,deg C,,Y,Ensemble A,,,,"54.973691, -1.626011",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_SoilTemp(2)_600,deg C,,Y,Ensemble A,,,,"54.973691, -1.626012",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_SoilTemp(2)_800,deg C,,Y,Ensemble A,,,,"54.973691, -1.626013",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_SoilTemp_200,deg C,,Y,Ensemble A,,,,"54.973691, -1.626014",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_SoilTemp_400,deg C,,Y,Ensemble A,,,,"54.973691, -1.626015",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_SoilTemp_600,deg C,,Y,Ensemble A,,,,"54.973691, -1.626016",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_SoilTemp_800,deg C,,Y,Ensemble A,,,,"54.973691, -1.626017",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_Theta_200,%,,Y,Ensemble A,,,,"54.973691, -1.626018",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_Theta_400,%,,Y,Ensemble A,,,,"54.973691, -1.626019",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_Theta_600,%,,Y,Ensemble A,,,,"54.973691, -1.626020",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),A_Theta_800,%,,Y,Ensemble A,,,,"54.973691, -1.626021",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),Drain_A#@15m,ml,,Y,Ensemble A,,,,"54.973691, -1.626022",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-11-86 (Ensemble_A),Power,V,,Y,Ensemble A,,,,"54.973691, -1.626023",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-58 (Lysimeter 1),Drain gauge#@15m,ml,,Y,Lysimeter 1,,,,"54.973388, -1.625861",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),ECb 100mm,mS.m-1,,Y,Lysimeter 1,,,,"54.973388, -1.625862",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),ECb 300mm,mS.m-1,,Y,Lysimeter 1,,,,"54.973388, -1.625863",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),ECb 400mm,mS.m-1,,Y,Lysimeter 1,,,,"54.973388, -1.625864",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),ECb 500mm,mS.m-1,,Y,Lysimeter 1,,,,"54.973388, -1.625865",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),ECb 800mm,mS.m-1,,Y,Lysimeter 1,,,,"54.973388, -1.625866",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),L1_Rainfall_Kalyx#@15m,Tip,,Y,Lysimeter 1,,,,"54.973388, -1.625867",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),L1_Rainfall_Kalyx#@1m,Tip,,Y,Lysimeter 1,,,,"54.973388, -1.625868",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),L1_Rainfall_PitGauge#@15m,Tip,,Y,Lysimeter 1,,,,"54.973388, -1.625869",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),L1_Rainfall_PitGauge#@1m,Tip,,Y,Lysimeter 1,,,,"54.973388, -1.625870",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),Power,V,,Y,Lysimeter 1,,,,"54.973388, -1.625871",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),SoilTemp 100mm,deg C,,Y,Lysimeter 1,,,,"54.973388, -1.625872",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),SoilTemp 300mm,deg C,,Y,Lysimeter 1,,,,"54.973388, -1.625873",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),SoilTemp 400mm,deg C,,Y,Lysimeter 1,,,,"54.973388, -1.625874",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),SoilTemp 500mm,deg C,,Y,Lysimeter 1,,,,"54.973388, -1.625875",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),SoilTemp 800mm,deg C,,Y,Lysimeter 1,,,,"54.973388, -1.625876",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),Theta 100mm,%,,Y,Lysimeter 1,,,,"54.973388, -1.625877",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),Theta 300mm,%,,Y,Lysimeter 1,,,,"54.973388, -1.625878",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),Theta 400mm,%,,Y,Lysimeter 1,,,,"54.973388, -1.625879",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),Theta 500mm,%,,Y,Lysimeter 1,,,,"54.973388, -1.625880",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-58 (Lysimeter 1),Theta 800mm,%,,Y,Lysimeter 1,,,,"54.973388, -1.625881",,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,,
+GP2-10-60 (Ensemble E + RG),Drain_E1#@1m,ml,,Y,Ensemble E,,,,"54.974272, -1.625926",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),Drain_E2#@1m,ml,,Y,Ensemble E,,,,"54.974272, -1.625927",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),Drain_E3#@1m,ml,,Y,Ensemble E,,,,"54.974272, -1.625928",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_ECb_200,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625929",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_ECb_400,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625930",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_ECb_600,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625931",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_ECb_800,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625932",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_Psi_200,kPa,,Y,Ensemble E,,,,"54.974272, -1.625933",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_Psi_400,kPa,,Y,Ensemble E,,,,"54.974272, -1.625934",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_Psi_600,kPa,,Y,Ensemble E,,,,"54.974272, -1.625935",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_Psi_800,kPa,,Y,Ensemble E,,,,"54.974272, -1.625936",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_SoilTemp(2)_200,deg C,,Y,Ensemble E,,,,"54.974272, -1.625937",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_SoilTemp(2)_400,deg C,,Y,Ensemble E,,,,"54.974272, -1.625938",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_SoilTemp(2)_600,deg C,,Y,Ensemble E,,,,"54.974272, -1.625939",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_SoilTemp(2)_800,deg C,,Y,Ensemble E,,,,"54.974272, -1.625940",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_SoilTemp_200,deg C,,Y,Ensemble E,,,,"54.974272, -1.625941",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_SoilTemp_400,deg C,,Y,Ensemble E,,,,"54.974272, -1.625942",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_SoilTemp_600,deg C,,Y,Ensemble E,,,,"54.974272, -1.625943",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_SoilTemp_800,deg C,,Y,Ensemble E,,,,"54.974272, -1.625944",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_Theta_200,%,,Y,Ensemble E,,,,"54.974272, -1.625945",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_Theta_400,%,,Y,Ensemble E,,,,"54.974272, -1.625946",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_Theta_600,%,,Y,Ensemble E,,,,"54.974272, -1.625947",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E1_Theta_800,%,,Y,Ensemble E,,,,"54.974272, -1.625948",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_ECb_200,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625949",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_ECb_400,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625950",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_ECb_600,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625951",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_ECb_800,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625952",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_Psi_200,kPa,,Y,Ensemble E,,,,"54.974272, -1.625953",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_Psi_400,kPa,,Y,Ensemble E,,,,"54.974272, -1.625954",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_Psi_600,kPa,,Y,Ensemble E,,,,"54.974272, -1.625955",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_Psi_800,kPa,,Y,Ensemble E,,,,"54.974272, -1.625956",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_SoilTemp(2)_200,deg C,,Y,Ensemble E,,,,"54.974272, -1.625957",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_SoilTemp(2)_400,deg C,,Y,Ensemble E,,,,"54.974272, -1.625958",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_SoilTemp(2)_600,deg C,,Y,Ensemble E,,,,"54.974272, -1.625959",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_SoilTemp(2)_800,deg C,,Y,Ensemble E,,,,"54.974272, -1.625960",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_SoilTemp_200,deg C,,Y,Ensemble E,,,,"54.974272, -1.625961",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_SoilTemp_400,deg C,,Y,Ensemble E,,,,"54.974272, -1.625962",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_SoilTemp_600,deg C,,Y,Ensemble E,,,,"54.974272, -1.625963",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_SoilTemp_800,deg C,,Y,Ensemble E,,,,"54.974272, -1.625964",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_Theta_200,%,,Y,Ensemble E,,,,"54.974272, -1.625965",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_Theta_400,%,,Y,Ensemble E,,,,"54.974272, -1.625966",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_Theta_600,%,,Y,Ensemble E,,,,"54.974272, -1.625967",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E2_Theta_800,%,,Y,Ensemble E,,,,"54.974272, -1.625968",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_ECb_200,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625969",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_ECb_400,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625970",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_ECb_600,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625971",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_ECb_800,mS.m-1,,Y,Ensemble E,,,,"54.974272, -1.625972",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_Psi_200,kPa,,Y,Ensemble E,,,,"54.974272, -1.625973",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_Psi_400,kPa,,Y,Ensemble E,,,,"54.974272, -1.625974",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_Psi_600,kPa,,Y,Ensemble E,,,,"54.974272, -1.625975",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_Psi_800,kPa,,Y,Ensemble E,,,,"54.974272, -1.625976",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_SoilTemp(2)_200,deg C,,Y,Ensemble E,,,,"54.974272, -1.625977",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_SoilTemp(2)_400,deg C,,Y,Ensemble E,,,,"54.974272, -1.625978",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_SoilTemp(2)_600,deg C,,Y,Ensemble E,,,,"54.974272, -1.625979",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_SoilTemp(2)_800,deg C,,Y,Ensemble E,,,,"54.974272, -1.625980",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_SoilTemp_200,deg C,,Y,Ensemble E,,,,"54.974272, -1.625981",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_SoilTemp_400,deg C,,Y,Ensemble E,,,,"54.974272, -1.625982",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_SoilTemp_600,deg C,,Y,Ensemble E,,,,"54.974272, -1.625983",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_SoilTemp_800,deg C,,Y,Ensemble E,,,,"54.974272, -1.625984",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_Theta_200,%,,Y,Ensemble E,,,,"54.974272, -1.625985",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_Theta_400,%,,Y,Ensemble E,,,,"54.974272, -1.625986",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_Theta_600,%,,Y,Ensemble E,,,,"54.974272, -1.625987",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),E3_Theta_800,%,,Y,Ensemble E,,,,"54.974272, -1.625988",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),Pit Rain Gauge#@1m,-,,Y,Ensemble E,,,,"54.974272, -1.625989",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,
+GP2-10-60 (Ensemble E + RG),Power,V,,Y,Ensemble E,,,,"54.974272, -1.625990",,,,,,,,,,,,,,,,,,,,,,,,,,,,,Y,,,,

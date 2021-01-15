@@ -16,6 +16,12 @@ from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 import urllib.parse
 from datetime import timedelta, datetime
+import re
+
+
+def convert(text):
+    return int(text) if str(text).isdigit() else text.lower()
+
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
@@ -25,6 +31,12 @@ mongo = PyMongo(server)
 
 readings = mongo.db.readings
 
+lookup = pd.read_csv('ngif-sensor-fields.csv')
+to_drop = lookup[lookup['To keep?'] == 'N']['Current field'].values.tolist()
+names_lookup = lookup.set_index('Current name')['New name'].to_dict()
+fields_lookup = lookup.set_index('Current field')['New field'].to_dict()
+units_lookup = lookup.set_index('Current field')['New units'].to_dict()
+
 
 class Sensors:
     def __init__(self):
@@ -33,17 +45,17 @@ class Sensors:
         self.update()
 
     def update(self):
-        self.metadata = {sensor['name']: {k: v for k, v in sensor.items() if k != 'name'}
+        self.metadata = {sensor['name']: {k: v for k, v in sensor.items() if k not in ['name']+to_drop}
                          for sensor in list(mongo.db.sensors.find({}, {'_id': False}, sort=[('name', ASCENDING)]))}
 
-        self.names = list(self.metadata.keys())
+        self.names = [n for n in self.metadata.keys()]
 
 
 sensors = Sensors()
 
 
 def get_name_with_units(name, field):
-    return f'{field} ({sensors.metadata[name][field]["units"]})'
+    return f'{get_field(field)} ({get_units(name, field)})'
 
 
 app = dash.Dash(
@@ -60,6 +72,11 @@ def create_layout():
     end_date = datetime.utcnow().date()
     name = sensors.names[0] if len(sensors.names) > 0 else None
     field = list(sensors.metadata[name].keys())[0] if len(sensors.names) > 0 else None
+    options = sorted([{'label': get_name(n), 'value': n}
+                      for n in sensors.names],
+                     key=lambda key: [convert(int(c) if c.isdigit() else c.lower())
+                                      for c in re.split('([0-9]+)', key['label'])])
+
     return html.Div(children=[
 
         html.H1(children='National Green Infrastructure Facility (NGIF)'),
@@ -67,8 +84,8 @@ def create_layout():
         html.Div([
             dcc.Dropdown(
                 id='name',
-                options=[{'label': n, 'value': n} for n in sensors.names],
-                value=sensors.names[0] if len(sensors.names) > 0 else None,
+                options=options,
+                value=options[0]['value'] if len(options) > 0 else None,
             )
         ], style={'display': 'inline-block', 'width': '49%'}),
         html.Div([
@@ -121,16 +138,31 @@ def update_table(_):
     return get_table_data()
 
 
+def get_units(name, field):
+    return sensors.metadata[name][field].get("units") if pd.isna(units_lookup.get(field)) else units_lookup[field]
+
+
+def get_name(name):
+    return name if pd.isna(names_lookup.get(name)) else names_lookup[name]
+
+
+def get_field(field):
+    return field if pd.isna(fields_lookup.get(field)) else fields_lookup[field]
+
+
 def get_table_data():
     rows = []
     for sensor, fields in sensors.metadata.items():
         for field in fields.keys():
             metadata = fields[field]
-            units = metadata.get('units')
+            units = get_units(sensor, field)
             last_updated = metadata.get('last_updated')
             last_value = metadata.get('last_value')
-            rows.append({'sensor': sensor, 'field': field, 'units': units, 'time of last reading': str(last_updated),
-                         'value of last reading': str(last_value), 'id': f'{sensor}.{field}'})
+            rows.append({
+                'sensor': get_name(sensor),
+                'field': get_field(field),
+                'units': units, 'time of last reading': str(last_updated),
+                'value of last reading': str(last_value), 'id': f'{sensor}.{field}'})
     return rows
 
 
@@ -168,7 +200,9 @@ def create_plot(name, field, start_date, end_date):
 def update_fields(name):
     if name is None:
         raise PreventUpdate
-    return [{'label': n, 'value': n} for n in sensors.metadata[name].keys()]
+    # return [{'label': n, 'value': n} for n in sensors.metadata[name].keys()]
+
+    return [{'label': get_field(n), 'value': n} for n in sensors.metadata[name].keys() if n not in to_drop]
 
 
 @app.callback(
