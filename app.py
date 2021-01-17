@@ -49,8 +49,13 @@ class Metadata:
                 if field not in ['name'] + to_drop:
                     rows.append({'name': sensor['name'], 'field': field, **field_metadata})
 
+        if len(rows) == 0:
+            self.df = pd.DataFrame()
+            self.names = []
+            return
+
         self.df = pd.merge(pd.DataFrame(rows), lookup.drop('units', axis=1),
-                           left_on=['name', 'field'], right_on=['Current name', 'Current field'])
+                           left_on=['name', 'field'], right_on=['Current name', 'Current field'], how='left')
 
         for col in ['name', 'field', 'units']:
             new_col = f'New {col}'
@@ -153,10 +158,13 @@ def update_table(_):
 
 def get_table_data():
 
-    rows = metadata.df[['New name', 'New field', 'New units', 'last_updated', 'last_value']]
-    rows.columns = ['sensor', 'field', 'units', 'time of last reading', 'value of last reading']
+    if len(metadata.df) > 0:
+        rows = metadata.df[['New name', 'New field', 'New units', 'last_updated', 'last_value']]
+        rows.columns = ['sensor', 'field', 'units', 'time of last reading', 'value of last reading']
 
-    return rows.to_dict('records')
+        return rows.to_dict('records')
+    else:
+        return {}
 
 
 @app.callback(Output(component_id='plot', component_property='figure'),

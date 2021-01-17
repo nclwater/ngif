@@ -10,7 +10,7 @@ sensors.drop()
 readings.drop()
 
 readings.insert({'name': 'sensor', 'field': 1, 'time': datetime.now()})
-sensors.insert({'name': 'sensor', 'field': {'units': 'mm'}})
+sensors.insert({'name': 'sensor', 'field': {'units': 'mm', 'last_updated': datetime.now(), 'last_value': 1}})
 
 
 class TestApp(TestCase):
