@@ -57,23 +57,35 @@ class Metadata:
 
         self.df = self.df[self.df['To keep?'] != 'N']
 
-        for col in ['name', 'field', 'units']:
-            new_col = f'New {col}'
-            self.df.loc[self.df[new_col].isnull(), new_col] = self.df[col][self.df[new_col].isnull()]
+        self.df['db_name'] = self.df['name']
+        self.df['name'] = self.df['name'].replace(self.df.set_index('name')['New name'].dropna().to_dict())
+
+        self.df['db_field'] = self.df['field']
+        self.df.loc[self.df['New field'].notnull(), 'field'] = self.df.loc[self.df['New field'].notnull(), 'New field']
+
+        self.df.loc[self.df['New units'].notnull(), 'units'] = self.df.loc[self.df['New units'].notnull(), 'New units']
 
         self.names = self.df.name.unique().tolist()
 
     def get_field_metadata(self, name, field):
         return self.df.loc[(self.df.name == name) & (self.df.field == field)].iloc[0]
 
+    def get_field_with_units(self, name, field):
+        field_metadata = self.get_field_metadata(name, field)
+        return f'{field_metadata.field} ({field_metadata.units})'
+
+    def as_table(self):
+
+        if len(self.df) > 0:
+            rows = self.df[['name', 'field', 'units', 'last_updated', 'last_value']]
+            rows.columns = ['sensor', 'field', 'units', 'time of last reading', 'value of last reading']
+
+            return rows.to_dict('records')
+        else:
+            return {}
+
 
 metadata = Metadata()
-
-
-def get_field_with_units(name, field):
-    field_metadata = metadata.get_field_metadata(name, field)
-    return f'{field_metadata["New field"]} ({field_metadata["New units"]})'
-
 
 app = dash.Dash(
     __name__,
@@ -87,13 +99,14 @@ def create_layout():
     metadata.update()
     start_date = datetime.utcnow().date() - timedelta(days=2)
     end_date = datetime.utcnow().date()
-    name = metadata.names[0] if len(metadata.names) > 0 else None
-    field = metadata.df[metadata.df.name == name].field[0] if len(metadata.df) > 0 else None
 
-    options = sorted([{'label': metadata.df[metadata.df.name == n]['New name'].iloc[0], 'value': n}
+    options = sorted([{'label': n, 'value': n}
                       for n in metadata.names],
                      key=lambda key: [convert(int(c) if c.isdigit() else c.lower())
                                       for c in re.split('([0-9]+)', key['label'])])
+
+    name = options[0]['value'] if len(options) > 0 else None
+    field = metadata.df[metadata.df.name == name].field.iloc[0] if len(options) > 0 else None
 
     return html.Div(children=[
 
@@ -135,7 +148,7 @@ def create_layout():
                 {"name": name.title(), "id": name, "deletable": False, "selectable": False} for i, name in
                 enumerate(['sensor', 'field', 'units', 'time of last reading', 'value of last reading'])
             ],
-            data=get_table_data(),
+            data=metadata.as_table(),
             editable=False,
             filter_action="native",
             sort_action="native",
@@ -153,18 +166,8 @@ def create_layout():
 @app.callback(Output(component_id='table', component_property='data'),
               [Input('update', 'n_clicks')])
 def update_table(_):
-    return get_table_data()
-
-
-def get_table_data():
-
-    if len(metadata.df) > 0:
-        rows = metadata.df[['New name', 'New field', 'New units', 'last_updated', 'last_value']]
-        rows.columns = ['sensor', 'field', 'units', 'time of last reading', 'value of last reading']
-
-        return rows.to_dict('records')
-    else:
-        return {}
+    metadata.update()
+    return metadata.as_table()
 
 
 @app.callback(Output(component_id='plot', component_property='figure'),
@@ -181,15 +184,17 @@ def update_plot(_, name, field, start_date, end_date):
 def create_plot(name, field, start_date, end_date):
     if name is None or field is None:
         raise PreventUpdate
-    df = pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True},
+
+    field_metadata = metadata.get_field_metadata(name, field)
+    df = pd.DataFrame(list(readings.find({'name': field_metadata.db_name, field_metadata.db_field: {"$exists": True},
                                           "time": {"$lt": datetime.fromisoformat(end_date) + timedelta(days=1),
                                                    "$gte": datetime.fromisoformat(start_date)}},
 
-                                         {field: 1, 'time': 1},
+                                         {field_metadata.db_field: 1, 'time': 1},
                                          sort=[('_id', DESCENDING)])))
     if len(df) > 0:
-        fig = px.line(df, x="time", y=field)
-        fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': get_field_with_units(name, field)}})
+        fig = px.line(df, x="time", y=field_metadata.db_field)
+        fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': metadata.get_field_with_units(name, field)}})
         fig.update_traces(mode='lines+markers')
     else:
         fig = {}
@@ -203,8 +208,7 @@ def update_fields(name):
         raise PreventUpdate
     # return [{'label': n, 'value': n} for n in sensors.metadata[name].keys()]
 
-    return [{'label': row['New field'], 'value': row.field}
-            for i, row in metadata.df[metadata.df.name == name].iterrows()]
+    return [{'label': row.field, 'value': row.field} for i, row in metadata.df[metadata.df.name == name].iterrows()]
 
 
 @app.callback(
@@ -238,18 +242,19 @@ def update_href(name, field, start_date, end_date):
 def download_all(name, field):
     import io
     csv = io.StringIO()
-    pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True}}, {'_id': False, field: 1, 'time': 1, },
+    field_metadata = metadata.get_field_metadata(name, field)
+    pd.DataFrame(list(readings.find({'name': field_metadata.db_name, field_metadata.db_field: {"$exists": True}},
+                                    {'_id': False, field_metadata.db_field: 1, 'time': 1, },
                                     sort=[('_id', ASCENDING)]))).rename(
-        columns={field: get_field_with_units(name, field)}).to_csv(csv, index=False)
+        columns={field_metadata.db_field: metadata.get_field_with_units(name, field)}).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
     mem.seek(0)
-    field_metadata = metadata.get_field_metadata(name, field)
 
     return flask.send_file(mem,
                            mimetype='text/csv',
-                           attachment_filename=f'ngif-[{field_metadata["New name"]}]-[{field_metadata["New field"]}].csv',
+                           attachment_filename=f'ngif-[{name}]-[{field}].csv',
                            as_attachment=True)
 
 
@@ -257,7 +262,7 @@ def download_all(name, field):
 def download_metadata():
     import io
     csv = io.StringIO()
-    pd.DataFrame(get_table_data()).drop('id', axis=1).to_csv(csv, index=False)
+    pd.DataFrame(metadata.as_table()).drop('id', axis=1).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
@@ -273,22 +278,21 @@ def download_metadata():
 def download(name, field, start_date, end_date):
     import io
     csv = io.StringIO()
-    pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True},
+    field_metadata = metadata.get_field_metadata(name, field)
+    pd.DataFrame(list(readings.find({'name': field_metadata.db_name, field_metadata.db_field: {"$exists": True},
                                      "time": {"$lt": datetime.fromisoformat(end_date) + timedelta(days=1),
                                               "$gte": datetime.fromisoformat(start_date)}},
-                                    {'_id': False, field: 1, 'time': 1, },
+                                    {'_id': False, field_metadata.db_field: 1, 'time': 1, },
                                     sort=[('_id', ASCENDING)]))).rename(
-        columns={field: get_field_with_units(name, field)}).to_csv(csv, index=False)
+        columns={field_metadata.db_field: metadata.get_field_with_units(name, field)}).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
     mem.seek(0)
 
-    field_metadata = metadata.get_field_metadata(name, field)
-
     return flask.send_file(mem,
                            mimetype='text/csv',
-                           attachment_filename=f'ngif-[{field_metadata["New name"]}]-[{field_metadata["New field"]}].csv',
+                           attachment_filename=f'ngif-[{name}]-[{field}].csv',
                            as_attachment=True)
 
 
