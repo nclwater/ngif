@@ -32,7 +32,6 @@ mongo = PyMongo(server)
 readings = mongo.db.readings
 
 lookup = pd.read_csv('ngif-sensor-fields.csv')
-to_drop = lookup[lookup['To keep?'] == 'N']['Current field'].values.tolist()
 
 
 class Metadata:
@@ -44,9 +43,8 @@ class Metadata:
     def update(self):
         rows = []
         for sensor in mongo.db.sensors.find({}, {'_id': False}, sort=[('name', ASCENDING)]):
-
             for field, field_metadata in sensor.items():
-                if field not in ['name'] + to_drop:
+                if field != 'name':
                     rows.append({'name': sensor['name'], 'field': field, **field_metadata})
 
         if len(rows) == 0:
@@ -56,6 +54,8 @@ class Metadata:
 
         self.df = pd.merge(pd.DataFrame(rows), lookup.drop('units', axis=1),
                            left_on=['name', 'field'], right_on=['Current name', 'Current field'], how='left')
+
+        self.df = self.df[self.df['To keep?'] != 'N']
 
         for col in ['name', 'field', 'units']:
             new_col = f'New {col}'
