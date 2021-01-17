@@ -33,9 +33,6 @@ readings = mongo.db.readings
 
 lookup = pd.read_csv('ngif-sensor-fields.csv')
 to_drop = lookup[lookup['To keep?'] == 'N']['Current field'].values.tolist()
-names_lookup = lookup.set_index('Current name')['New name'].to_dict()
-fields_lookup = lookup.set_index('Current field')['New field'].to_dict()
-units_lookup = lookup.set_index('Current field')['New units'].to_dict()
 
 
 class Sensors:
@@ -45,17 +42,38 @@ class Sensors:
         self.update()
 
     def update(self):
-        self.metadata = {sensor['name']: {k: v for k, v in sensor.items() if k not in ['name']+to_drop}
-                         for sensor in list(mongo.db.sensors.find({}, {'_id': False}, sort=[('name', ASCENDING)]))}
+        self.get_metadata()
+        self.get_names()
 
-        self.names = [n for n in self.metadata.keys()]
+    def get_names(self):
+        self.names = self.metadata.name.unique().tolist()
+
+    def get_metadata(self):
+        rows = []
+        for sensor in mongo.db.sensors.find({}, {'_id': False}, sort=[('name', ASCENDING)]):
+
+            for field, metadata in sensor.items():
+                if field not in ['name'] + to_drop:
+                    rows.append({'name': sensor['name'], 'field': field, **metadata})
+
+        self.metadata = pd.merge(pd.DataFrame(rows), lookup.drop('units', axis=1),
+                                 left_on=['name', 'field'], right_on=['Current name', 'Current field'])
+
+        for col in ['name', 'field', 'units']:
+            new_col = f'New {col}'
+            self.metadata[new_col].loc[self.metadata[new_col].isnull()] = \
+                self.metadata[col][self.metadata[new_col].isnull()]
+
+    def get_field_metadata(self, name, field):
+        return self.metadata.loc[(self.metadata.name == name) & (self.metadata.field == field)].iloc[0]
 
 
 sensors = Sensors()
 
 
-def get_name_with_units(name, field):
-    return f'{get_field(field)} ({get_units(name, field)})'
+def get_field_with_units(name, field):
+    metadata = sensors.get_field_metadata(name, field)
+    return f'{metadata["New field"]} ({metadata["New units"]})'
 
 
 app = dash.Dash(
@@ -71,8 +89,9 @@ def create_layout():
     start_date = datetime.utcnow().date() - timedelta(days=2)
     end_date = datetime.utcnow().date()
     name = sensors.names[0] if len(sensors.names) > 0 else None
-    field = list(sensors.metadata[name].keys())[0] if len(sensors.names) > 0 else None
-    options = sorted([{'label': get_name(n), 'value': n}
+    field = sensors.metadata[sensors.metadata.name == name].field[0] if len(sensors.metadata) > 0 else None
+
+    options = sorted([{'label': sensors.metadata[sensors.metadata.name == n]['New name'].iloc[0], 'value': n}
                       for n in sensors.names],
                      key=lambda key: [convert(int(c) if c.isdigit() else c.lower())
                                       for c in re.split('([0-9]+)', key['label'])])
@@ -138,32 +157,12 @@ def update_table(_):
     return get_table_data()
 
 
-def get_units(name, field):
-    return sensors.metadata[name][field].get("units") if pd.isna(units_lookup.get(field)) else units_lookup[field]
-
-
-def get_name(name):
-    return name if pd.isna(names_lookup.get(name)) else names_lookup[name]
-
-
-def get_field(field):
-    return field if pd.isna(fields_lookup.get(field)) else fields_lookup[field]
-
-
 def get_table_data():
-    rows = []
-    for sensor, fields in sensors.metadata.items():
-        for field in fields.keys():
-            metadata = fields[field]
-            units = get_units(sensor, field)
-            last_updated = metadata.get('last_updated')
-            last_value = metadata.get('last_value')
-            rows.append({
-                'sensor': get_name(sensor),
-                'field': get_field(field),
-                'units': units, 'time of last reading': str(last_updated),
-                'value of last reading': str(last_value), 'id': f'{sensor}.{field}'})
-    return rows
+
+    rows = sensors.metadata[['New name', 'New field', 'New units', 'last_updated', 'last_value']]
+    rows.columns = ['sensor', 'field', 'units', 'time of last reading', 'value of last reading']
+
+    return rows.to_dict('records')
 
 
 @app.callback(Output(component_id='plot', component_property='figure'),
@@ -188,7 +187,7 @@ def create_plot(name, field, start_date, end_date):
                                          sort=[('_id', DESCENDING)])))
     if len(df) > 0:
         fig = px.line(df, x="time", y=field)
-        fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': get_name_with_units(name, field)}})
+        fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': get_field_with_units(name, field)}})
         fig.update_traces(mode='lines+markers')
     else:
         fig = {}
@@ -202,7 +201,8 @@ def update_fields(name):
         raise PreventUpdate
     # return [{'label': n, 'value': n} for n in sensors.metadata[name].keys()]
 
-    return [{'label': get_field(n), 'value': n} for n in sensors.metadata[name].keys() if n not in to_drop]
+    return [{'label': row['New field'], 'value': row.field}
+            for i, row in sensors.metadata[sensors.metadata.name == name].iterrows()]
 
 
 @app.callback(
@@ -238,15 +238,16 @@ def download_all(name, field):
     csv = io.StringIO()
     pd.DataFrame(list(readings.find({'name': name, field: {"$exists": True}}, {'_id': False, field: 1, 'time': 1, },
                                     sort=[('_id', ASCENDING)]))).rename(
-        columns={field: get_name_with_units(name, field)}).to_csv(csv, index=False)
+        columns={field: get_field_with_units(name, field)}).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
     mem.seek(0)
+    metadata = sensors.get_field_metadata(name, field)
 
     return flask.send_file(mem,
                            mimetype='text/csv',
-                           attachment_filename=f'ngif-[{get_name(name)}]-[{get_field(field)}].csv',
+                           attachment_filename=f'ngif-[{metadata["New name"]}]-[{metadata["New field"]}].csv',
                            as_attachment=True)
 
 
@@ -275,15 +276,17 @@ def download(name, field, start_date, end_date):
                                               "$gte": datetime.fromisoformat(start_date)}},
                                     {'_id': False, field: 1, 'time': 1, },
                                     sort=[('_id', ASCENDING)]))).rename(
-        columns={field: get_name_with_units(name, field)}).to_csv(csv, index=False)
+        columns={field: get_field_with_units(name, field)}).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
     mem.seek(0)
 
+    metadata = sensors.get_field_metadata(name, field)
+
     return flask.send_file(mem,
                            mimetype='text/csv',
-                           attachment_filename=f'ngif-[{get_name(name)}]-[{get_field(field)}].csv',
+                           attachment_filename=f'ngif-[{metadata["New name"]}]-[{metadata["New field"]}].csv',
                            as_attachment=True)
 
 
