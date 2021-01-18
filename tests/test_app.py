@@ -9,8 +9,11 @@ sensors = db.sensors
 sensors.drop()
 readings.drop()
 
-readings.insert({'name': 'sensor', 'field': 1, 'time': datetime.now()})
-sensors.insert({'name': 'sensor', 'field': {'units': 'mm', 'last_updated': datetime.now(), 'last_value': 1}})
+name = 'GP2-10-68 (Ensemble F + Pavement)'
+field = 'Drain_F1#@15m'
+readings.insert({'name': name, field: 1, 'time': datetime.now()})
+sensors.insert({'name': name,
+                field: {'units': 'mm', 'last_updated': datetime.now(), 'last_value': 1}})
 
 
 class TestApp(TestCase):
@@ -22,5 +25,5 @@ class TestApp(TestCase):
 
     def test_create_plot(self):
 
-        app.create_plot(name='sensor', field='field', start_date=date.today().isoformat(),
+        app.create_plot(name='Ensemble F', field=field, start_date=date.today().isoformat(),
                         end_date=date.today().isoformat())

@@ -104,9 +104,20 @@ def create_layout():
     name = options[0]['value'] if len(options) > 0 else None
     field = metadata.df[metadata.df.name == name].field.iloc[0] if len(options) > 0 else None
 
+    locations = metadata.df.drop_duplicates('name').set_index('name')['Long. Lat'].str.split(',', expand=True) \
+        if len(metadata.df) > 0 else None
+    map_figure = px.scatter_mapbox(
+        locations.index,
+        lat=locations.iloc[:, 0].astype(float).tolist(),
+        lon=locations.iloc[:, 1].astype(float).tolist(),
+        hover_name="name",
+        zoom=16,
+        mapbox_style='open-street-map') if locations is not None else {}
+
     return html.Div(children=[
 
-        html.H1(children='National Green Infrastructure Facility (NGIF)'),
+        html.Div([html.Img(src=app.get_asset_url('NGIF_logo_web_thumb.jpg'),
+                 alt='National Green Infrastructure Facility', width=400)]),
 
         html.Div([
             dcc.Dropdown(
@@ -138,7 +149,7 @@ def create_layout():
         dcc.Loading(dcc.Graph(id='plot',
                               figure=create_plot(name, field, start_date.isoformat(), end_date.isoformat()) if
                               name is not None else None)),
-        dash_table.DataTable(
+        html.Div([dash_table.DataTable(
             id='table',
             columns=[{
                 "name": col.replace('_', ' ').title(),
@@ -155,10 +166,18 @@ def create_layout():
             cell_selectable=False,
             page_action="native",
             page_current=0,
-            page_size=10,
-        ),
-        html.A('Download metadata table', href='/download-metadata')
-    ])
+            page_size=10
+        ), html.A('Download metadata table', href='/download-metadata')], style={'padding-bottom': 40}),
+
+        dcc.Graph(figure=map_figure),
+        html.Div(
+            [
+                html.Img(src=app.get_asset_url('ncl logo no bkgrd.png'), width=150, alt='Newcastle University',
+                         style={'padding-right': 20}),
+                html.Img(src=app.get_asset_url('UKCRIC_logo.jpg'), width=150, alt='UKCRIC')],
+            style={'width': 320, 'margin': 'auto'}),
+
+    ], style={'max-width': 800, 'margin': 'auto'})
 
 
 @app.callback(Output(component_id='table', component_property='data'),
