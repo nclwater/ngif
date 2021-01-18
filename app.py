@@ -75,12 +75,8 @@ class Metadata:
         return f'{field_metadata.field} ({field_metadata.units})'
 
     def as_table(self):
-
         if len(self.df) > 0:
-            rows = self.df[['name', 'field', 'units', 'last_updated', 'last_value']]
-            rows.columns = ['sensor', 'field', 'units', 'time of last reading', 'value of last reading']
-
-            return rows.to_dict('records')
+            return self.df[['name', 'field', 'units', 'last_updated', 'last_value']].to_dict('records')
         else:
             return {}
 
@@ -144,10 +140,12 @@ def create_layout():
                               name is not None else None)),
         dash_table.DataTable(
             id='table',
-            columns=[
-                {"name": name.title(), "id": name, "deletable": False, "selectable": False} for i, name in
-                enumerate(['sensor', 'field', 'units', 'time of last reading', 'value of last reading'])
-            ],
+            columns=[{
+                "name": col.replace('_', ' ').title(),
+                "id": col,
+                "deletable": False,
+                "selectable": False
+            } for col in ['name', 'field', 'units', 'last_updated', 'last_value']],
             data=metadata.as_table(),
             editable=False,
             filter_action="native",
@@ -206,7 +204,6 @@ def create_plot(name, field, start_date, end_date):
 def update_fields(name):
     if name is None:
         raise PreventUpdate
-    # return [{'label': n, 'value': n} for n in sensors.metadata[name].keys()]
 
     return [{'label': row.field, 'value': row.field} for i, row in metadata.df[metadata.df.name == name].iterrows()]
 
