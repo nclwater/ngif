@@ -12,5 +12,6 @@ RUN pip install gunicorn
 
 COPY app.py ./
 COPY ngif-sensor-fields.csv ./
+COPY assets ./assets
 
 CMD gunicorn  --timeout 600 --workers 3 app:server
