@@ -231,7 +231,7 @@ def get_data(name, field, start_date=None, end_date=None, smooth=False):
         columns={field_metadata.db_field: metadata.get_field_with_units(name, field)})
 
     if smooth and len(df) > 0:
-        values = df.iloc[:, 1].values
+        values = df.iloc[:, 1].values.astype(float)
         idx = []
         for i, value in enumerate(values):
             idx.append(i)
