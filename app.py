@@ -141,6 +141,7 @@ def create_layout():
             display_format='DD/MM/YYYY',
             minimum_nights=0
         ),
+        dcc.Checklist(id='smooth', options=[{'label': 'Smooth', 'value': '-'}]),
         html.P(),
         html.A(html.Button('Update Plot'), id='update'),
         html.A(html.Button('Download Selected Period'), id='download-link'),
@@ -192,17 +193,18 @@ def update_table(_):
               [State(component_id='name', component_property='value'),
                State(component_id='field', component_property='value'),
                State(component_id='date-picker', component_property='start_date'),
-               State(component_id='date-picker', component_property='end_date')
+               State(component_id='date-picker', component_property='end_date'),
+               State(component_id='smooth', component_property='value')
                ])
-def update_plot(_, name, field, start_date, end_date):
-    return create_plot(name, field, start_date, end_date)
+def update_plot(_, name, field, start_date, end_date, smooth):
+    return create_plot(name, field, start_date, end_date, smooth)
 
 
-def create_plot(name, field, start_date, end_date):
+def create_plot(name, field, start_date, end_date, smooth=False):
     if name is None or field is None:
         raise PreventUpdate
 
-    df = get_data(name, field, start_date, end_date)
+    df = get_data(name, field, start_date, end_date, smooth=smooth)
     if len(df) > 0:
         fig = px.line(df, x=df.columns[0], y=df.columns[1])
         fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': df.columns[1]}})
@@ -212,9 +214,9 @@ def create_plot(name, field, start_date, end_date):
     return fig
 
 
-def get_data(name, field, start_date=None, end_date=None):
+def get_data(name, field, start_date=None, end_date=None, smooth=False):
     field_metadata = metadata.get_field_metadata(name, field)
-    return pd.DataFrame(
+    df = pd.DataFrame(
         list(readings.find(
             {
                 'name': field_metadata.db_name,
@@ -227,6 +229,18 @@ def get_data(name, field, start_date=None, end_date=None):
             {field_metadata.db_field: 1, 'time': 1, '_id': 0},
             sort=[('_id', ASCENDING)]))).rename(
         columns={field_metadata.db_field: metadata.get_field_with_units(name, field)})
+
+    if smooth and len(df) > 0:
+        values = df.iloc[:, 1].values
+        idx = []
+        for i, value in enumerate(values):
+            idx.append(i)
+            if value != 0:
+                values[idx] = value / len(idx)
+                idx = []
+        df.iloc[:, 1] = values
+
+    return df
 
 
 @app.callback(Output(component_id='field', component_property='options'),
