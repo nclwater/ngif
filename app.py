@@ -11,7 +11,7 @@ import plotly.express as px
 import pandas as pd
 import flask
 import os
-from flask_pymongo import PyMongo, DESCENDING, ASCENDING
+from flask_pymongo import PyMongo, ASCENDING
 from dash.dependencies import Input, Output, State
 from dash.exceptions import PreventUpdate
 import urllib.parse
@@ -202,20 +202,31 @@ def create_plot(name, field, start_date, end_date):
     if name is None or field is None:
         raise PreventUpdate
 
-    field_metadata = metadata.get_field_metadata(name, field)
-    df = pd.DataFrame(list(readings.find({'name': field_metadata.db_name, field_metadata.db_field: {"$exists": True},
-                                          "time": {"$lt": datetime.fromisoformat(end_date) + timedelta(days=1),
-                                                   "$gte": datetime.fromisoformat(start_date)}},
-
-                                         {field_metadata.db_field: 1, 'time': 1},
-                                         sort=[('_id', DESCENDING)])))
+    df = get_data(name, field, start_date, end_date)
     if len(df) > 0:
-        fig = px.line(df, x="time", y=field_metadata.db_field)
-        fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': metadata.get_field_with_units(name, field)}})
+        fig = px.line(df, x=df.columns[0], y=df.columns[1])
+        fig.update_layout({'xaxis': {'title': None}, 'yaxis': {'title': df.columns[1]}})
         fig.update_traces(mode='lines+markers')
     else:
         fig = {}
     return fig
+
+
+def get_data(name, field, start_date=None, end_date=None):
+    field_metadata = metadata.get_field_metadata(name, field)
+    return pd.DataFrame(
+        list(readings.find(
+            {
+                'name': field_metadata.db_name,
+                field_metadata.db_field: {"$exists": True},
+                "time": {
+                    "$lt": datetime.fromisoformat(end_date) + timedelta(days=1),
+                    "$gte": datetime.fromisoformat(start_date)
+                } if start_date is not None else {"$exists": True},
+            },
+            {field_metadata.db_field: 1, 'time': 1, '_id': 0},
+            sort=[('_id', ASCENDING)]))).rename(
+        columns={field_metadata.db_field: metadata.get_field_with_units(name, field)})
 
 
 @app.callback(Output(component_id='field', component_property='options'),
@@ -258,11 +269,7 @@ def update_href(name, field, start_date, end_date):
 def download_all(name, field):
     import io
     csv = io.StringIO()
-    field_metadata = metadata.get_field_metadata(name, field)
-    pd.DataFrame(list(readings.find({'name': field_metadata.db_name, field_metadata.db_field: {"$exists": True}},
-                                    {'_id': False, field_metadata.db_field: 1, 'time': 1, },
-                                    sort=[('_id', ASCENDING)]))).rename(
-        columns={field_metadata.db_field: metadata.get_field_with_units(name, field)}).to_csv(csv, index=False)
+    get_data(name, field).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
@@ -294,13 +301,7 @@ def download_metadata():
 def download(name, field, start_date, end_date):
     import io
     csv = io.StringIO()
-    field_metadata = metadata.get_field_metadata(name, field)
-    pd.DataFrame(list(readings.find({'name': field_metadata.db_name, field_metadata.db_field: {"$exists": True},
-                                     "time": {"$lt": datetime.fromisoformat(end_date) + timedelta(days=1),
-                                              "$gte": datetime.fromisoformat(start_date)}},
-                                    {'_id': False, field_metadata.db_field: 1, 'time': 1, },
-                                    sort=[('_id', ASCENDING)]))).rename(
-        columns={field_metadata.db_field: metadata.get_field_with_units(name, field)}).to_csv(csv, index=False)
+    get_data(name, field, start_date, end_date).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
@@ -308,7 +309,7 @@ def download(name, field, start_date, end_date):
 
     return flask.send_file(mem,
                            mimetype='text/csv',
-                           attachment_filename=f'ngif-[{name}]-[{field}].csv',
+                           attachment_filename=f'ngif-[{name}]-[{field}]-[{start_date}]-[{end_date}].csv',
                            as_attachment=True)
 
 
