@@ -13,6 +13,7 @@ import flask
 import os
 from flask_pymongo import PyMongo, ASCENDING
 from dash.dependencies import Input, Output, State
+from flask import request
 from dash.exceptions import PreventUpdate
 import urllib.parse
 from datetime import timedelta, datetime
@@ -262,10 +263,11 @@ def update_selected_field(available_options):
 @app.callback(Output('download-all-link', 'href'),
               [
                   Input(component_id='name', component_property='value'),
-                  Input(component_id='field', component_property='value')
+                  Input(component_id='field', component_property='value'),
+                  Input(component_id='smooth', component_property='value')
                ])
-def update_href(name, field):
-    return urllib.parse.quote(f'/download-all/{name}/{field}')
+def update_href(name, field, smooth):
+    return urllib.parse.quote(f'/download-all/{name}/{field}' + ('/smooth' if smooth else ''))
 
 
 @app.callback(Output('download-link', 'href'),
@@ -273,17 +275,20 @@ def update_href(name, field):
                   Input(component_id='name', component_property='value'),
                   Input(component_id='field', component_property='value'),
                   Input(component_id='date-picker', component_property='start_date'),
-                  Input(component_id='date-picker', component_property='end_date')
+                  Input(component_id='date-picker', component_property='end_date'),
+                  Input(component_id='smooth', component_property='value')
                ])
-def update_href(name, field, start_date, end_date):
-    return urllib.parse.quote(f'/download/{name}/{field}/{start_date}/{end_date}')
+def update_href(name, field, start_date, end_date, smooth):
+    return urllib.parse.quote(f'/download/{name}/{field}/{start_date}/{end_date}' + ('/smooth' if smooth else ''))
 
 
 @app.server.route('/download-all/<name>/<field>')
+@app.server.route('/download-all/<name>/<field>/smooth')
 def download_all(name, field):
     import io
+    smooth = request.path.endswith('/smooth')
     csv = io.StringIO()
-    get_data(name, field).to_csv(csv, index=False)
+    get_data(name, field, smooth=smooth).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
@@ -291,7 +296,7 @@ def download_all(name, field):
 
     return flask.send_file(mem,
                            mimetype='text/csv',
-                           attachment_filename=f'ngif-[{name}]-[{field}].csv',
+                           attachment_filename=f'ngif-[{name}]-[{field}{" (smoothed)" if smooth else ""}].csv',
                            as_attachment=True)
 
 
@@ -312,10 +317,12 @@ def download_metadata():
 
 
 @app.server.route('/download/<name>/<field>/<start_date>/<end_date>')
+@app.server.route('/download/<name>/<field>/<start_date>/<end_date>/smooth')
 def download(name, field, start_date, end_date):
     import io
+    smooth = request.path.endswith('/smooth')
     csv = io.StringIO()
-    get_data(name, field, start_date, end_date).to_csv(csv, index=False)
+    get_data(name, field, start_date, end_date, smooth=smooth).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
@@ -323,7 +330,7 @@ def download(name, field, start_date, end_date):
 
     return flask.send_file(mem,
                            mimetype='text/csv',
-                           attachment_filename=f'ngif-[{name}]-[{field}]-[{start_date}]-[{end_date}].csv',
+                           attachment_filename=f'ngif-[{name}]-[{field}{" (smoothed)" if smooth else ""}]-[{start_date}]-[{end_date}].csv',
                            as_attachment=True)
 
 
