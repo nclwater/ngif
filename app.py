@@ -253,6 +253,27 @@ def update_fields(name):
     return [{'label': row.field, 'value': row.field} for i, row in metadata.df[metadata.df.name == name].iterrows()]
 
 
+@app.callback(Output(component_id='smooth', component_property='style'),
+              [Input(component_id='field', component_property='value')])
+def update_checklist_style(field):
+    if field is None:
+        raise PreventUpdate
+
+    if field.lower().startswith('outflow'):
+        return {'display': 'block'}
+    else:
+        return {'display': 'none'}
+
+
+@app.callback(Output(component_id='smooth', component_property='value'),
+              [Input(component_id='smooth', component_property='style')])
+def update_checklist_value(style):
+    if style['display'] == 'none':
+        return []
+    else:
+        raise PreventUpdate
+
+
 @app.callback(
     dash.dependencies.Output('field', 'value'),
     [dash.dependencies.Input('field', 'options')])
