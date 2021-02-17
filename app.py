@@ -256,12 +256,32 @@ def get_data(name, field, start_date=None, end_date=None, smooth=False):
 
 
 @app.callback(Output(component_id='field', component_property='options'),
-              [Input(component_id='name', component_property='value')])
-def update_fields(name):
+              [Input(component_id='name', component_property='value'),
+               Input(component_id='theme', component_property='value')])
+def update_fields(name, theme):
     if name is None:
         raise PreventUpdate
 
-    return [{'label': row.field, 'value': f'{row["name"]}/{row.field}'} for i, row in metadata.df[metadata.df.name == name].iterrows()]
+    return [{'label': row.field, 'value': f'{row["name"]}/{row.field}'} for i, row in metadata.df[metadata.df[theme] == name].iterrows()]
+
+
+@app.callback(Output(component_id='name', component_property='options'),
+              [Input(component_id='theme', component_property='value')])
+def update_names(theme):
+    if theme is None:
+        raise PreventUpdate
+    options = [{'label': s, 'value': s} for s in metadata.df[theme].sort_values().dropna().unique() if s != '\xa0']
+    print(options)
+    return options
+
+
+@app.callback(
+    dash.dependencies.Output('name', 'value'),
+    [dash.dependencies.Input('name', 'options')])
+def update_selected_name(available_options):
+    if len(available_options) == 0:
+        raise PreventUpdate
+    return available_options[0]['value']
 
 
 @app.callback(Output(component_id='smooth', component_property='style'),
@@ -289,6 +309,8 @@ def update_checklist_value(style):
     dash.dependencies.Output('field', 'value'),
     [dash.dependencies.Input('field', 'options')])
 def update_selected_field(available_options):
+    if len(available_options) == 0:
+        raise PreventUpdate
     return available_options[0]['value']
 
 
