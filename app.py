@@ -122,16 +122,24 @@ def create_layout():
 
         html.Div([
             dcc.Dropdown(
+                id='theme',
+                options=[{'label': s, 'value': s} for s in ['Location', 'Project', 'Parameter', 'SuDS/GI type', 'All']],
+                value='Location',
+            )
+        ], style={'display': 'inline-block', 'width': '29%'}),
+
+        html.Div([
+            dcc.Dropdown(
                 id='name',
                 options=options,
                 value=options[0]['value'] if len(options) > 0 else None,
             )
-        ], style={'display': 'inline-block', 'width': '49%'}),
+        ], style={'display': 'inline-block', 'width': '29%'}),
         html.Div([
             dcc.Dropdown(
                 id='field',
             )
-        ], style={'display': 'inline-block', 'width': '49%'}),
+        ], style={'display': 'inline-block', 'width': '29%'}),
 
         dcc.DatePickerRange(
             id='date-picker',
@@ -191,13 +199,16 @@ def update_table(_):
 
 @app.callback(Output(component_id='plot', component_property='figure'),
               [Input('update', 'n_clicks')],
-              [State(component_id='name', component_property='value'),
-               State(component_id='field', component_property='value'),
+              [State(component_id='field', component_property='value'),
                State(component_id='date-picker', component_property='start_date'),
                State(component_id='date-picker', component_property='end_date'),
                State(component_id='smooth', component_property='value')
                ])
-def update_plot(_, name, field, start_date, end_date, smooth):
+def update_plot(_, field, start_date, end_date, smooth):
+    if field is None:
+        raise PreventUpdate
+    name, field = field.split('/')
+    print(name, field)
     return create_plot(name, field, start_date, end_date, smooth)
 
 
@@ -250,7 +261,7 @@ def update_fields(name):
     if name is None:
         raise PreventUpdate
 
-    return [{'label': row.field, 'value': row.field} for i, row in metadata.df[metadata.df.name == name].iterrows()]
+    return [{'label': row.field, 'value': f'{row["name"]}/{row.field}'} for i, row in metadata.df[metadata.df.name == name].iterrows()]
 
 
 @app.callback(Output(component_id='smooth', component_property='style'),
@@ -283,24 +294,22 @@ def update_selected_field(available_options):
 
 @app.callback(Output('download-all-link', 'href'),
               [
-                  Input(component_id='name', component_property='value'),
                   Input(component_id='field', component_property='value'),
                   Input(component_id='smooth', component_property='value')
                ])
-def update_href(name, field, smooth):
-    return urllib.parse.quote(f'/download-all/{name}/{field}' + ('/smooth' if smooth else ''))
+def update_href(field, smooth):
+    return urllib.parse.quote(f'/download-all/{field}' + ('/smooth' if smooth else ''))
 
 
 @app.callback(Output('download-link', 'href'),
               [
-                  Input(component_id='name', component_property='value'),
                   Input(component_id='field', component_property='value'),
                   Input(component_id='date-picker', component_property='start_date'),
                   Input(component_id='date-picker', component_property='end_date'),
                   Input(component_id='smooth', component_property='value')
                ])
-def update_href(name, field, start_date, end_date, smooth):
-    return urllib.parse.quote(f'/download/{name}/{field}/{start_date}/{end_date}' + ('/smooth' if smooth else ''))
+def update_href(field, start_date, end_date, smooth):
+    return urllib.parse.quote(f'/download/{field}/{start_date}/{end_date}' + ('/smooth' if smooth else ''))
 
 
 @app.server.route('/download-all/<name>/<field>')
