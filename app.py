@@ -97,14 +97,6 @@ def create_layout():
     start_date = datetime.utcnow().date() - timedelta(days=2)
     end_date = datetime.utcnow().date()
 
-    options = sorted([{'label': n, 'value': n}
-                      for n in metadata.names],
-                     key=lambda key: [convert(int(c) if c.isdigit() else c.lower())
-                                      for c in re.split('([0-9]+)', key['label'])])
-
-    name = options[0]['value'] if len(options) > 0 else None
-    field = metadata.df[metadata.df.name == name].field.iloc[0] if len(options) > 0 else None
-
     locations = metadata.df.drop_duplicates('name').set_index('name')['Long. Lat'].str.split(',', expand=True) \
         if len(metadata.df) > 0 else None
     map_figure = px.scatter_mapbox(
@@ -131,8 +123,8 @@ def create_layout():
         html.Div([
             dcc.Dropdown(
                 id='name',
-                options=options,
-                value=options[0]['value'] if len(options) > 0 else None,
+                options=[],
+                value=None,
             )
         ], style={'display': 'inline-block', 'width': '29%'}),
         html.Div([
@@ -156,9 +148,8 @@ def create_layout():
         html.A(html.Button('Download Selected Period'), id='download-link'),
         html.A(html.Button('Download Entire Series'), id='download-all-link'),
 
-        dcc.Loading(dcc.Graph(id='plot',
-                              figure=create_plot(name, field, start_date.isoformat(), end_date.isoformat()) if
-                              name is not None else None)),
+        dcc.Loading(dcc.Graph(id='plot', figure={})),
+
         html.Div([dash_table.DataTable(
             id='table',
             columns=[{
@@ -262,7 +253,8 @@ def update_fields(name, theme):
     if name is None:
         raise PreventUpdate
 
-    return [{'label': row.field, 'value': f'{row["name"]}/{row.field}'} for i, row in metadata.df[metadata.df[theme] == name].iterrows()]
+    return [{'label': row.field, 'value': f'{row["name"]}/{row.field}'}
+            for i, row in metadata.df[metadata.df[theme] == name].iterrows()]
 
 
 @app.callback(Output(component_id='name', component_property='options'),
@@ -270,7 +262,10 @@ def update_fields(name, theme):
 def update_names(theme):
     if theme is None:
         raise PreventUpdate
-    options = [{'label': s, 'value': s} for s in metadata.df[theme].sort_values().dropna().unique() if s != '\xa0']
+    options = [{'label': s, 'value': s} for s in metadata.df[theme].dropna().unique() if s != '\xa0']
+    options.sort(key=lambda key: [convert(int(c) if c.isdigit() else c.lower())
+                                  for c in re.split('([0-9]+)', key['label'])])
+
     print(options)
     return options
 
@@ -380,10 +375,11 @@ def download(name, field, start_date, end_date):
     mem.write(csv.getvalue().encode('utf-8'))
     mem.seek(0)
 
-    return flask.send_file(mem,
-                           mimetype='text/csv',
-                           attachment_filename=f'ngif-[{name}]-[{field}{" (smoothed)" if smooth else ""}]-[{start_date}]-[{end_date}].csv',
-                           as_attachment=True)
+    return flask.send_file(
+        mem,
+        mimetype='text/csv',
+        attachment_filename=f'ngif-[{name}]-[{field}{" (smoothed)" if smooth else ""}]-[{start_date}]-[{end_date}].csv',
+        as_attachment=True)
 
 
 app.layout = create_layout
