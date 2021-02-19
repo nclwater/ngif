@@ -118,7 +118,7 @@ def create_layout():
                 options=[{'label': s, 'value': s} for s in ['Location', 'Project', 'Parameter', 'SuDS/GI type', 'All']],
                 value='Location',
             )
-        ], style={'display': 'inline-block', 'width': '29%'}),
+        ], style={'display': 'inline-block', 'width': '33%'}),
 
         html.Div([
             dcc.Dropdown(
@@ -126,12 +126,12 @@ def create_layout():
                 options=[],
                 value=None,
             )
-        ], style={'display': 'inline-block', 'width': '29%'}),
+        ], style={'display': 'inline-block', 'width': '33%'}),
         html.Div([
             dcc.Dropdown(
                 id='field',
             )
-        ], style={'display': 'inline-block', 'width': '29%'}),
+        ], style={'display': 'inline-block', 'width': '33%'}),
 
         dcc.DatePickerRange(
             id='date-picker',
@@ -199,7 +199,6 @@ def update_plot(_, field, start_date, end_date, smooth):
     if field is None:
         raise PreventUpdate
     name, field = field.split('/')
-    print(name, field)
     return create_plot(name, field, start_date, end_date, smooth)
 
 
@@ -252,9 +251,10 @@ def get_data(name, field, start_date=None, end_date=None, smooth=False):
 def update_fields(name, theme):
     if name is None:
         raise PreventUpdate
+    fields = [{'label': row.field, 'value': f'{row["name"]}/{row.field}'}
+            for i, row in metadata.df[metadata.df[theme].str.contains(name, regex=False, na=False)].iterrows()]
 
-    return [{'label': row.field, 'value': f'{row["name"]}/{row.field}'}
-            for i, row in metadata.df[metadata.df[theme] == name].iterrows()]
+    return fields
 
 
 @app.callback(Output(component_id='name', component_property='options'),
@@ -262,11 +262,11 @@ def update_fields(name, theme):
 def update_names(theme):
     if theme is None:
         raise PreventUpdate
-    options = [{'label': s, 'value': s} for s in metadata.df[theme].dropna().unique() if s != '\xa0']
+    options = set([s for group in metadata.df[theme].dropna().unique() for s in group.split(';') if s != '\xa0'])
+    options = [{'label': s.strip(), 'value': s.strip()} for s in options]
     options.sort(key=lambda key: [convert(int(c) if c.isdigit() else c.lower())
                                   for c in re.split('([0-9]+)', key['label'])])
 
-    print(options)
     return options
 
 
