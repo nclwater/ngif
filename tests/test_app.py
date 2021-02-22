@@ -2,6 +2,7 @@ import app
 from unittest import TestCase
 from pymongo import MongoClient
 from datetime import datetime, date
+import json
 
 db = MongoClient(app.server.config['MONGO_URI']).get_database()
 readings = db.readings
@@ -27,3 +28,10 @@ class TestApp(TestCase):
 
         app.create_plot(name='Ensemble F', field=field, start_date=date.today().isoformat(),
                         end_date=date.today().isoformat())
+
+    def test_upload(self):
+        with open('tests/eml.json') as f:
+            eml = json.load(f)
+        client = app.server.test_client()
+        response = client.post('/upload/eml', json=eml)
+        self.assertTrue(json.loads(response.data)['uploaded'])

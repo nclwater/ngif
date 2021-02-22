@@ -18,6 +18,7 @@ from dash.exceptions import PreventUpdate
 import urllib.parse
 from datetime import timedelta, datetime
 import re
+import json
 
 
 def convert(text):
@@ -381,6 +382,14 @@ def download(name, field, start_date, end_date):
         attachment_filename=f'ngif-[{name}]-[{field}{" (smoothed)" if smooth else ""}]-[{start_date}]-[{end_date}].csv',
         as_attachment=True)
 
+
+@app.server.route('/upload/eml', methods=['POST'])
+def upload():
+    df = pd.DataFrame(request.get_json()['data']['readings'])
+
+
+
+    return json.dumps({'uploaded': True}), 200, {'ContentType': 'application/json'}
 
 app.layout = create_layout
 
