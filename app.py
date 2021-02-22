@@ -11,7 +11,7 @@ import plotly.express as px
 import pandas as pd
 import flask
 import os
-from flask_pymongo import PyMongo, ASCENDING
+from flask_pymongo import PyMongo, ASCENDING, DESCENDING
 from dash.dependencies import Input, Output, State
 from flask import request
 from dash.exceptions import PreventUpdate
@@ -385,11 +385,56 @@ def download(name, field, start_date, end_date):
 
 @app.server.route('/upload/eml', methods=['POST'])
 def upload():
-    df = pd.DataFrame(request.get_json()['data']['readings'])
+    uploaded_data = request.get_json()
 
+    if len(uploaded_data) == 0:
+        return json.dumps({'uploaded': False}), 200, {'ContentType': 'application/json'}
 
+    units = {}
+    data = []
+
+    for row in uploaded_data:
+        data_row = {'time': row['time'], 'unitID': row['unitID']}
+        for k, v in row.items():
+            if k not in ['customer', 'unitID', 'time']:
+                data_row[k] = v[0]
+                units[k + '.units'] = v[-1]
+        data.append(data_row)
+
+    data = pd.DataFrame(data)
+    data['time'] = pd.to_datetime(data.time)
+
+    for name in data.unitID.unique():
+
+        name_data = data[data.unitID == name].drop(columns='unitID')
+
+        last_entry = readings.find_one(
+            {'name': name}, {'time': 1},
+            sort=[('_id', DESCENDING)]
+        )
+
+        if last_entry is not None:
+            last_time = pd.to_datetime(last_entry['time'])
+            name_data = name_data[name_data.time > last_time]
+
+        updated_time = {}
+        latest_value = {}
+
+        for col in name_data.columns:
+            if col != 'time' and name_data[col].notnull().any():
+                records = name_data[[col, 'time']].dropna()
+                last_record = records.loc[[records['time'].idxmax()]].to_dict('records')[0]
+                updated_time[col + '.last_updated'] = last_record['time']
+                latest_value[col + '.last_value'] = last_record[col]
+
+        mongo.db.sensors.update_one({'name': name}, {'$set': {**units, **updated_time, **latest_value}}, upsert=True)
+
+        readings.insert_many({'name': name, 'uploaded_by': request.remote_addr,
+                              **{k: v for k, v in row.items() if pd.notna(v)}}
+                             for row in name_data.to_dict('records'))
 
     return json.dumps({'uploaded': True}), 200, {'ContentType': 'application/json'}
+
 
 app.layout = create_layout
 
