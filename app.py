@@ -57,6 +57,7 @@ class Metadata:
                            left_on=['name', 'field'], right_on=['Current name', 'Current field'], how='left')
 
         self.df = self.df[self.df['To keep?'] != 'N']
+        self.df.loc[self.df.Location.isnull(), 'Location'] = self.df.name[self.df.Location.isnull()]
 
         self.df['db_name'] = self.df['name']
         self.df['name'] = self.df['name'].replace(self.df.set_index('name')['New name'].dropna().to_dict())
