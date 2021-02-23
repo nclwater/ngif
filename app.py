@@ -417,6 +417,8 @@ def upload():
         if last_entry is not None:
             last_time = pd.to_datetime(last_entry['time'])
             name_data = name_data[name_data.time > last_time]
+            if len(name_data) == 0:
+                continue
 
         updated_time = {}
         latest_value = {}
