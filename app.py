@@ -179,6 +179,8 @@ def create_layout():
                          style={'padding-right': 20}),
                 html.Img(src=app.get_asset_url('UKCRIC_logo.jpg'), width=150, alt='UKCRIC')],
             style={'width': 320, 'margin': 'auto'}),
+        html.Div(dcc.Markdown("If you have any questions or problems with the data app, please contact the National "
+                              "Green Infrastructure Facility at mailto:green.infrastructure@newcastle.ac.uk"))
 
     ], style={'max-width': 800, 'margin': 'auto'})
 
