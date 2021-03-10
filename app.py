@@ -266,8 +266,9 @@ def update_fields(name, theme):
 def update_names(theme):
     if theme is None:
         raise PreventUpdate
-    options = set([s for group in metadata.df[theme].dropna().unique() for s in group.split(';') if s != '\xa0'])
-    options = [{'label': s.strip(), 'value': s.strip()} for s in options]
+    options = set([s.strip() for group in metadata.df[theme].dropna().unique()
+                   for s in group.split(';') if s != '\xa0'])
+    options = [{'label': s, 'value': s} for s in options]
     options.sort(key=lambda key: [convert(int(c) if c.isdigit() else c.lower())
                                   for c in re.split('([0-9]+)', key['label'])])
 
