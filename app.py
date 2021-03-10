@@ -289,7 +289,7 @@ def update_checklist_style(field):
     if field is None:
         raise PreventUpdate
 
-    if field.lower().startswith('outflow'):
+    if field.split('/')[1].lower().startswith('outflow'):
         return {'display': 'block'}
     else:
         return {'display': 'none'}
