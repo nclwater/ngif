@@ -99,15 +99,19 @@ def create_layout():
     start_date = datetime.utcnow().date() - timedelta(days=2)
     end_date = datetime.utcnow().date()
 
-    locations = metadata.df.drop_duplicates('name').set_index('name')['Long. Lat'].str.split(',', expand=True) \
+    locations = pd.read_csv('locations.csv', index_col='name') \
         if len(metadata.df) > 0 else None
-    map_figure = px.scatter_mapbox(
-        locations.index,
-        lat=locations.iloc[:, 0].astype(float).tolist(),
-        lon=locations.iloc[:, 1].astype(float).tolist(),
-        hover_name="name",
-        zoom=16,
-        mapbox_style='open-street-map') if locations is not None else {}
+    if locations is not None:
+        map_figure = px.scatter_mapbox(
+            locations.index,
+            lat=locations.lat.tolist(),
+            lon=locations.lon.tolist(),
+            hover_name="name",
+            zoom=16,
+            mapbox_style='open-street-map')
+        map_figure.update_layout({'margin': {'t': 0, 'b': 0, 'l': 0, 'r': 0}})
+    else:
+        map_figure = {}
 
     return html.Div(children=[
 
