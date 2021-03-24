@@ -108,6 +108,7 @@ def create_layout():
         hover_name="name",
         zoom=16,
         mapbox_style='open-street-map') if locations is not None else {}
+    map_figure.update_layout({'margin': {'t': 0, 'b': 0, 'l': 0, 'r': 0}})
 
     return html.Div(children=[
 
