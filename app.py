@@ -101,14 +101,17 @@ def create_layout():
 
     locations = pd.read_csv('locations.csv', index_col='name') \
         if len(metadata.df) > 0 else None
-    map_figure = px.scatter_mapbox(
-        locations.index,
-        lat=locations.lat.tolist(),
-        lon=locations.lon.tolist(),
-        hover_name="name",
-        zoom=16,
-        mapbox_style='open-street-map') if locations is not None else {}
-    map_figure.update_layout({'margin': {'t': 0, 'b': 0, 'l': 0, 'r': 0}})
+    if locations is not None:
+        map_figure = px.scatter_mapbox(
+            locations.index,
+            lat=locations.lat.tolist(),
+            lon=locations.lon.tolist(),
+            hover_name="name",
+            zoom=16,
+            mapbox_style='open-street-map')
+        map_figure.update_layout({'margin': {'t': 0, 'b': 0, 'l': 0, 'r': 0}})
+    else:
+        map_figure = {}
 
     return html.Div(children=[
 
