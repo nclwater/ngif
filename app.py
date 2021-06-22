@@ -360,7 +360,7 @@ def download_all(name, field):
 def download_metadata():
     import io
     csv = io.StringIO()
-    pd.DataFrame(metadata.as_table()).drop('id', axis=1).to_csv(csv, index=False)
+    pd.DataFrame(metadata.as_table()).to_csv(csv, index=False)
 
     mem = io.BytesIO()
     mem.write(csv.getvalue().encode('utf-8'))
