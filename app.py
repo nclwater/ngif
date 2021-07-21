@@ -152,7 +152,7 @@ def create_layout():
         html.P(),
         html.A(html.Button('Update Plot'), id='update'),
         html.A(html.Button('Download Selected Period'), id='download-link'),
-        html.A(html.Button('Download Entire Series'), id='download-all-link'),
+        # html.A(html.Button('Download Entire Series'), id='download-all-link'),
 
         dcc.Loading(dcc.Graph(id='plot', figure={})),
 
@@ -181,10 +181,19 @@ def create_layout():
             [
                 html.Img(src=app.get_asset_url('ncl logo no bkgrd.png'), width=150, alt='Newcastle University',
                          style={'padding-right': 20}),
-                html.Img(src=app.get_asset_url('UKCRIC_logo.jpg'), width=150, alt='UKCRIC')],
-            style={'width': 320, 'margin': 'auto'}),
-        html.Div(dcc.Markdown("If you have any questions or problems with the data app, please contact the National "
-                              "Green Infrastructure Facility at mailto:green.infrastructure@newcastle.ac.uk"))
+                html.Img(src=app.get_asset_url('UKCRIC_logo.jpg'), width=150, alt='UKCRIC', style={'padding-right': 20}),
+                html.A(html.Img(src=app.get_asset_url('cc by 4.0.png'), width=150, alt='CC BY 4.0',
+                                style={'padding-right': 20}), href='http://doi.org/10.25405/data.ncl.14605569')
+            ],
+            style={'width': 520, 'margin': 'auto'}),
+        html.Div(dcc.Markdown(
+            "© UKCRIC National Green Infrastructure Facility. All NGIF data is licenced under a CC BY 4.0 licence. "
+            "The NGIF licence can be found [here](http://doi.org/10.25405/data.ncl.14605569). "
+            "Details on the CC BY 4.0 licence can be found [here](https://creativecommons.org/licenses/by/4.0/). "
+            "Data downloads using the data app are limited to 30 days from the start date selected. "
+            "If you would like to access longer term data, please access the NGIF data via the NGIF licence. "
+            "If you have any questions or problems with the data app, please contact the National "
+            "Green Infrastructure Facility at mailto:green.infrastructure@newcastle.ac.uk"))
 
     ], style={'max-width': 800, 'margin': 'auto'})
 
@@ -318,13 +327,13 @@ def update_selected_field(available_options):
     return available_options[0]['value']
 
 
-@app.callback(Output('download-all-link', 'href'),
-              [
-                  Input(component_id='field', component_property='value'),
-                  Input(component_id='smooth', component_property='value')
-               ])
-def update_href(field, smooth):
-    return urllib.parse.quote(f'/download-all/{field}' + ('/smooth' if smooth else ''))
+# @app.callback(Output('download-all-link', 'href'),
+#               [
+#                   Input(component_id='field', component_property='value'),
+#                   Input(component_id='smooth', component_property='value')
+#                ])
+# def update_href(field, smooth):
+#     return urllib.parse.quote(f'/download-all/{field}' + ('/smooth' if smooth else ''))
 
 
 @app.callback(Output('download-link', 'href'),
@@ -338,22 +347,22 @@ def update_href(field, start_date, end_date, smooth):
     return urllib.parse.quote(f'/download/{field}/{start_date}/{end_date}' + ('/smooth' if smooth else ''))
 
 
-@app.server.route('/download-all/<name>/<field>')
-@app.server.route('/download-all/<name>/<field>/smooth')
-def download_all(name, field):
-    import io
-    smooth = request.path.endswith('/smooth')
-    csv = io.StringIO()
-    get_data(name, field, smooth=smooth).to_csv(csv, index=False)
-
-    mem = io.BytesIO()
-    mem.write(csv.getvalue().encode('utf-8'))
-    mem.seek(0)
-
-    return flask.send_file(mem,
-                           mimetype='text/csv',
-                           attachment_filename=f'ngif-[{name}]-[{field}{" (smoothed)" if smooth else ""}].csv',
-                           as_attachment=True)
+# @app.server.route('/download-all/<name>/<field>')
+# @app.server.route('/download-all/<name>/<field>/smooth')
+# def download_all(name, field):
+#     import io
+#     smooth = request.path.endswith('/smooth')
+#     csv = io.StringIO()
+#     get_data(name, field, smooth=smooth).to_csv(csv, index=False)
+#
+#     mem = io.BytesIO()
+#     mem.write(csv.getvalue().encode('utf-8'))
+#     mem.seek(0)
+#
+#     return flask.send_file(mem,
+#                            mimetype='text/csv',
+#                            attachment_filename=f'ngif-[{name}]-[{field}{" (smoothed)" if smooth else ""}].csv',
+#                            as_attachment=True)
 
 
 @app.server.route('/download-metadata')
@@ -376,6 +385,17 @@ def download_metadata():
 @app.server.route('/download/<name>/<field>/<start_date>/<end_date>/smooth')
 def download(name, field, start_date, end_date):
     import io
+    duration = datetime.strptime(end_date, '%Y-%m-%d') - datetime.strptime(start_date, '%Y-%m-%d')
+    if duration > timedelta(days=30):
+        mem = io.BytesIO()
+        mem.write('Requested period too long, must be less than 30 days. To download full series go to http://doi.org/10.25405/data.ncl.14605569'.encode('utf-8'))
+        mem.seek(0)
+        return flask.send_file(
+            mem,
+            mimetype='text',
+            attachment_filename=f'error.txt',
+            as_attachment=True)
+
     smooth = request.path.endswith('/smooth')
     csv = io.StringIO()
     get_data(name, field, start_date, end_date, smooth=smooth).to_csv(csv, index=False)
