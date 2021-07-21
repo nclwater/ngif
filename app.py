@@ -192,6 +192,9 @@ def create_layout():
             "Details on the CC BY 4.0 licence can be found [here](https://creativecommons.org/licenses/by/4.0/). "
             "Data downloads using the data app are limited to 30 days from the start date selected. "
             "If you would like to access longer term data, please access the NGIF data via the NGIF licence. "
+            "Whilst every care is taken to ensure accurate measurements of in-situ conditions are reported, "
+            "the NGIF data app records raw sensor value readings and no post-processing has been conducted. "
+            "Please contact green.infrastructure@newcastle.ac.uk if you are planning to use our data. "
             "If you have any questions or problems with the data app, please contact the National "
             "Green Infrastructure Facility at mailto:green.infrastructure@newcastle.ac.uk"))
 
