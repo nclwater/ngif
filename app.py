@@ -350,22 +350,22 @@ def update_href(field, start_date, end_date, smooth):
     return urllib.parse.quote(f'/download/{field}/{start_date}/{end_date}' + ('/smooth' if smooth else ''))
 
 
-# @app.server.route('/download-all/<name>/<field>')
-# @app.server.route('/download-all/<name>/<field>/smooth')
-# def download_all(name, field):
-#     import io
-#     smooth = request.path.endswith('/smooth')
-#     csv = io.StringIO()
-#     get_data(name, field, smooth=smooth).to_csv(csv, index=False)
-#
-#     mem = io.BytesIO()
-#     mem.write(csv.getvalue().encode('utf-8'))
-#     mem.seek(0)
-#
-#     return flask.send_file(mem,
-#                            mimetype='text/csv',
-#                            attachment_filename=f'ngif-[{name}]-[{field}{" (smoothed)" if smooth else ""}].csv',
-#                            as_attachment=True)
+@app.server.route('/download-all/<name>/<field>')
+@app.server.route('/download-all/<name>/<field>/smooth')
+def download_all(name, field):
+    import io
+    smooth = request.path.endswith('/smooth')
+    csv = io.StringIO()
+    get_data(name, field, smooth=smooth).to_csv(csv, index=False)
+
+    mem = io.BytesIO()
+    mem.write(csv.getvalue().encode('utf-8'))
+    mem.seek(0)
+
+    return flask.send_file(mem,
+                           mimetype='text/csv',
+                           attachment_filename=f'ngif-[{name}]-[{field}{" (smoothed)" if smooth else ""}].csv',
+                           as_attachment=True)
 
 
 @app.server.route('/download-metadata')
