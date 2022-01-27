@@ -19,7 +19,6 @@ import urllib.parse
 from datetime import timedelta, datetime
 import re
 import json
-from flask_talisman import Talisman
 
 
 def convert(text):
@@ -93,8 +92,6 @@ app = dash.Dash(
     external_stylesheets=external_stylesheets,
     title='NGIF'
 )
-
-Talisman(app, content_security_policy=None)
 
 
 def create_layout():
