@@ -94,7 +94,7 @@ app = dash.Dash(
     title='NGIF'
 )
 
-Talisman(app)
+Talisman(app, content_security_policy=None)
 
 
 def create_layout():
