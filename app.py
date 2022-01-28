@@ -90,7 +90,10 @@ app = dash.Dash(
     __name__,
     server=server,
     external_stylesheets=external_stylesheets,
-    title='NGIF'
+    title='NGIF',
+    meta_tags=[
+            {"name": "viewport", "content": "width=device-width, initial-scale=1"}
+        ]
 )
 
 
@@ -113,32 +116,47 @@ def create_layout():
     else:
         map_figure = {}
 
+    dropdown_width = '250px'
+
     return html.Div(children=[
 
         html.Div([html.Img(src=app.get_asset_url('NGIF_logo_web_thumb.jpg'),
-                 alt='National Green Infrastructure Facility', width=400)]),
-
+                 alt='National Green Infrastructure Facility', style={'max-width': '100%', 'width': '400px'})]),
         html.Div([
-            dcc.Dropdown(
-                id='theme',
-                options=[{'label': s, 'value': s} for s in ['Location', 'Project', 'Parameter', 'SuDS/GI type', 'All']],
-                value='Location',
-            )
-        ], style={'display': 'inline-block', 'width': '33%'}),
+            html.Div([
+                html.Label('Theme', htmlFor='theme'),
+                dcc.Dropdown(
+                    id='theme',
+                    options=[{'label': s, 'value': s} for s in
+                             ['Location', 'Project', 'Parameter', 'SuDS/GI type', 'All']],
+                    value='Location',
+                )
+            ], style={'display': 'inline-block',
+                      'width': dropdown_width
+                      }),
 
-        html.Div([
-            dcc.Dropdown(
-                id='name',
-                options=[],
-                value=None,
-            )
-        ], style={'display': 'inline-block', 'width': '33%'}),
-        html.Div([
-            dcc.Dropdown(
-                id='field',
-            )
-        ], style={'display': 'inline-block', 'width': '33%'}),
 
+            html.Div([
+                html.Label('Name', htmlFor='name'),
+                dcc.Dropdown(
+                    id='name',
+                    options=[],
+                    value=None,
+                )
+            ], style={'display': 'inline-block',
+                      'width': dropdown_width
+                      }),
+            html.Div([
+                html.Label('Field', htmlFor='field'),
+                dcc.Dropdown(
+                    id='field',
+                )
+            ], style={'display': 'inline-block',
+                      'width': dropdown_width
+                      }),
+        ]),
+
+        html.Label('Date range', htmlFor='date-picker'),
         dcc.DatePickerRange(
             id='date-picker',
             min_date_allowed=datetime(2000, 1, 1),
@@ -174,7 +192,8 @@ def create_layout():
             page_action="native",
             page_current=0,
             page_size=10
-        ), html.A('Download metadata table', href='/download-metadata')], style={'padding-bottom': 40}),
+        ), html.A('Download metadata table', href='/download-metadata')],
+            style={'padding-bottom': 40, 'max-width': '100%', 'overflow': 'scroll'}),
 
         dcc.Graph(figure=map_figure),
         html.Div(
@@ -185,7 +204,7 @@ def create_layout():
                 html.A(html.Img(src=app.get_asset_url('cc by 4.0.png'), width=150, alt='CC BY 4.0',
                                 style={'padding-right': 20}), href='http://doi.org/10.25405/data.ncl.14605569')
             ],
-            style={'width': 520, 'margin': 'auto'}),
+            style={'margin': 'auto'}),
         html.Div(dcc.Markdown(
             "© UKCRIC National Green Infrastructure Facility. All NGIF data is licenced under a CC BY 4.0 licence. "
             "The NGIF licence can be found [here](http://doi.org/10.25405/data.ncl.14605569). "
@@ -472,4 +491,4 @@ def upload():
 app.layout = create_layout
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server("0.0.0.0", debug=True)
