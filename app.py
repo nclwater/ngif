@@ -29,9 +29,8 @@ def convert(text):
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 server = flask.Flask(__name__)
-server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://alex:Lyapunov-7@ngif.f0hkj.mongodb.net/')
-mongo = pymongo.MongoClient('mongodb+srv://alex:Lyapunov-7@ngif.f0hkj.mongodb.net/')
-
+server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/test?authSource=admin')
+mongo = PyMongo(server)
 
 readings = mongo.db.readings
 
