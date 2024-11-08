@@ -19,7 +19,6 @@ import urllib.parse
 from datetime import timedelta, datetime
 import re
 import json
-import pymongo
 
 
 def convert(text):
