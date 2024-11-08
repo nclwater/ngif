@@ -19,6 +19,7 @@ import urllib.parse
 from datetime import timedelta, datetime
 import re
 import json
+import pymongo
 
 
 def convert(text):
@@ -28,8 +29,9 @@ def convert(text):
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 server = flask.Flask(__name__)
-server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/test?authSource=admin')
-mongo = PyMongo(server)
+server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb+srv://alex:Lyapunov-7@ngif.f0hkj.mongodb.net/')
+mongo = pymongo.MongoClient('mongodb+srv://alex:Lyapunov-7@ngif.f0hkj.mongodb.net/')
+
 
 readings = mongo.db.readings
 
@@ -102,6 +104,15 @@ def create_layout():
     start_date = datetime.utcnow().date() - timedelta(days=2)
     end_date = datetime.utcnow().date()
 
+    default_theme = 'Location'
+
+    name_options = get_name_options(default_theme)
+
+    default_name = name_options[0]['value']
+
+    field_options = get_field_options(name_options[0]['value'], default_theme)
+    default_field = field_options[0]['value']
+
     locations = pd.read_csv('locations.csv', index_col='name') \
         if len(metadata.df) > 0 else None
     if locations is not None:
@@ -129,7 +140,7 @@ def create_layout():
                     id='theme',
                     options=[{'label': s, 'value': s} for s in
                              ['Location', 'Project', 'Parameter', 'SuDS/GI type', 'All']],
-                    value='Location',
+                    value=default_theme,
                 )
             ], style={'display': 'inline-block',
                       'width': dropdown_width
@@ -140,8 +151,8 @@ def create_layout():
                 html.Label('Name', htmlFor='name'),
                 dcc.Dropdown(
                     id='name',
-                    options=[],
-                    value=None,
+                    options=name_options,
+                    value=default_name,
                 )
             ], style={'display': 'inline-block',
                       'width': dropdown_width
@@ -150,6 +161,8 @@ def create_layout():
                 html.Label('Field', htmlFor='field'),
                 dcc.Dropdown(
                     id='field',
+                    options=field_options,
+                    value=default_field
                 )
             ], style={'display': 'inline-block',
                       'width': dropdown_width
@@ -290,9 +303,12 @@ def get_data(name, field, start_date=None, end_date=None, smooth=False):
 def update_fields(name, theme):
     if name is None:
         raise PreventUpdate
+    
+    return get_field_options(name, theme)
+
+def get_field_options(name, theme):
     fields = [{'label': row.field, 'value': f'{row["name"]}/{row.field}'}
             for i, row in metadata.df[metadata.df[theme].str.contains(name, regex=False, na=False)].iterrows()]
-
     return fields
 
 
@@ -301,6 +317,10 @@ def update_fields(name, theme):
 def update_names(theme):
     if theme is None:
         raise PreventUpdate
+   
+    return get_name_options(theme)
+
+def get_name_options(theme):
     options = set([s.strip() for group in metadata.df[theme].dropna().unique()
                    for s in group.split(';') if s != '\xa0'])
     options = [{'label': s, 'value': s} for s in options]
@@ -308,7 +328,6 @@ def update_names(theme):
                                   for c in re.split('([0-9]+)', key['label'])])
 
     return options
-
 
 @app.callback(
     dash.dependencies.Output('name', 'value'),
