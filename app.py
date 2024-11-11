@@ -4,9 +4,9 @@
 # visit http://127.0.0.1:8050/ in your web browser.
 
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
-import dash_table
+from dash import dcc
+from dash import html
+from dash import dash_table
 import plotly.express as px
 import pandas as pd
 import flask
@@ -28,7 +28,8 @@ def convert(text):
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 server = flask.Flask(__name__)
-server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/test?authSource=admin')
+# server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/test?authSource=admin')
+server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost:27017/ngif?authSource=admin')
 mongo = PyMongo(server)
 
 readings = mongo.db.readings
@@ -105,11 +106,15 @@ def create_layout():
     default_theme = 'Location'
 
     name_options = get_name_options(default_theme)
+   
+   
+    # default_name = name_options[0]['value']
+    default_name = 'Lysimeter 6'
 
-    default_name = name_options[0]['value']
-
-    field_options = get_field_options(name_options[0]['value'], default_theme)
-    default_field = field_options[0]['value']
+    field_options = get_field_options("Lysimeter 6", default_theme)
+    print(field_options[15])
+    # default_field = field_options[0]['value']
+    default_field = 'Lysimeter 6/Rain - Hourly'
 
     locations = pd.read_csv('locations.csv', index_col='name') \
         if len(metadata.df) > 0 else None
@@ -126,6 +131,8 @@ def create_layout():
         map_figure = {}
 
     dropdown_width = '250px'
+
+ 
 
     return html.Div(children=[
 
@@ -297,8 +304,10 @@ def get_data(name, field, start_date=None, end_date=None, smooth=False):
 
 @app.callback(Output(component_id='field', component_property='options'),
               [Input(component_id='name', component_property='value'),
-               Input(component_id='theme', component_property='value')])
+               Input(component_id='theme', component_property='value')],
+               prevent_initial_call=True)
 def update_fields(name, theme):
+    print('update fields ' + name)
     if name is None:
         raise PreventUpdate
     
@@ -311,7 +320,8 @@ def get_field_options(name, theme):
 
 
 @app.callback(Output(component_id='name', component_property='options'),
-              [Input(component_id='theme', component_property='value')])
+              [Input(component_id='theme', component_property='value')],
+              prevent_initial_call=True)
 def update_names(theme):
     if theme is None:
         raise PreventUpdate
