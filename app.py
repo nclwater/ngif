@@ -339,7 +339,8 @@ def get_name_options(theme):
 
 @app.callback(
     dash.dependencies.Output('name', 'value'),
-    [dash.dependencies.Input('name', 'options')])
+    [dash.dependencies.Input('name', 'options')],
+    prevent_initial_call=True)
 def update_selected_name(available_options):
     if len(available_options) == 0:
         raise PreventUpdate
@@ -369,7 +370,8 @@ def update_checklist_value(style):
 
 @app.callback(
     dash.dependencies.Output('field', 'value'),
-    [dash.dependencies.Input('field', 'options')])
+    [dash.dependencies.Input('field', 'options')],
+    prevent_initial_call=True)
 def update_selected_field(available_options):
     if len(available_options) == 0:
         raise PreventUpdate
