@@ -4,9 +4,9 @@
 # visit http://127.0.0.1:8050/ in your web browser.
 
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
-import dash_table
+from dash import dcc
+from dash import html
+from dash import dash_table
 import plotly.express as px
 import pandas as pd
 import flask
@@ -28,7 +28,8 @@ def convert(text):
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 server = flask.Flask(__name__)
-server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/test?authSource=admin')
+# server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://test:password@localhost:27017/test?authSource=admin')
+server.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost:27017/ngif?authSource=admin')
 mongo = PyMongo(server)
 
 readings = mongo.db.readings
@@ -102,6 +103,19 @@ def create_layout():
     start_date = datetime.utcnow().date() - timedelta(days=2)
     end_date = datetime.utcnow().date()
 
+    default_theme = 'Location'
+
+    name_options = get_name_options(default_theme)
+   
+   
+    # default_name = name_options[0]['value']
+    default_name = 'Lysimeter 6'
+
+    field_options = get_field_options("Lysimeter 6", default_theme)
+    print(field_options[15])
+    # default_field = field_options[0]['value']
+    default_field = 'Lysimeter 6/Rain - Hourly'
+
     locations = pd.read_csv('locations.csv', index_col='name') \
         if len(metadata.df) > 0 else None
     if locations is not None:
@@ -118,6 +132,8 @@ def create_layout():
 
     dropdown_width = '250px'
 
+ 
+
     return html.Div(children=[
 
         html.Div([html.Img(src=app.get_asset_url('NGIF_logo_web_thumb.jpg'),
@@ -129,7 +145,7 @@ def create_layout():
                     id='theme',
                     options=[{'label': s, 'value': s} for s in
                              ['Location', 'Project', 'Parameter', 'SuDS/GI type', 'All']],
-                    value='Location',
+                    value=default_theme,
                 )
             ], style={'display': 'inline-block',
                       'width': dropdown_width
@@ -140,8 +156,8 @@ def create_layout():
                 html.Label('Name', htmlFor='name'),
                 dcc.Dropdown(
                     id='name',
-                    options=[],
-                    value=None,
+                    options=name_options,
+                    value=default_name,
                 )
             ], style={'display': 'inline-block',
                       'width': dropdown_width
@@ -150,6 +166,8 @@ def create_layout():
                 html.Label('Field', htmlFor='field'),
                 dcc.Dropdown(
                     id='field',
+                    options=field_options,
+                    value=default_field
                 )
             ], style={'display': 'inline-block',
                       'width': dropdown_width
@@ -286,21 +304,31 @@ def get_data(name, field, start_date=None, end_date=None, smooth=False):
 
 @app.callback(Output(component_id='field', component_property='options'),
               [Input(component_id='name', component_property='value'),
-               Input(component_id='theme', component_property='value')])
+               Input(component_id='theme', component_property='value')],
+               prevent_initial_call=True)
 def update_fields(name, theme):
+    print('update fields ' + name)
     if name is None:
         raise PreventUpdate
+    
+    return get_field_options(name, theme)
+
+def get_field_options(name, theme):
     fields = [{'label': row.field, 'value': f'{row["name"]}/{row.field}'}
             for i, row in metadata.df[metadata.df[theme].str.contains(name, regex=False, na=False)].iterrows()]
-
     return fields
 
 
 @app.callback(Output(component_id='name', component_property='options'),
-              [Input(component_id='theme', component_property='value')])
+              [Input(component_id='theme', component_property='value')],
+              prevent_initial_call=True)
 def update_names(theme):
     if theme is None:
         raise PreventUpdate
+   
+    return get_name_options(theme)
+
+def get_name_options(theme):
     options = set([s.strip() for group in metadata.df[theme].dropna().unique()
                    for s in group.split(';') if s != '\xa0'])
     options = [{'label': s, 'value': s} for s in options]
@@ -309,10 +337,10 @@ def update_names(theme):
 
     return options
 
-
 @app.callback(
     dash.dependencies.Output('name', 'value'),
-    [dash.dependencies.Input('name', 'options')])
+    [dash.dependencies.Input('name', 'options')],
+    prevent_initial_call=True)
 def update_selected_name(available_options):
     if len(available_options) == 0:
         raise PreventUpdate
@@ -342,7 +370,8 @@ def update_checklist_value(style):
 
 @app.callback(
     dash.dependencies.Output('field', 'value'),
-    [dash.dependencies.Input('field', 'options')])
+    [dash.dependencies.Input('field', 'options')],
+    prevent_initial_call=True)
 def update_selected_field(available_options):
     if len(available_options) == 0:
         raise PreventUpdate
